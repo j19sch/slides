@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Helping the new tester to get a running start</title>
+
+		<meta name="description" content="Geen testgevallen, maar testideeën">
+		<meta name="author" content="Joep Schuurkes">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple_01.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Geen testgevallen,<br>maar testideeën</h3>
+					<div style="margin-top:1.5em;display:flex; flex-direction:column">
+						<h5>Joep Schuurkes<br><span style="font-size:0.70em">@j19sch</span></h5>
+						<h6 style="margin-top:1em">TestNet Najaarsevenement 2014</h6>
+					</div>
+				</section>
+				<section>
+					<h3>allereerst: een vraag</h3>
+				</section>
+				<section>
+					<h3>testgeval</h3>
+				</section>
+				<section>
+					<h3>gestructureerd</h3>
+				</section>
+				<section>
+					<h3>herhaalbaar</h3>
+				</section>
+				<section>
+					<h3>onderhoudbaar</h3>
+				</section>
+				<section>
+					<h3>herbruikbaar</h3>
+				</section>
+				<section>
+					<h3>traceerbaar</h3>
+				</section>
+				<section>
+					<h3>waarom deze test?</h3>
+				</section>
+				<section>
+					<h3>informatieschuld</h3>
+				</section>
+				<section>
+					<h3>testidee</h3>
+				</section>
+				<section>
+					<img style="width:80%" data-src="TestgevallenTestideeen/powerpoint.png" alt="blank powerpoint">
+				</section>
+				<section>
+					<h3>testlog</h3>
+				</section>
+				<section>
+					<div style="text-align:left;margin-left:2em">
+						<h4 style="max-width:20em">“Om te componeren moet je noten schrijven, maar het vak van een componist is niet het schrijven van noten. Het vak van de componist is het concipiëren van de muziek.”</h4>
+						<div style="margin-left:1.5em">
+							<h5>- Edsger W. Dijkstra</h5>
+							<h6 style="margin-left:3em">Denken als disicpline ( Noorderlicht , VPRO, 2001)</h6>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div style="text-align:left;margin-left:3em">
+						<h3>vragen</h3>
+						<div style="margin-top:1.5em;margin-left:3em">
+							<h3>opmerkingen</h3>
+							<div style="margin-top:1.5em;margin-left:3em">
+								<h3>bedenkingen?</h3>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+				<h3>bedankt!</h3>
+				<div style="position:relative;top:3em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+						<h5 style="flex:10;">@j19sch</h5>
+						<h5 style="flex:8;">testingcurve.wordpress.com</h5>
+					</div>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				slideNumber: false,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transitionspeed: 'fast',
+				
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
