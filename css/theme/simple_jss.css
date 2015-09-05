@@ -54,16 +54,16 @@ body {
 
 .reveal h4 {
   font-size: 1em; }
-  
+
 .reveal h5 {
   font-size: 0.8em; }
-  
+
 .reveal h6 {
   font-size: 0.65em; }
 
 .reveal h1 {
   text-shadow: none; }
-  
+
  .reveal h3h {
   margin: 0 0 0 0;
   color: #000;
@@ -76,12 +76,13 @@ body {
   text-shadow: none;
   word-wrap: break-word;
   position:relative;
-  top:-100px } 
+  top:-100px }
 
 /*********************************************
  * OTHER
  *********************************************/
 .reveal p {
+  font-size: 0.25em;
   margin: 20px 0;
   line-height: 1.3; }
 
@@ -106,7 +107,7 @@ body {
 
 .reveal ul {
   list-style: none; }
-  
+
  .reveal li:before {
 	content:"·";
 	font-size:36px;
@@ -206,14 +207,16 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #00008B;
+  /*color: #00008B;*/
+  color: #e7ad52;
   text-decoration: none;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
   transition: color 0.15s ease; }
 
 .reveal a:hover {
-  color: #0000f1;
+  color: #f3d7ac;
+  /*color: #0000f1;*/
   text-shadow: none;
   border: none; }
 

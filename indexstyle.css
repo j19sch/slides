@@ -12,7 +12,8 @@ pres {
 	margin-top:1.5em;
 	margin-bottom:1.5em;
 	padding-left:1em;
-	display:block
+	display:block;
+	width:32em;
 }
 
 title {
@@ -30,7 +31,7 @@ talk {
 note {
 	margin-left: 1em;
 	padding-bottom: 2em;
-	font-size: 1em;
+	font-size: 0.9em;
 	font-style: oblique;
 }
 
@@ -40,5 +41,4 @@ a:link, a:visited {
 
 a:hover, a:active {
 	color: #666699;
-
 }
