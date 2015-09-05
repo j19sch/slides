@@ -4,8 +4,13 @@ body {
 	background-color: #fff;
 }
 
+h1 {
+	margin-bottom: 0.2em;
+}
+
 pres {
-	margin-bottom:2em;
+	margin-top:1.5em;
+	margin-bottom:1.5em;
 	padding-left:1em;
 	display:block
 }
@@ -20,6 +25,13 @@ title {
 talk {
 	padding-left:2em;
 	display: block;
+}
+
+note {
+	margin-left: 1em;
+	padding-bottom: 2em;
+	font-size: 1em;
+	font-style: oblique;
 }
 
 a:link, a:visited {
