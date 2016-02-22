@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>from CDT principles to practice - a model</title>
+
+	<meta name="description"
+		content="It seems that when you present the seven principles of context-driven testing to anyone with some experience in IT, they agree with all seven of them. And yet not all of these people are context-driven. And even if you are context-driven, bridging the gap from principles to practice is hard. For instance, what are the practical implications of 'Projects unfold over time in ways that are often not predictable.'? After struggling with this myself, I managed to bridge this gap by creating my own model, my own way to express what context-driven testing is. This model consists of Tools, Process, Information, Value and People. While it does capture the philosophical underpinnings of context-driven testing, it connects these to what we see and do in our daily life as testers. A simple example is how the model distinguishes the tool 'document' from the information it may communicate during the process of reading. And while I wouldn't claim that my model magically solves the problem with the principles I described above, I do think it can be a valuable tool in moving from context-driven principle(s) to practice. Although the best way would probably be people creating their own models, like I have. Encouraging people to do so, is most definitely a secondary purpose of my talk.
+">
+	<meta name="author" content="Joep Schuurkes">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="css/viptp.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<img style="width:37%;height:37%; margin-bottom:1.4em" data-src="viptp/CC-2016_Logo.png" alt="CoCo logo">
+				<h2>from CDT principles to practice<br>a model</h2>
+				<div style="margin-top:1.3em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+					<h5 style="margin-left:2em">Joep Schuurkes<br>@j19sch</h5>
+					<img style="width:16%;height:16%;margin-right:1.5em" data-src="viptp/Mendix_Logo.png" alt="Mendix logo">
+				</div>
+				<aside class="notes">CopenhagenContext, February 26th 2016, 10:30 - 11:15</aside>
+			</section>
+			<section>
+				<h4>the 7 principles of context-driven testing</h4>
+				<ol>
+					<li>The value of any practice depends on its context.
+					<li>There are good practices in context, but there are no best practices.</li>
+					<li>People, working together, are the most important part of any project’s context.</li>
+					<li>Projects unfold over time in ways that are often not predictable.</li>
+					<li>The product is a solution. If the problem isn’t solved, the product doesn’t work.</li>
+					<li>Good software testing is a challenging intellectual process.</li>
+					<li>Only through judgment and skill, exercised cooperatively throughout the entire project, are we able to do the right things at the right times to effectively test our products.</li>
+				</ol>
+				<aside class="notes"><ul>
+					<li>revisiting the principles</li>
+					<li>rethinking everything for this talk</li>
+					<li>is strength and weakness of these principles</li>
+					<li>my own model, own codification of my current understanding</li>
+				</ul></aside>
+			</section>
+			<section>
+				<h2>testing is</h2>
+				<h2>an information problem</h2>
+				<h2 class="fragment">a people problem</h2>
+				<aside class="notes"><ul>
+					<li>information problem
+						<ul>
+						<li>testing: investigating a product to analyze it</li>
+						<li>which questions to ask</li>
+						<li>how to ask them</li>
+						<li>how to evaluate the answer</li>
+						</ul>
+					</li>
+					<li>people problem
+						<ul>
+						<li>always a people problem (Weinberg)</li>
+						<li>more about that later</li>
+						</ul>
+					</li>
+				</ul></aside>
+			</section>
+			<section>
+				<h2>information</h2>
+				<h2>process</h2>
+				<h2>tools</h2>
+				<aside class="notes"><ul>
+					<li>testing: investigating a product to analyze it</li>
+					<li>philosophy disclaimer: epistemic complexity</li>
+					<li>thing / event / thought</li>
+					<li>e.g. what's happening here right now</li>
+					<li>Kant - Schopenhauer</li>
+					<li>testing stuff
+						<ul>
+						<li>T: test design techniques, scrum board, docs</li>
+						<li>P: analyzing, modelling, reporting</li>
+						<li>I: test plan, test ideas, models</li>
+						</ul>
+					</li>
+					<li>CDT stuff
+						<ul>
+						<li>reqs (I) vs reqs doc(T)</li>
+						<li>check(T) vs test(P)</li>
+						<li>tacit vs implicit knowledge</li>
+						<li>models, heuristics, fallible oracles</li>
+						<li>philosophy of science</li>
+						<li>test automation: T or P?</li>
+						</ul>
+					</li>
+				</ul></aside>
+			</section>
+			<section>
+				<h2>value</h2>
+				<h2>information</h2>
+				<h2>process</h2>
+				<h2>tools</h2>
+				<aside class="notes"><ul>
+					<li>quality: value to a person who matters</li>
+					<li>value -> direction, purpose, testing mission</li>
+					<li>testing: use tools(T) to do stuff(P) to provide valuable(V) information(I)</li>
+					<li>valuable information vs information about value</li>
+					<li>CDT stuff
+						<ul>
+						<li>testing mission</li>
+						<li>metrics not valid, dangerous</li>
+						</ul>
+					</li>
+				</ul></aside>
+			</section>
+			<section>
+				<h2>from tools to value</h2>
+				<h3>or</h3>
+				<h2>from value to tools?</h2>
+				<aside class="notes"><ul>
+					<li>factory/CD school: tools -> value</li>
+					<li>CDT: value -> tools</li>
+					<li>CDT stuff
+						<ul>
+						<li>test automation vs automation in testing</li>
+						<li>heuristics, testing as wicked problem</li>
+						<li>skills and craftsmanship</li>
+						<li>responsibility, empowerment</li>
+						<li>concept of schools: value -> tools</li>
+						</ul>
+					</li>
+				</ul></aside>
+			</section>
+			<section>
+				<h2>and what about people?</h2>
+				<aside class="notes"><ul>
+					<li>T/P/I -> human</li>
+					<li>V -> human</li>
+					<li>people problem</li>
+					<li>princ3: people working together</li>
+					<li>CDT stuff
+						<ul>
+						<li>social sciences</li>
+						<li>but less than I hope, more focus on information problem</li>
+						<li>Satir interaction model: intake, meaning, significance, response</li>
+						<li>PSL</li>
+						<li>humane aspect, people are of value</li>
+						<li>integrity, reputation</li>
+						</ul>
+					</li>
+					<li>interests me more and more, agile, scrum master</li>
+				</ul></aside>
+			</section>
+			<section>
+				<img style="width:55%;height:55%" data-src="viptp/VIPTP.png" alt="Value-Information-Process-Tools-People">
+			</section>
+			<section>
+				<h4>the 7 principles of context-driven testing</h4>
+				<ol>
+					<li>The value of any practice depends on its context.
+					<li>There are good practices in context, but there are no best practices.</li>
+					<li>People, working together, are the most important part of any project’s context.</li>
+					<li>Projects unfold over time in ways that are often not predictable.</li>
+					<li>The product is a solution. If the problem isn’t solved, the product doesn’t work.</li>
+					<li>Good software testing is a challenging intellectual process.</li>
+					<li>Only through judgment and skill, exercised cooperatively throughout the entire project, are we able to do the right things at the right times to effectively test our products.</li>
+				</ol>
+				<aside class="notes"><ul>
+					<li>my model</li>
+					<li>the principles</li>
+					<li>you tell me</li>
+					<li>AND: how would you cofify your understanding?</li>
+				</ul></aside>
+			</section>
+			<section>
+				<h3>thank you!</h3>
+				<div style="position:relative;top:3em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+					<h6 style="flex:4;">j19sch.github.io</h6>
+					<h6 style="flex:6;">testingcurve.wordpress.com</h6>
+					<h6 style="flex:4;">@j19sch</h6>
+				</div>
+			</section>
+			<section>
+				<h4>main points of this talk</h4>
+				<ul>
+					<li>distinguish tools, from process, from information</li>
+					<li>work from value to tools</li>
+					<li>people are of value</li>
+					<li>find your own way to express</li>
+				<ul>
+				<aside class="notes">documentation is where information goes to die</aside>
+			</section>
+			<section>
+				<h4>The danger with codifying method as tools is that by ignoring context it obviates the requirement to understand the problem.<br> - John Seddon</h4>
+			<aside class="notes">https://twitter.com/hemppah/status/618378496168095744, full quote: The danger with codifying method as tools is that by ignoring the all-important context it obviates the first requirement to understand the problem, and, more importantly, to understand and articulate the problem from a systems perspective. - Freedom from Command and Control: Rethinking Management for Lean Service By John Seddon
+			</section>
+			<section>
+				<h4>testing is a wicked problem</h4>
+				<ul>
+					<li>The problem is not understood until after the solution is found.</li>
+					<li>Wicked problems have no stopping rule.</li>
+					<li>Solutions to wicked problems are not right/wrong, but better/worse.</li>
+					<li>Problems and symptopms are hard to separate - every problem is a symptom.</li>
+					<li>Every wicked problem is essentially novel and unique.</li>
+					<li>There is no exhaustively describale set of solutions or permissible operations.</li>
+				</ul>
+				<p>source: James Lynsday</p>
+			</section>
+			<section>
+				<h4>main philospical influences on this talk</h4>
+				<ul>
+					<li>Hume: empiricism</li>
+					<li>Schopenhauer: world as representation</li>
+					<li>Levinas: ethics before ontology</li>
+					<li>Kant: never treat others as mere means</li>
+					<li>Kant: Enlightenment is man's emergence from his self-imposed nonage.</li>
+				<ul>
+			</section>
+			<section>
+				<p>The world is my representation": this is a truth valid with reference to every living and knowing being, although man alone can bring it into reflective, abstract consciousness. If he really does so, philosophical discernment has dawned on him. It then becomes clear and certain to him that he does not know a sun and an earth, but only an eye that sees a sun, a hand that feels an earth; that the world around him is there only as representation, in other words, only in reference to another thing, namely that which represents, and this is himself.</p>
+				<p>The world as will and representation - Arthur Schopenhauer</p>
+			</section>
+			<section>
+				<p>Enlightenment is man's emergence from his self-imposed nonage. Nonage is the inability to use one's own understanding without another's guidance. This nonage is self-imposed if its cause lies not in lack of understanding but in indecision and lack of courage to use one's own mind without another's guidance. Dare to know! (Sapere aude.) "Have the courage to use your own understanding," is therefore the motto of the enlightenment.</p>
+				<p>What is Enlightenment? - Immanuel Kant</p>
+			</section>
+			<section>
+				<p>Computers and their software are two things. As collections of interacting cogs they must be ‘checked’ to make sure there are no missing teeth and the wheels spin together nicely. Machines are also ‘social prostheses’, fitting into social life where a human once fitted. It is a characteristic of medical prostheses, like replacement hearts, that they do not do exactly the same job as the thing they replace; the surrounding body compensates.</p>
+				<p>Contemporary computers cannot do just the same thing as humans because they do not fit into society as humans do, so the surrounding society must compensate for the way the computer fails to reproduce what it replaces. This means that a complex judgment is needed to test whether software fits well enough for the surrounding humans to happily ‘repair’ the differences between humans and machines. This is much more than a matter of deciding whether the cogs spin right.</p>
+				<p>Harry Collins - http://www.developsense.com/blog/2014/03/harry-collins-motive-for-distinctions/</p>
+			</section>
+			
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: true,
+			slideNumber: false,
+			history: true,
+			center: true,
+
+			// test aspect ratio 4:3
+			//width: 1024,
+			//height: 768,
+
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+			transitionspeed: 'fast',
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+
+		</script>
+
+	</body>
+	</html>
