@@ -6,6 +6,7 @@ body {
 
 h1 {
 	margin-bottom: 0.2em;
+	font-size:2.0em
 }
 
 pres {
@@ -35,6 +36,7 @@ note {
 	font-size: 0.9em;
 	font-style: oblique;
 	display: block;
+	width:32em;
 }
 
 a:link, a:visited {
