@@ -25,14 +25,16 @@ title {
 
 talk {
 	padding-left:2em;
+	font-size: 1.0em;
 	display: block;
 }
 
 note {
 	margin-left: 1em;
-	padding-bottom: 2em;
+	padding-bottom: 0.1em;
 	font-size: 0.9em;
 	font-style: oblique;
+	display: block;
 }
 
 a:link, a:visited {
