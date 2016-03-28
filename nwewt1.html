@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Regression testing, not sure if I'd say we do that...</title>
+
+	<meta name="description"
+		content="NWEWT 1 - One of the main responsibilities of my team is our online portal, which consists of several applications. In my talk I will describe this portal and more importantly our way of working:
+1) complete user story;
+2) combine user stories into a release;
+3) test the release;
+4) deploy the release.
+
+There are parts of this process one could label as 'regression testing' and some of my teammates do. I myself, however, try to avoid using it more and more. There are several reasons for this, but the main one is that 'regression testing' has so little meaning. It does not specify a quality attribute as for instance security testing, neither does it specify an architectural scope as for instance integration testing. Rather its meaning depends on the models we have about the impact of the changes we made, on the entire product.
+And interestingly enough, no one seems to mind. Conversations about regression testing seem to be limited to: 'What are you doing?' 'Regression testing.' 'Ok, carry on.' It's almost like a Jedi mind trick...
+
+And that's the claim I would like to present in my experience report: for every activity in my team's process that could be labeled as 'regression testing', there is a more descriptive label. And we should use that better label.">
+	<meta name="author" content="Joep Schuurkes">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="css/nwewt1.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>regression testing</h1><h2>not sure if I'd say we do that...</h2>
+				<div style="display:flex;flex-wrap:nowrap;justify-content:center;margin-top:1em">
+					<h5 style="margin-right:1em;margin-bottom:0em">NWEWT 1</h5>
+					<h5 style="margin-left:1em;margin-bottom:0em">1-3 April 2016, Liverpool, UK</h5>
+				</div>
+				<img src="nwewt1/nwewt-logo.png" alt="nwewt logo" height="35%" width="35%" style="margin-top:0.1em">
+				<aside class="notes">I try not to use the term regression testing, because I don't know what it means anymore.
+					Hi, my name is Joep and I have lost the meaning of regression testing.
+				</aside>
+			</section>
+			<section>
+				<div style="display:flex;flex-wrap:nowrap;justify-content:space-around">
+					<img src="nwewt1/Mendix_Logo.png" alt="Mendix logo" height="35%" width="35%" style="margin-top:0.1em;margin-bottom:0.1em">
+					<h2 style="margin-top:0.1em;margin-bottom:0.1em">RAD PaaS</h2>
+				</div>
+			</section>
+			<section>
+				<h2>the modeler</h2>
+				<h2>the CloudPortal</h2>
+			</section>
+			<section>
+				<h2>the Portal</h2>
+				<h4>Sign up</h4>
+				<h4>Buzz</h4>
+				<h4>Capture</h4>
+				<h4>Template browser</h4>
+				<aside class="notes">several Mx apps</aside>
+			</section>
+			<section>
+				<h3>our process</h3>
+				<ol style="width:15em">
+					<li>build the user story</li>
+					<li>combine user stories into release</li>
+					<li>test the release</li>
+					<li>deploy the release</li>
+				</ol>
+			</section>
+			<section>
+				<h3>user story testing</h3>
+				<h4>focus:<br>current product plus user story</h4>
+				<aside class="notes">If the feature as such works, but breaks something else, does it work? Explain that to the PO!
+					includes: unit testing (MFs, Java), service tests, exploratory testing, post-done CI on Jenkins (unit tests)
+				</aside>
+			</section>
+			<section>
+				<h3>release testing</h3>
+				<h4>focus:<br>to-be-released product</h4>
+				<aside class="notes">includes: CI on Jenkins (unit tests), service tests, quick feature tests, new user smoke tests</aside>
+			</section>
+			<section>
+				<h3>why our release testing<br><span class="uline">is</span><br>purely regression testing</h3>
+			</section>
+			<section>
+				<h3><em>And we need to do regression testing!</em></h3>
+			</section>
+			<section>
+				<h3><em>Let's automate regression testing!</em></h3>
+			</section>
+			<section>
+				<h3>regression testing does not refer to</h3>
+				<h4 class="fragment">architectural scope</h4>
+				<h4 class="fragment">quality attributes</h4>
+				<h4 class="fragment">depth of coverage</h4>
+				<aside class="notes">
+					architectural scope: unit testing, service testing
+					quality attributes: usability, functionality (or behavior)
+					depth of coverage: smoke test, sanity check
+				</aside>
+			</section>
+			<section>
+				<h3>regression testing does refer to</h3>
+				<h4 class="fragment">our understanding of the product we test</h4>
+				<aside class="notes">
+					Testing refactored code: regression or progression testing?
+					Testing a workflow with a change in one step: regression or progression testing?
+				</aside>
+			</section>
+			<section>
+				<h1>I invoke the relative rule!</h1>
+				<aside class="notes">For any abstract X, X is X to some person, at some time.</aside>
+			</section>
+			<section>
+				<h3>thank you!</h3>
+			</section>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: true,
+			slideNumber: false,
+			history: true,
+			center: true,
+
+			// test aspect ratio 4:3
+			//width: 1024,
+			//height: 768,
+
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+			transitionspeed: 'fast',
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+
+		</script>
+
+	</body>
+	</html>
