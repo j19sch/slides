@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Test automation in three different ways</title>
+
+	<meta name="description"
+		content="The software testing community is filled with people with a variety of backgrounds. Some of us have a degree in software engineering or similar and some of us, like me, don't. (Philosophy, if you want to know.) For this second group of people getting started with test automation may seem like a daunting task. It could very well be you haven't written a line of code in your life. Yet it is an area you have some knowledge about: you work in IT, you talk to developers, you praboably have read some blog posts about automation in testing. And yet... where and how to start? You seem to be missing that one particular piece of knowledge that would set you on your way.
+
+In my past three jobs I was involved in test automation in three different ways: from having a test automation engineer in the team, to doing it all by byself, to collaborating with the developers in my team. Each time I learned different things. Some lessons were crucial to be able to tackle the problems in the next job. Others I wished I had learned sooner, because I really could have used them. And although I picked up some technical knowledge and skills, the most important lessons were about myself, about my colleagues, and about how I interacted with them.
+
+So in this talk I would like to share my journey into test automation with you. And the focus won't be on the tools, the frameworks and the best practices. It will be on the people.">
+	<meta name="author" content="Joep Schuurkes">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="css/ntd2016.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div style="display:flex;flex-wrap:nowrap;justify-content:space-around;align-items:center">
+					<h5>2 June 2016</h5>
+					<img style="width:17%;height:17%" data-src="ntd2016/ntd2016_logo.png" alt="Nordic Testing Days 2016">
+					<h5>Tallinn, Estonia</h5>
+				</div>
+				<h1>test automation<br>in three different ways</h1>
+				<div style="margin-top:1.2em;display:flex;flex-wrap:nowrap;justify-content:space-around;align-items:center">
+					<h5>Joep Schuurkes<br>@j19sch</h5>
+					<img style="width:17%;height:17%" data-src="ntd2016/Mendix_Logo.png" alt="Mendix">
+				</div>
+			</section>
+			<section>
+				<h2>the first story</h2>
+			</section>
+			<section>
+				<h1 class="allcaps">collaborate</h1>
+			</section>
+			<section>
+				<h2>the second story</h2>
+			</section>
+			<section>
+				<h1 class="allcaps">just begin</h1>
+			</section>
+			<section>
+				<h2>the third story</h2>
+			</section>
+			<section>
+				<h1 class="allcaps">learn</h1>
+			</section>
+			<section>
+				<h3>Just begin,</h3><h3 class="fragment">engage with people,</h3><h3 class="fragment">and you'll find yourself<br>with help soon enough.</h3>
+			</section>
+			<section>
+				<h4>thank you!</h4>
+				<div style="position:relative;top:3em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+					<h5 style="flex:4;">j19sch.github.io</h5>
+					<h5 style="flex:6;">testingcurve.wordpress.com</h5>
+					<h5 style="flex:4;">@j19sch</h5>
+				</div>
+			</section>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: true,
+			slideNumber: false,
+			history: true,
+			center: true,
+
+			// test aspect ratio 4:3
+			//width: 1024,
+			//height: 768,
+
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+			transitionspeed: 'fast',
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+
+		</script>
+
+	</body>
+	</html>
