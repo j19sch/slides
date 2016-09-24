@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>How this tester learned to write code</title>
+
+	<meta name="description"
+		content="Every few months the same old question pops up: Should testers learn how to code? And I don't think they do. You can spend a full career in testing, improving your skills every step along the way, without ever feeling the need or want to add coding to your skill set. However, if you are thinking about learning how to write code, I'd like to share a story with you, the story about how I learned. And make no mistake, I'm not claiming to be a developer or a software engineer, neither do I claim I can code well. What I can do, is write code that's good enough for my needs. And that's a perfectly valid achievement on its own.
+
+My story will begin with the command line (Welcome, this is MS-DOS, this is an IRQ conflict.), will meander via shell scripting and VBA (the horror, the horror) to more 'serious' languages, and will end with a developer saying that reading my code made his eyes bleed. (To be fair, he then spent an afternoon teaching me about clean code.)
+
+More important than the story itself, are some reflections and some lessons I learned. There will be simple practical advice about interesting resources, about version control. There will be an answer to 'Why should I learn how to program as a tester?' There will be a list of things you really don't need to learn, like what's the deal with those programming paradigms Wikipedia lists for every programming language. And, the most important part, I will show how your testing skills give you a great advantage when learning how to code.">
+	<meta name="author" content="Joep Schuurkes">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="css/eurostar2016.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-image=eurostar2016/Title_Mx.jpg data-background-size=contain>
+				<h1 class="title-slide" style="text-align:left; margin-left:1em; text-indent:-1em">How this tester learned<br>to write code</h1>
+				<h4 class="title-slide" style="text-align:left; margin-top:0.6em">Joep Schuurkes</h4>
+			</section>
+			<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+				<h2>a little bit about myself</h2>
+				<h4>1987: Apple Macintosh at home</h4>
+				<h4>1995-1999: little math in high school</h4>
+				<h4>1999-2004: degree in Philosophy</h4>
+				<h4>2006: tester 'by accident'</h4>
+				<h4>2016: scrum master</h4>
+			</section>
+			<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+				<h2>languages I have used</h2>
+					<div style="display:flex;flex-wrap:nowrap;justify-content:space-around">
+						<span>
+						<h4>bash</h4>
+						<h4>java</h4>
+						<h4>javascript</h4>
+						<h4>php</h4>
+						<h4>perl</h4>
+					</span>
+					<span>
+						<h4>python</h4>
+						<h4>php</h4>
+						<h4>SQL</h4>
+						<h4>typescript</h4>
+						<h4>VBA for Excel</h4>
+					</span>
+					</div>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<h2>more about myself</h2>
+			<h4>199?: Windows PC at home</h4>
+			<h4>1999: pine, SUSE linux</h4>
+			<h4>1999-2004: formal logic</h4>
+			<h4>2004: LaTeX, debian linux</h4>
+			<h4>2005: python tutorial</h4>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<h2>things I like</h2>
+			<h4>ASCII dungeon crawlers</h4>
+			<h4>i3 window manager</h4>
+			<h4>vim</h4>
+			<h4>this slidedeck in html, css and javascript<br>and it's on GitHub</h4>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<h3>The value of<br>another's experience<br>is to give us hope,<br>not to tell us how<br>or whether to proceed.</h3><h5>- Peter Block</h2>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<h1>the story of how I got started</h1>
+			<aside class="notes">
+					Code: command-line -> sed -> perl
+					What: start small
+					Why: make life easier, connect with developers
+					"The Linux shell is a secret gateway into programming skills." @JesseTAlford #EuroTestConf https://twitter.com/FriendlyTester/status/698108794069524481
+				</aside>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<h>the command-line as gateway drug to programming</h3>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<h1>the story of how I impressed myself for the first time</h1>
+			<aside class="notes">
+					Code: VBA for Excel
+					What: small step/test/repeat, dive in
+					Why: make life easier
+					@ThePracticalDev: O RLY? Changing stuff and seeing what happens
+				</aside>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<h1>the story of how I actually started learning</h1>
+			<aside class="notes">
+					Code: service tests in python
+					What: clean code (name, structure, refactor), IDE
+					Why: learn about sw development as a skill
+					Draw to circles, draw the rest of the owl. https://twitter.com/DesignUXUI/status/490179377099845632
+				</aside>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<h1>the story of where I am now</h1>
+			<aside class="notes">
+					Code: trello-cycle-times, git, AWS
+					What: version control, find a project
+					Why: fun, learn about tech
+				</aside>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<h1>thank you</h1>
+			<aside class="notes"></aside>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+				<h2>Why learn</h2>
+				<h5>connect with developers: Rabo, perl, SHA</h5>
+				<h5>make life easier: NN, xml templates</h5>
+				<h5>learn about sw development as a skill: python refactor</h5>
+				<h5>learn about technology: ???</h5>
+				<h5>read code: TRIM() PL/SQL</h5>
+				<h5>understand where bugs live: TRIM() PL/SQL</h5>
+				<h5>because it's fun: lose track of time</h5>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+				<h2>Learned what</h2>
+				<h5>dive in: VBA for Excel???</h5>
+				<h5>use an IDE: service tests
+				<h5>start small: command-line, bash, perl</h5>
+				<h5>git: NN, xml template; started to use ???</h5>
+				<h5>small step, test, repeat: Rabo, VBA for Excel</h5>
+				<h5>refactor, name, function/method as structure: python refactor, clean code</h5>
+				<h5>find a project: trello cycle times, PgObjgenerator, Selenium, service tests, python tutorial</h5>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+				<h2>Testing super-powers when learning to code</h2>
+				<h5>being ok with not knowing, cf java for testers: ???</h5>
+				<h5>being ok with never knowing, cf python is a blah blah: ???</h5>
+				<h5>try out and learn something = testing: VBA for Excel</h5>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+				<h2>cool stuff to look at</h2>
+				<h5>java for testers</h5>
+				<h5>github or bitbucket</h5>
+				<h5>hackerrank, codeacademy</h5>
+				<h5>TIS-100, Human Resource Machine, Factorio</h5>
+				<h5>book: Code</h5>
+		</section>
+			<section>
+				<h1>presentation title</h1>
+				<div style="margin-top:1.2em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+					<h5>event</h5>
+					<h5>date</h5>
+				</div>
+			</section>
+			<section>
+				<h3>thank you!</h3>
+			</section>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: true,
+			slideNumber: false,
+			history: true,
+			center: true,
+
+			// test aspect ratio 4:3
+			//width: 1024,
+			//height: 768,
+
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+			transitionspeed: 'fast',
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+
+		</script>
+
+	</body>
+	</html>
