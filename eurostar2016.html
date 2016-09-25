@@ -23,7 +23,7 @@ More important than the story itself, are some reflections and some lessons I le
 	<link rel="stylesheet" href="css/eurostar2016.css" id="theme">
 
 	<!-- Code syntax highlighting -->
-	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/eurostar2016_code.css">
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -39,7 +39,7 @@ More important than the story itself, are some reflections and some lessons I le
 		<div class="slides">
 			<section data-background-image=eurostar2016/Title_Mx.jpg data-background-size=contain>
 				<h1 class="title-slide" style="text-align:left; margin-left:1em; text-indent:-1em">How this tester learned<br>to write code</h1>
-				<h4 class="title-slide" style="text-align:left; margin-top:0.6em">Joep Schuurkes</h4>
+				<h4 class="title-slide" style="text-align:left; margin-top:0.6em">Joep Schuurkes <span style="margin-left:1em;font-size:0.75em">@j19sch</span></h4>
 			</section>
 			<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
 				<h2>a little bit about myself</h2>
@@ -70,24 +70,32 @@ More important than the story itself, are some reflections and some lessons I le
 		</section>
 		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
 			<h2>more about myself</h2>
-			<h4>199?: Windows PC at home</h4>
-			<h4>1999: pine, SUSE linux</h4>
+			<h4>1995: Windows PC at home</h4>
+			<h4>1999: SUSE linux</h4>
 			<h4>1999-2004: formal logic</h4>
-			<h4>2004: LaTeX, debian linux</h4>
+			<h4>2004: debian linux, LaTeX</h4>
 			<h4>2005: python tutorial</h4>
 		</section>
 		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
 			<h2>things I like</h2>
+			<h4>pine</h4>
 			<h4>ASCII dungeon crawlers</h4>
-			<h4>i3 window manager</h4>
 			<h4>vim</h4>
 			<h4>this slidedeck in html, css and javascript<br>and it's on GitHub</h4>
+			<aside class="notes">and I like i3wm but that's not easy to convey in a picture</aside>
 		</section>
 		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
-			<h3>The value of<br>another's experience<br>is to give us hope,<br>not to tell us how<br>or whether to proceed.</h3><h5>- Peter Block</h2>
+			<h3>The value of another's experience<br>is to give us hope,<br>not to tell us how or whether to proceed.</h3><h5>- Peter Block</h2>
 		</section>
 		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
-			<h1>the story of how I got started</h1>
+			<h2>four stories</h2>
+			<h4>how I got started</h4>
+			<h4>how I impressed myself for the first time</h4>
+			<h4>how I finally learned some dev skills</h4>
+			<h4>how I'm doing now</h4>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<h2>the story of how I got started</h2>
 			<aside class="notes">
 					Code: command-line -> sed -> perl
 					What: start small
@@ -96,10 +104,28 @@ More important than the story itself, are some reflections and some lessons I le
 				</aside>
 		</section>
 		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<pre><code data-trim data-noescape>
+while (<$tpl>) {
+  my $tplln = $_;
+  chomp $tplln;
+  foreach my $group (keys %sfile) {
+    if ($sfile{$group}[0] == $i) {
+      if (index ($tplln, $sfile{$group}[1]) != -1 && $sfile{$group}[2] eq 'skip') {
+        $tplln = "";
+      } else {
+        $tplln =~ s{$sfile{$group}[1]}{$sfile{$group}[2]};
+      }
+    }
+  }
+  print $req $tplln or die "Kan niet schrijven naar $req.";
+}
+			</code></pre>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
 			<h>the command-line as gateway drug to programming</h3>
 		</section>
 		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
-			<h1>the story of how I impressed myself for the first time</h1>
+			<h2>the story of how I impressed myself for the first time</h2>
 			<aside class="notes">
 					Code: VBA for Excel
 					What: small step/test/repeat, dive in
@@ -108,7 +134,27 @@ More important than the story itself, are some reflections and some lessons I le
 				</aside>
 		</section>
 		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
-			<h1>the story of how I actually started learning</h1>
+			<pre><code data-trim data-noescape>
+'Apply filter criteria on columns to be filterd
+Dim j As Integer
+For j = LBound(ArrColNames) To UBound(ArrColNames)
+  If InStr(ArrCritsRaw(j), ";") <> 0 Then
+  ' Multiple criteria present, so only select possible
+      Dim ArrSplit() As String
+      ArrSplit = Split(ArrCritsRaw(j), ";")
+      Selection.AutoFilter Field:=ArrColNames(j), Criteria1:=ArrSplit,
+			    Operator:=xlFilterValues
+  Else
+    ' Single criterium present, so select, deselect, empty, notempty,
+		' greater/smaller than possible
+      Selection.AutoFilter Field:=ArrColNames(j), Criteria1:=ArrCritsRaw(j),
+			    Operator:=xlFilterValues
+  End If
+Next j
+			</code></pre>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<h2>the story of how I finally<br>learned some dev skills</h2>
 			<aside class="notes">
 					Code: service tests in python
 					What: clean code (name, structure, refactor), IDE
@@ -117,16 +163,55 @@ More important than the story itself, are some reflections and some lessons I le
 				</aside>
 		</section>
 		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
-			<h1>the story of where I am now</h1>
+			<pre><code data-trim data-noescape>
+def test_create_new_app(app_name):
+  print "Creating project with name " + app_name
+
+  project_id = ProjectsAPI.create_new_app_sync(username, apikey, app_name)
+  print "Project with id " + str(project_id) + " created."
+
+  check_project_details_in_sprintr(project_id)
+  check_project_and_svnproperties_on_teamserver(project_id)
+  check_events_in_platform_analytics(project_id)
+
+def check_project_and_svnproperties_on_teamserver(projectid):
+  svnrepo_uri = teamserver_url + projectid
+
+  assert (teamserver.check_if_repository_exists(svnrepo_uri) is True)
+  assert (teamserver.check_if_repository_contains_mpr(svnrepo_uri, app_name) is True)
+  check_if_svn_properties_are_set(svnrepo_uri, projectid, app_name)
+  check_if_silent_conversion_svn_revision_property_is_set(svnrepo_uri)
+			</pre></code>
+		</section>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+			<h2>the story of how I'm doing now</h2>
 			<aside class="notes">
 					Code: trello-cycle-times, git, AWS
 					What: version control, find a project
 					Why: fun, learn about tech
-				</aside>
+			</aside>
 		</section>
 		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
-			<h1>thank you</h1>
-			<aside class="notes"></aside>
+			<pre><code data-trim data-noescape>
+def lambda_handler(event, context=None):
+  print "cycle times requested for %s" % str(event)
+
+  trelloclient = cl.init_trello_client()
+  trello_boards = extend_list_of_boards_with_board_ids(trelloclient, event)
+
+  post_cycle_times_table_for_requested_boards(trelloclient, trello_boards)
+
+def post_cycle_times_table_for_requested_boards(client, requested_boards):
+  for board in requested_boards:
+    cycle_times_table = create_cycletimes_table_for_trello_board(client, board)
+
+    if board["channel"]:
+      cl.send_to_slack(board["channel"], "```" + cycle_times_table + "```")
+    if board["stdout"]:
+      print cycle_times_table
+
+    print "done: board %s" % board["name"]
+			</pre></code>
 		</section>
 		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
 				<h2>Why learn</h2>
@@ -162,16 +247,13 @@ More important than the story itself, are some reflections and some lessons I le
 				<h5>TIS-100, Human Resource Machine, Factorio</h5>
 				<h5>book: Code</h5>
 		</section>
-			<section>
-				<h1>presentation title</h1>
-				<div style="margin-top:1.2em;display:flex;flex-wrap:nowrap;justify-content:space-around">
-					<h5>event</h5>
-					<h5>date</h5>
+		<section data-background-image=eurostar2016/Background.jpg data-background-size=contain>
+				<h2>thank you!</h2>
+				<div style="position:relative;top:1em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+					<h5>j19sch.github.io</h5>
+					<h5>@j19sch</h5>
 				</div>
-			</section>
-			<section>
-				<h3>thank you!</h3>
-			</section>
+		</section>
 		</div>
 
 		<script src="reveal.js/lib/js/head.min.js"></script>

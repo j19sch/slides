@@ -7,9 +7,9 @@ body { background: #fff; background-color: #fff; }
 
 .reveal h2 { font-size: 1.8em}
 
-.reveal h3 { font-size: 1.4em}
+.reveal h3 { font-size: 1.3em}
 
-.reveal h4 { font-size: 1.1em}
+.reveal h4 { font-size: 1.0em}
 .reveal h4.title-slide {color: #F0F1EB;}
 
 .reveal h5 { font-size: 0.8em}
@@ -17,3 +17,9 @@ body { background: #fff; background-color: #fff; }
 .reveal section img {
   box-shadow: none;
   border: none; }
+
+.reveal pre {
+  font-size: 0.5em;
+}
+
+.reveal pre code {overflow: hidden;}

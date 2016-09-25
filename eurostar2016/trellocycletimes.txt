@@ -1,0 +1,120 @@
+from decimal import Decimal
+import datetime
+
+import clients as cl
+import calculations as calc
+
+# ToDo: flag card if card was moved more than once to (To Be Released or Done)
+
+holidays = [datetime.date(2016, 1, 1),
+            datetime.date(2016, 3, 27), datetime.date(2016, 3, 28),
+            datetime.date(2016, 4, 27),
+            datetime.date(2016, 5, 5), datetime.date(2016, 5, 15), datetime.date(2016, 5, 16),
+            datetime.date(2016, 12, 25), datetime.date(2016, 12, 26),
+            datetime.date(2016, 6, 7), datetime.date(2016, 6, 8)]
+
+
+def compose_cycle_time_bar(cycle_days, done, false_start, impediment, card_name):
+    cycle_time_days = cycle_days * "#" if not false_start else "!" + (cycle_days * "#")[1:]
+
+    cycle_time_bar = "|" + cycle_time_days + "|" if done else "|" + cycle_time_days + "."
+    cycle_time_bar += " !" if impediment else ""
+
+    return cycle_time_bar.ljust(12) + card_name
+
+
+def create_cycletimes_table_for_trello_board(client, trello_board):
+    cycletimes_overview = [(trello_board["name"] + " cycle times"), "=-=-=-=-=-=-=-=-=-=-=-=-=-=-="]
+
+    cycle_times = []
+    cards_stuck_in_leftmost_column = []
+
+    board_from_trello = client.get_board(trello_board["id"])
+
+    impediment_labels = [label for label in board_from_trello.get_labels() if label.name.lower() in
+                         [impediment_label.lower() for impediment_label in trello_board["impediment-labels"]]]
+
+    for card in board_from_trello.open_cards():
+        current_state = card.get_list().name
+
+        if card.create_date.date() < (datetime.datetime.now().date() - datetime.timedelta(days=14))\
+                and current_state in trello_board["todo"]:
+            cards_stuck_in_leftmost_column.append(card.name)
+
+        card_has_impediment = any(label_id in card.idLabels for label_id in [label.id for label in impediment_labels])
+
+        if current_state in trello_board["doing"] + trello_board["done"]:
+
+            card_start_date = card.create_date.date()  # ToDo: breaks if card is copied instead of created
+
+            card_move_dates = card.listCardMove_date()
+
+            if not card_move_dates:
+                card_end_date = datetime.datetime.now().date()
+            else:
+                card_end_date = datetime.date(1, 1, 1)
+
+            for move_date in card_move_dates:
+                if move_date[0] in trello_board["todo"] and move_date[2].date() >= card_start_date:
+                    card_start_date = move_date[2].date()
+
+                if current_state in trello_board["done"]:
+                    if move_date[1] in trello_board["done"] and move_date[2].date() > card_end_date:
+                        card_end_date = move_date[2].date()
+                else:
+                    card_end_date = datetime.datetime.now().date()
+
+            card_done = current_state in trello_board["done"]
+
+            card_picked_up_counter = len(
+                [movedate for movedate in card_move_dates if movedate[0] in trello_board["todo"]])
+            card_false_start = card_picked_up_counter > 1
+
+            card_cycle_time = calc.calculate_cycle_time(card_start_date, card_end_date, holidays)
+            cycle_times.append(card_cycle_time)
+            cycletimes_overview.append(
+                compose_cycle_time_bar(card_cycle_time, card_done, card_false_start, card_has_impediment, card.name))
+
+    if cycle_times:
+        cycletimes_overview.append(
+            "\naverage cycle time: %s\n" % round((sum(cycle_times) / Decimal(len(cycle_times))), 2))
+
+    if cards_stuck_in_leftmost_column:
+        cycletimes_overview.append("Cards in Ready to pick up older than two weeks:")
+        cycletimes_overview.extend("- " + card for card in cards_stuck_in_leftmost_column)
+        cycletimes_overview.append("\n")
+
+    return "\n".join(cycletimes_overview)
+
+
+def post_cycle_times_table_for_requested_boards(client, requested_boards):
+    for board in requested_boards:
+        cycle_times_table = create_cycletimes_table_for_trello_board(client, board)
+
+        if board["channel"]:
+            cl.send_to_slack(board["channel"], "```" + cycle_times_table + "```")
+
+        if board["stdout"]:
+            print cycle_times_table
+
+        print "done: board %s" % board["name"]
+
+
+def extend_list_of_boards_with_board_ids(client, board_list):
+    available_boards = client.list_boards()
+
+    for board in board_list:
+        board["id"] = [available_board.id for available_board in available_boards if
+                       available_board.name == board["name"]][0]
+    return board_list
+
+
+def lambda_handler(event, context=None):
+    boards_from_event = event
+    print "cycle times requested for %s" % str(boards_from_event)
+
+    trelloclient = cl.init_trello_client()
+
+    boards_from_event = extend_list_of_boards_with_board_ids(trelloclient, boards_from_event)
+
+    post_cycle_times_table_for_requested_boards(trelloclient, boards_from_event)
