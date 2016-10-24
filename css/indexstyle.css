@@ -9,12 +9,27 @@ h1 {
 	font-size:2.0em
 }
 
+h2 {
+	font-size: 1.3em;
+	margin-top: 2.0em;
+	margin-left: 0.3em;
+	margin-bottom: -0.7em;
+	font-style: italic;
+}
+
 pres {
 	margin-top:1.5em;
 	margin-bottom:1.5em;
 	padding-left:1em;
 	display:block;
 	width:32em;
+}
+
+a.title {
+	display: block;
+	font-size: 1.2em;
+	padding-bottom:0.2em;
+	font-weight: bold;
 }
 
 title {
@@ -33,10 +48,13 @@ talk {
 note {
 	margin-left: 1em;
 	padding-bottom: 0.1em;
-	font-size: 0.9em;
-	font-style: oblique;
 	display: block;
 	width:32em;
+}
+
+.note {
+	font-size: 0.9em;
+	font-style: oblique;
 }
 
 a:link, a:visited {
