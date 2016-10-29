@@ -96,11 +96,11 @@ More important than the story itself, are some reflections and some lessons I le
 		</section>
 		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
 			<h2>some of the things I like</h2>
-			<img alt="vim" src="eurostar2016/vim.png" width="75%" height="75%">
+			<img alt="dcss" src="eurostar2016/crawl_minotaur_berzerker_01.PNG" width="70%" height="70%">
 		</section>
 		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
 			<h2>some of the things I like</h2>
-			<img alt="dcss" src="eurostar2016/crawl_minotaur_berzerker_01.PNG" width="70%" height="70%">
+			<img alt="vim" src="eurostar2016/vim.png" width="75%" height="75%">
 		</section>
 		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
 			<h2>some of the things I like</h2>
@@ -115,13 +115,12 @@ More important than the story itself, are some reflections and some lessons I le
 		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
 			<div style="display:flex;flex-wrap:nowrap;justify-content:center">
 				<div style="display: flex;align-items:center">
-					<h2>four stories</h2>
+					<h2>three stories</h2>
 				</div>
 				<div style="text-align:left; margin-left:2em">
 					<h4 class="fragment">how I got started</h4>
 					<h4 class="fragment">how I impressed myself for the first time</h4>
 					<h4 class="fragment">how I finally learned some dev skills</h4>
-					<h4 class="fragment">how I'm doing now</h4>
 				</div>
 			</div>
 		</section>
@@ -162,6 +161,7 @@ while (<$tpl>) {
 				<div style="margin-top:1.3em">
 					<h4 class="fragment" style="font-style: italic">what did I learn?</h4>
 					<h4 class="fragment" style="margin-left:3em">it starts with a small first step</h4>
+					<h4 class="fragment" style="margin-left:3em">I can do this</h4>
 				</div>
 			</div>
 		</section>
@@ -241,94 +241,45 @@ def check_project_and_svnproperties_on_teamserver(projectid):
 			<div style="text-align:left">
 				<h4 class="fragment" style="font-style: italic">why did I learn?</h4>
 				<h4 class="fragment" style="margin-left:3em">I was invited to</h4>
-				<h4 class="fragment" style="margin-left:3em">I wanted to write better code</h4>
+				<h4 class="fragment" style="margin-left:3em">I accepted the invitation</h4>
 				<div style="margin-top:1.3em">
 					<h4 class="fragment" style="font-style: italic">what did I learn?</h4>
 					<h4 class="fragment" style="margin-left:3em">clean code: naming, structuring, refactoring</h4>
-					<h4 class="fragment" style="margin-left:3em">use an IDE</h4>
+					<h4 class="fragment" style="margin-left:3em">developers have skills and heuristics too</h4>
 				</div>
 			</div>
 		</section>
 		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
-			<h2>the story of how I'm doing now</h2>
-			<aside class="notes">
-					Code: trello-cycle-times, git, AWS
-					What: version control, find a project
-					Why: fun, learn about tech
-			</aside>
-		</section>
-		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
-			<h4>Python <span class="snippet-year">(2016)</span></h4>
-			<pre><code data-trim data-noescape>
-def lambda_handler(event, context=None):
-  print "cycle times requested for %s" % str(event)
-
-  trelloclient = cl.init_trello_client()
-  trello_boards = extend_list_of_boards_with_board_ids(trelloclient, event)
-
-  post_cycle_times_table_for_requested_boards(trelloclient, trello_boards)
-
-def post_cycle_times_table_for_requested_boards(client, requested_boards):
-  for board in requested_boards:
-    cycle_times_table = create_cycletimes_table_for_trello_board(client, board)
-
-    if board["channel"]:
-      cl.send_to_slack(board["channel"], "```" + cycle_times_table + "```")
-    if board["stdout"]:
-      print cycle_times_table
-
-    print "done: board %s" % board["name"]
-			</pre></code>
-		</section>
-		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
-			<div style="text-align:left">
-				<h4 class="fragment" style="font-style: italic">why did I learn?</h4>
-				<h4 class="fragment" style="margin-left:3em">to be able to do what I wanted</h4>
-				<h4 class="fragment" style="margin-left:3em">for the fun of learning a new technology</h4>
-				<div style="margin-top:1.3em">
-					<h4 class="fragment" style="font-style: italic">what did I learn?</h4>
-					<h4 class="fragment" style="margin-left:3em">proper version control</h4>
-					<h4 class="fragment" style="margin-left:3em">you need a project</h4>
-				</div>
-			</div>
-		</section>
-		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
-			<h2>so to wrap up</h2>
+			<h1>to wrap up</h1>
 		</section>
 		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
 			<div style="display:flex;flex-wrap:nowrap;justify-content:center">
 				<div style="display: flex;align-items:center">
-					<h3>why learn</h3>
+					<h2>why learn</h2>
 				</div>
 				<div style="text-align:left; margin-left:2em">
-					<h4>connect with developers</h4>
-					<h4>make your life easier</h4>
-					<h4>read code and find/analyse bugs</h4>
-					<h4>get better at programming</h4>
-					<h4>learn about technology</h4>
-					<h4>and... to have fun</h4>
+					<h4 class="fragment">make your life easier</h4>
+					<h4 class="fragment">connect with developers</h4>
+					<h4 class="fragment">to have fun</h4>
 				</div>
+				<aside class="notes">make your life easier: read code and find/analyse bugs; get better at programming; learn about technology</aside>
 		</section>
 		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
 			<div style="display:flex;flex-wrap:nowrap;justify-content:center">
 				<div style="display: flex;align-items:center">
-					<h3>what to learn</h3>
+					<h2>what to learn</h2>
 				</div>
 				<div style="text-align:left; margin-left:2em">
-					<h4>start small</h4>
-					<h4>just dive in</h4>
-					<h4>small step, test, repeat</h4>
-					<h4>write clean code</h4>
-					<h4>use an IDE</h4>
-					<h4>use version control</h4>
-					<h4>find a project</h4>
+					<h4 class="fragment">start small and dive in</h4>
+					<h4 class="fragment">small step, test, repeat</h4>
+					<h4 class="fragment">write clean code</h4>
 				</div>
 		</section>
 		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
-			<h2>one more thing...</h2>
+			<h1>one more thing...</h1>
 		</section>
 		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
-			<h3>you have</h3><h1>two testing super-powers</h1><h3>that will help you</h3>
+			<h3 style="margin-bottom:5px">you have</h3><h1>two testing super-powers</h1><h3>that will help you</h3>
 		</section>
 		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
 			<div style="display:flex;flex-wrap:nowrap;justify-content:space-between"</div>
@@ -351,6 +302,40 @@ def post_cycle_times_table_for_requested_boards(client, requested_boards):
 				</div>
 				</div>
 			</div>
+		</section>
+		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
+			<h1>some places that helped me</h1>
+		</section>
+		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
+			<h2>the sites</h2>
+			<div style="position:relative;display:flex;flex-wrap:nowrap;justify-content:space-around">
+				<div style="margin:20px 60px 30px 60px;flex-grow:1;display:flex;align-items:center">
+						<img data-src=eurostar2016/codeacademy.png alt="CodeAcademy">
+				</div>
+				<div style="margin:20px 60px 30px 60px;margin-top:20pxflex-grow:1">
+					<img data-src=eurostar2016/hackerrank.png alt="HackerRank">
+				</div>
+			</div>
+		</section>
+		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
+			<h2>the books</h2>
+			<div style="position:relative;display:flex;flex-wrap:nowrap;justify-content:space-around">
+					<img style="width:30%;height:30%" data-src=eurostar2016/javafortesters.png alt="Java for Testers - Alan Richardson">
+					<img style="width:26%;height:26%" data-src=eurostar2016/code.png alt="Code - Charles Petzold">
+			</div>
+		</section>
+		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
+			<h2>the games</h2>
+			<div style="position:relative;display:flex;flex-wrap:nowrap;justify-content:space-around">
+				<div style="margin-left:20px;margin-right:20px;display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:space-around">
+					<img data-src=eurostar2016/humanresourcemachine.jpg alt="Human Resource Machine">
+					<img data-src=eurostar2016/tis-100.jpg alt="TIS-100">
+				</div>
+				<div style="margin-left:20px;margin-right:20px;display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:space-around">
+					<img data-src=eurostar2016/factorio.jpg alt="Factorio">
+				</div>
+			</div>
+
 		</section>
 		<section data-background-image=eurostar2016/Background_scaled.jpg data-background-size=contain>
 				<h2>thank you!</h2>
