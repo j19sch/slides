@@ -2,59 +2,76 @@ body {
 	font-family: 'News Cycle', serif;
 	background: #fff;
 	background-color: #fff;
+	width:32em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: normal;
+	margin: 0;
 }
 
 h1 {
-	margin-bottom: 0.2em;
 	font-size:2.0em
+	margin-bottom: 0.2em;
 }
 
 h2 {
-	font-size: 1.3em;
-	margin-top: 2.0em;
+	font-size: 1.4em;
+}
+
+h3 {
+	font-size: 1.1em;
+}
+
+h4 {
+	font-size: 1.0em;
+}
+
+h5 {
+	font-size: 0.9em;
+}
+
+.year {
+	margin-top: 1.5em;
 	margin-left: 0.3em;
-	margin-bottom: -0.7em;
+	margin-bottom: -0.8em;
 	font-style: italic;
 }
 
-pres {
+.presentation {
 	margin-top:1.5em;
 	margin-bottom:1.5em;
 	padding-left:1em;
 	display:block;
-	width:32em;
 }
 
-a.title {
+.title {
 	display: block;
-	font-size: 1.2em;
 	padding-bottom:0.2em;
 	font-weight: bold;
 }
 
-title {
-	display: block;
-	font-size: 1.2em;
-	padding-bottom:0.2em;
-	font-weight: bold;
+.co-presenter {
+	font-style: italic;
 }
 
-talk {
+.talk {
 	padding-left:2em;
-	font-size: 1.0em;
 	display: block;
-}
-
-note {
-	margin-left: 1em;
-	padding-bottom: 0.1em;
-	display: block;
-	width:32em;
 }
 
 .note {
-	font-size: 0.9em;
 	font-style: oblique;
+}
+
+h5.note {
+	margin-left: 1em;
+	padding-bottom: 0.1em;
+	display: block;
 }
 
 a:link, a:visited {
