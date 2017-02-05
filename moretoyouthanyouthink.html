@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>There's more to you than you think</title>
+
+	<meta name="description"
+		content="When faced with a challenge, often there are things that hold us back. They slow us down or they keep us from trying at all. And more often than we would like (or think), we ourselves are what is holding us back. We imagine problems where there are none, and by doing so create an actual problem for ourselves. We limit ourselves, because… why actually?
+						In this talk I will share two stories. One is about my first attempt at test automation; the other one about how my understanding of agile has changed. And through these stories I will share what I’ve learned about self-imposed limitations and about overcoming them.">
+	<meta name="author" content="Joep Schuurkes">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="css/night_etc2017.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="css/night-etc2017-code.css">
+
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1 style="margin-bottom:0em">there's more to you</h1>
+				<h1 style="margin-bottom:0.1em">than you think</h1>
+				<h4>(there's all of you)</h4>
+				<div style="margin-top:2em;display:flex;flex-wrap:nowrap;justify-content:space-around;align-items:center">
+					<img class="etc-logo" style="width:15%;height:15%" data-src="ETC2017/etc-logo_130px.png" alt="ETC Banner">
+					<div>
+						<h6 style="margin-bottom:0">Joep Schuurkes<br>@j19sch</h6>
+						<h6 style="margin-top:0.2em;margin-bottom:0em">slides at https://j19sch.github.io</h6>
+					</div>
+					<img style="width:20%;height:20%" data-src="ETC2017/Mendix_Logo_white.png" alt="Mendix">
+				</div>
+			</section>
+			<section>
+				<h4>[ picture of me in a dress shirt ]</h4>
+			</section>
+			<section>
+				<h2>and yet I didn't</h2>
+			</section>
+			<section>
+				<h2>self-imposed limitation</h2>
+			</section>
+			<section>
+				<h1>survival rules</h1>
+			</section>
+			<section>
+				<div style="display:flex;flex-wrap:nowrap;justify-content:center;align-items:flex-start">
+					<div class="fragment" data-fragment-index="1" style="margin-right:1em">
+						<img style="width:100%;height:100%;margin-bottom:0px" data-src="ETC2017/VirginiaSatir4.jpg" alt="Virginia Satir">
+						<h4 style="margin-bottom:5px">Virginia Satir</h4>
+						<h5>(1916-1988)</h5>
+					</div>
+					<div style="margin-left:1em">
+						<div style="text-align:left;display:flex;flex-wrap:nowrap;justify-content:center;flex-direction:column">
+							<h2>survival rules</h2>
+							<div style="margin-left:1em">
+								<h3 class="fragment" data-fragment-index="2">learned while young</h3>
+								<h3 class="fragment" data-fragment-index="3">helped us survive</h3>
+								<h3 class="fragment" data-fragment-index="4">breaking them feels like you'd die</h3>
+							</div>
+						</div>
+					</div>
+			</section>
+			<section>
+				<h2>if you can't say anything nice,<br>don't say anything at all</h2>
+			</section>
+			<section>
+				<h3>bouldering</h3>
+				<div style="display:flex;flex-wrap:nowrap;justify-content:center;align-items:center">
+					<img style="width:45%;height:45%;margin-right:1em" data-src="ETC2017/Bouldering-1-Problem.jpg" alt="bouldering problem">
+					<img class="fragment" style="width:35%;height:35%;margin-left:1em" data-src="ETC2017/Bouldering-1-Problem-detail.jpg" alt="bouldering problem detail">
+				</div>
+			</section>
+			<section>
+				<h3>the problem</h3>
+				<div style="display:flex;flex-wrap:nowrap;justify-content:center;align-items:center">
+					<img style="width:35%;height:35%" data-src="ETC2017/Bouldering-2-Before.jpg" alt="bouldering problem before">
+					<img class="fragment" data-fragment-index="1" style="width:35%;height:35%;margin-left:2em;margin-right:2em" data-src="ETC2017/Bouldering-3-During.jpg" alt="bouldering problem during">
+					<img class="fragment" data-fragment-index="2" style="width:35%;height:35%" data-src="ETC2017/Bouldering-4-After.jpg" alt="bouldering problem after">
+			</section>
+			<section>
+				<h3>first time</h3>
+				<div style="display:flex;flex-wrap:nowrap;justify-content:center;align-items:center">
+					<img style="width:35%;height:35%" data-src="ETC2017/Bouldering-2-Before.jpg" alt="bouldering problem before">
+					<img class="fragment" data-fragment-index="1" style="width:35%;height:35%;margin-left:2em;margin-right:2em" data-src="ETC2017/Bouldering-TopView.jpg" alt="bouldering problem top-view">
+					<img class="fragment" data-fragment-index="2" style="width:35%;height:35%" data-src="ETC2017/Bouldering-3-During.jpg" alt="bouldering problem during">
+				</div>
+			</section>
+			<section>
+				<h3>second time</h3>
+				<div style="display:flex;flex-wrap:nowrap;justify-content:center;align-items:center">
+					<img style="width:35%;height:35%" data-src="ETC2017/Bouldering-2-Before.jpg" alt="bouldering problem before">
+					<img class="fragment" data-fragment-index="1" style="width:35%;height:35%;margin-left:2em;margin-right:2em" data-src="ETC2017/Bouldering-TopView.jpg" alt="bouldering problem top-view">
+					<img class="fragment" data-fragment-index="2" style="width:35%;height:35%" data-src="ETC2017/Bouldering-3-During.jpg" alt="bouldering problem during">
+				</div>
+			</section>
+			<section>
+				<h3>two challenges in testing</h3>
+				<h2 class="fragment" data-fragment-index="1">test automation</h2>
+				<h2 class="fragment" data-fragment-index="2">agile</h2>
+			</section>
+			<section>
+				<h1>test automation</h1>
+			</section>
+			<section>
+				<div style="display:flex;flex-wrap:nowrap;justify-content:center;align-items:center">
+					<h3 style="margin-right:1em">general risk report<br>bank risk report<br>country risk report</h3>
+					<img style="width:50%;height:50%;margin-left:1em" data-src="ETC2017/risk-report.png" alt="risk report">
+				</div>
+			</section>
+			<section>
+				<img style="width:30%;height:30%" data-src="ETC2017/VBA_Excel.png" alt="VBA for Excel">
+				<pre><code data-trim data-noescape>
+	'Apply filter criteria on columns to be filterd
+	Dim j As Integer
+	For j = LBound(ArrColNames) To UBound(ArrColNames)
+		If InStr(ArrCritsRaw(j), ";") <> 0 Then
+		' Multiple criteria present, so only select possible
+				Dim ArrSplit() As String
+				ArrSplit = Split(ArrCritsRaw(j), ";")
+				Selection.AutoFilter Field:=ArrColNames(j), Criteria1:=ArrSplit,
+						Operator:=xlFilterValues
+		Else
+			' Single criterium present, so select, deselect, empty, notempty,
+			' greater/smaller than possible
+				Selection.AutoFilter Field:=ArrColNames(j), Criteria1:=ArrCritsRaw(j),
+						Operator:=xlFilterValues
+		End If
+	Next j
+				</code></pre>
+			</section>
+			<section>
+				<h3>you do not need</h3>
+				<div style="text-align:left;display:flex;flex-wrap:nowrap;justify-content:center">
+					<div>
+						<h4 class="fragment" data-fragment-index="1">a cost-benifit analysis</h4>
+						<h4 class="fragment" data-fragment-index="2">experience in the language being used</h4>
+						<h4 class="fragment" data-fragment-index="3">programming skills</h4>
+					</div>
+				</div>
+				<h5 class="fragment" data-fragment-index="3" style="margin-top:1em">(disclaimer: sample size of one)</h5>
+			</section>
+			<section>
+				<h3>you do not need</h3>
+				<h2 class="fragment" data-fragment-index="1">the perfect opportunity</h2>
+			</section>
+			<section>
+				<h1>agile</h1>
+			</section>
+			<section>
+				<div style="display:flex;flex-wrap:nowrap;justify-content:center;align-items:center">
+					<h3 style="margin-right:2em">working with developers and business analysts</h3>
+					<img style="width:50%;height:50%" data-src="ETC2017/minions-teamwork.jpg" alt="minions changing a lightbulb">
+				</div>
+			</section>
+			<section>
+				<div style="display:flex;flex-wrap:nowrap;justify-content:center;align-items:center">
+					<img style="width:50%;height:50%" data-src="ETC2017/post-it-notes.jpg" alt="post-it notes">
+					<h3 style="margin-left:2em">the scrum ceremonies</h3>
+				</div>
+			</section>
+			<section>
+				<div style="display:flex;flex-wrap:nowrap;justify-content:center;align-items:center">
+					<h3 style="margin-right:2em">creating a more humane workplace</h3>
+					<div style="display:flex;flex-wrap:nowrap;justify-content:center;align-items:center">
+						<img style="width:60%;height:60%;margin-right:0.5em" data-src="ETC2017/VitruvianVenus-AnneTimpano.jpg" alt="Vitruvian Venus">
+						<img style="width:55%;height:55%;margin-left:0.5em" data-src="ETC2017/300px-Da_Vinci_Vitruve_Luc_Viatour.jpg" alt="Vitruvian man">
+					</div>
+				</div<>
+			</section>
+			<section>
+				<img style="width:60%;height:60%;margin:0em" data-src="ETC2017/agile-wordcloud.png" alt="agile word cloud">
+			</section>
+			<section>
+				<h3>you do not need</h3>
+				<div style="text-align:left;display:flex;flex-wrap:nowrap;justify-content:center">
+					<div>
+						<h4 class="fragment" data-fragment-index="1">prior experience with agile</h4>
+						<h4 class="fragment" data-fragment-index="2">a basic understanding of agile</h4>
+					</div>
+				</div>
+				<h5 class="fragment" data-fragment-index="2" style="margin-top:1em">(disclaimer: sample size of one)</h5>
+			</section>
+			<section>
+				<h3>you do not need</h3>
+				<h2 class="fragment" data-fragment-index="1">to master agile immediately</h2>
+			</section>
+			<section>
+				<h1>survival rules</h1>
+			</section>
+			<section>
+				<h3>I need the perfect opportunity to try something</h3>
+			</section>
+			<section>
+				<h3>I should get things right from the start</h3>
+			</section>
+			<section>
+				<h2>contextualise</h2>
+			</section>
+			<section>
+				<h3>I need the perfect opportunity to try something</h3>
+				<h4 class="fragment" data-fragment-index="1">unless it's safe enough to try it out</h4>
+			</section>
+			<section>
+				<h3>I should get things right from the start</h3>
+				<h4 class="fragment" data-fragment-index="1">unless I can do something good enough for now</h4>
+			</section>
+			<section>
+				<h2>courage</h2>
+			</section>
+			<section>
+				<h2>introspection</h2>
+			</section>
+			<section>
+				<h2>will I actually die if I ...?</h2>
+			</section>
+			<section>
+				<h4>[ picture of me in a dress shirt ]</h4>
+				<aside class="notes">
+					calling people I don't know at the office to ask something; feeback on nose-picking
+					there are always reasons not to
+				</aside>
+			</section>
+			<section>
+				<h2 style="margin-top:2em">thank you!</h2>
+				<div style="margin-top:3.5em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+					<h5 style="flex:4;">j19sch.github.io</h5>
+					<h5 style="flex:6;">testingcurve.wordpress.com</h5>
+					<h5 style="flex:4;">@j19sch</h5>
+				</div>
+			</section>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: true,
+			slideNumber: false,
+			history: true,
+			center: true,
+
+			// test aspect ratio 4:3
+			//width: 1024,
+			//height: 768,
+
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+			transitionspeed: 'fast',
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+
+		</script>
+
+	</body>
+	</html>

@@ -1,0 +1,6 @@
+@import "../reveal.js/lib/css/zenburn.css";
+
+.hljs {
+  background: transparent;
+  color: #eeeeee;
+}
