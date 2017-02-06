@@ -44,10 +44,15 @@ body {
 .reveal h6 {
   font-size: 0.6em; }
 
+.reveal figcaption {
+  font-size: 0.3em;
+}
+
 .reveal section img {
   border: 0;
   background: none;
   box-shadow: none;
+  margin: 0;
 }
 
 .reveal section img.etc-logo {
