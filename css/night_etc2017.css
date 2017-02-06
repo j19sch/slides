@@ -3,12 +3,13 @@
 
 body {
   background: #424242;
-  background: -moz-radial-gradient(center, circle cover, #474747 0%, #1c1c1c 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #474747), color-stop(100%, #1c1c1c));
-  background: -webkit-radial-gradient(center, circle cover, #474747 0%, #1c1c1c 100%);
-  background: -o-radial-gradient(center, circle cover, #474747 0%, #1c1c1c 100%);
-  background: -ms-radial-gradient(center, circle cover, #474747 0%, #1c1c1c 100%);
-  background: radial-gradient(center, circle cover, #474747 0%, #1c1c1c 100%);
+  /* 474747 1c1c1c */
+  background: -moz-radial-gradient(center, circle cover, #494949 0%, #101010 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #494949), color-stop(100%, #101010));
+  background: -webkit-radial-gradient(center, circle cover, #494949 0%, #101010 100%);
+  background: -o-radial-gradient(center, circle cover, #494949 0%, #101010 100%);
+  background: -ms-radial-gradient(center, circle cover, #494949 0%, #101010 100%);
+  background: radial-gradient(center, circle cover, #494949 0%, #101010 100%);
   background-color: #424242; }
 
 /* sky */
