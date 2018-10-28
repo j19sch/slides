@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Building your own API testing framework</title>
+
+	<meta name="description" content="Learn about what makes a good testing frameworks by building your own - using Python, Pytest and the requests library
+
+		APIs lend themselves extremely well to test automation. There's a simple reason for this: APIs are designed to be consumed by computers, not by people. So where with UI tests, you need to rely on testing-specific libraries such as Selenium WebDriver, with API testing you can simply use the same libraries as the ones that are used to build applications. This also means that building an API testing framework is significantly easier than building one for UI testing. So why let's not just do that in a workshop?
+
+		You'll be able to experience how easy it is - assuming you have some very basic general programming knowledge and know what an API is. We'll build our framework using Python, Pytest and the requests library. More importantly, we'll explore and discuss what your framework needs to be able to do to support the full life cycle of a test suite. Because I see all too often a focus on how easy it is to build tests and little mention of maintainability or readability of test results.
+
+		After this workshop you'll have a basic API testing framework you can extend (I will be giving tips for next steps). More importantly you'll have a better understanding of testing frameworks in general. And that will come in handy when you have to evaluate a testing tool, or when you are discussing a framework with the developers that build it.">
+	<meta name="author" content="Joep Schuurkes">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="css/atd2018.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="css/atd2018_code.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<div class="header-right">
+				<p>Agile Testing Days 2018</p>
+			</div>
+			<div class="footer-left">
+				<p>@j19sch</p>
+			</div>
+				<div class="footer-right">
+				<p>j19sch.github.io</p>
+			</div>
+
+			<section>
+				<h1 style="margin-bottom:0em">building your own API testing framework</h1>
+				<div style="margin-top:1.5em;display:flex;flex-wrap:nowrap;justify-content:space-around;align-items:center">
+					<img class="logo-left" style="width:25%;height:25%" data-src="ATD2018/atd-logo.png" alt="ATD logo">
+					<div>
+						<h6 style="margin-bottom:0">Joep Schuurkes<br>@j19sch</h6>
+						<h6 style="margin-top:0.2em;margin-bottom:0em">slides at https://j19sch.github.io</h6>
+					</div>
+					<img class="plain" style="width:20%;height:20%" data-src="ntd2018-learn-to-write-code/mendix-logo-full.png" alt="Mendix">
+				</div>
+			</section>
+
+			<section>
+				<h2>first things first</h2>
+				<h3>pair up</h3>
+				<h3>https://github.com/j19sch/building-an-api-testing-framework#setup--installation</h3>
+			</section>
+
+			<section>
+				<h2>structure of this workshop</h2>
+				<h3>Exercises</h3>
+				<h3>C-RUDDER mnemonic</h3>
+				<h3>Learning goal retrospective</h3>
+				<h3>+/Δ</h3>
+				<aside class="notes">raise hand-rule</aside>
+			</section>
+
+			<section>
+				<h3>you are in charge of your own learning</h3>
+				<aside class="notes">explore, investigate, play around</aside>
+			</section>
+
+			<section>
+				<h3>this workshop comes with lifetime support</h3>
+				<aside class="notes">because inpredicatble timing, because good practice</aside>
+			</section>
+
+			<section>
+				<h2>pair up</h2>
+				<h3>say hi!</h3>
+				<h3>share your learning goal</h3>
+				<h3>be curious</h3>
+			</section>
+
+			<section>
+				<h1>setup</h1>
+				<h3>https://github.com/j19sch/building-an-api-testing-framework#setup--installation</h3>
+			</section>
+
+			<section>
+				<h1>exercise one</h1>
+			</section>
+
+			<section>
+				<h1>exercise two</h1>
+			</section>
+
+			<section>
+				<h1>exercise three</h1>
+			</section>
+
+			<section>
+				<h1>exercise four</h1>
+			</section>
+
+			<section>
+				<h1>exercise five</h1>
+			</section>
+
+			<section>
+				<div style="display:flex; justify-content: center">
+					<div style="text-align: left">
+						<h3><span style="font-weight:bold; margin-right:0.1em">C</span>reate</h3>
+						<h3><span style="font-weight:bold; margin-right:0.1em">R</span>ead</h3>
+						<h3><span style="font-weight:bold; margin-right:0.1em">U</span>pdate</h3>
+						<h3><span style="font-weight:bold; margin-right:0.1em">D</span>elete</h3>
+						<h3><span style="font-weight:bold; margin-right:0.1em">D</span>ebug</h3>
+						<h3><span style="font-weight:bold; margin-right:0.1em">E</span>xtend</h3>
+						<h3><span style="font-weight:bold; margin-right:0.1em">R</span>un & report</h3>
+					</div>
+				</div>
+				<aside class="notes">supports both good testing and good programming</aside>
+			</section>
+
+			<section>
+				<h2>learning goal retrospective</h2>
+			</section>
+			
+			<section>
+				<h2>+/Δ</h2>
+			</section>
+
+			<section>
+					<h1>thank you!</h1>
+					<div style="position:relative;top:1em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+						<h4>j19sch.github.io</h4>
+						<h4>@j19sch</h4>
+					</div>
+			</section>
+
+			<section>
+				<h2>why Python?</h2>
+			</section>
+			<section>
+				<h5>Given the option between writing an absolutely complete,<br>forward compatible, absolutely perfect solution to a given problem<br>and writing the simplest, stupidest, quickest thing that gets the job done,</h5>
+			</section>
+			<section>
+				<h5>the core developers of the Python language would rather that you write<br>the simplest, stupidest, quickest thing to get the job done<br>and go home and spend the rest of the day with your family.</h5>
+				<h6>James Powell // What Does It Take To Be An Expert At Python? <a href="https://www.youtube.com/watch?v=7lmCu8wz8ro">(vid)</a></h6>
+			</section>
+
+
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: true,
+			slideNumber: false,
+			history: true,
+			center: true,
+
+			// test aspect ratio 4:3
+			//width: 1024,
+			//height: 768,
+
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+			transitionspeed: 'fast',
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+
+		</script>
+
+	</body>
+	</html>
