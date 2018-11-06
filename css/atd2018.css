@@ -25,7 +25,10 @@ body {
 
 .reveal h6 { font-size: 0.6em}
 
-.reveal a { font-style: italic; }
+.reveal a {
+  color: #383D3D;
+  font-style: italic;
+}
 
 .reveal section img {
   margin: 0px 0px;
@@ -36,12 +39,13 @@ body {
 
 .reveal section img.logo-right {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-  border-radius:3px;
+  border-radius:5px;
+  background: white;
 }
 
 .reveal section img.logo-left {
   box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.5);
-  border-radius:3px;
+  border-radius:5px;
 }
 
 .reveal table td {
@@ -63,26 +67,26 @@ body {
 .slides .header-left{
   position:absolute;
   left: 0%;
-  font-size: 0.32em;
+  font-size: 0.35em;
 }
 
 .slides .header-right{
   position:absolute;
   right: 0%;
-  font-size: 0.32em;
+  font-size: 0.35em;
 }
 
 .slides .footer-left{
   position:absolute;
   left: 0%;
   bottom: 10%;
-  font-size: 0.32em
+  font-size: 0.35em
 }
 
 .slides .footer-right{
   position:absolute;
   right: 0%;
   bottom: 10%;
-  font-size: 0.32em
+  font-size: 0.35em
 }
 
