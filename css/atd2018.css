@@ -41,7 +41,14 @@ body {
   margin: 0px 0px;
   background: none;
   border: none;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reveal section img.img-left {
+  box-shadow: -10px 3px 10px rgba(0, 0, 0, 0.5)
+}
+
+.reveal section img.img-right {
+  box-shadow: 10px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .reveal section img.logo-right {
