@@ -25,6 +25,13 @@ body {
 
 .reveal h6 { font-size: 0.6em}
 
+.reveal p.caption {
+  margin: -10px 0px 0px 0px;
+  font-size: 0.25em;
+  text-align:center;
+  font-style: italic;
+}
+
 .reveal a {
   color: #383D3D;
   font-style: italic;
