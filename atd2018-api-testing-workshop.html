@@ -38,6 +38,9 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
+			<div class="header-left">
+				<p>#AgileTD</p>
+			</div>
 			<div class="header-right">
 				<p>Agile Testing Days 2018</p>
 			</div>
@@ -67,9 +70,14 @@
 					<h2><a href="https://git.io/fpvDS">https://git.io/fpvDS</a></h2>
 				</section>
 			</section>
-
-
-
+			<section>
+				<h2>what we'll be doing today</h2>
+				<div style="display:flex; justify-content:center; align-items:center">
+					<img class="img-left" style="width:32%; height:32%; margin: 15px" data-src="ATD2018/pytest.png" alt="pytest">
+					<img class="img-right" style="width:23%; height:23%; padding:10px; margin: 15px" data-src="ATD2018/requests.png" alt="requests">
+				</div>
+			</section>
+		
 			<section>
 				<h2>what we'll be doing today</h2>
 				<h3 class="fragment">Learning goals</h3>
@@ -84,8 +92,13 @@
 				<h3 class="fragment">this workshop comes with lifetime support</h3>
 				<h3 class="fragment">silent attention signal</h3>		
 				<aside class="notes">
-					learning: explore, investigate, play around
-					support: because inpredicatble timing, because good practice
+					<h4>learning</h4>
+					<p>not a race, competition, test</p>
+					<p>explore, investgiate, play</p>
+
+					<h4>support</h4>
+					<p>support because no idea how fast everyone will go</p>
+					<p>depending on fastness, different format</p>
 				</aside>
 			</section>
 
@@ -101,15 +114,27 @@
 						<h3 class="fragment">be curious</h3>
 					</div>
 				<aside class="notes">
-					each pair should have sufficient experience with Python and APIs
-					alternative: have people pair up based on learning goal & knowledge/skills?</aside>
+					<h4>pair</h4>
+					<p>each pair should have sufficient experience with Python and APIs</p>
+
+					<h4>learning goal</h4>
+					<p>will return to these at the end</p>
+
+
+					<h4>misc</h4>
+					<p>alternative: have people pair up based on learning goal & knowledge/skills?</p>
+				</aside>
 			</section>
 
 
 			<section>
 					<h2>first things first: setup!</h2>
 					<h2><a href="https://git.io/fpvDS">https://git.io/fpvDS</a></h2>
-					<aside class="notes">https://github.com/j19sch/building-an-api-testing-framework#setup--installation</aside>
+					<aside class="notes">
+						<h4>full link</h4>
+						<p>https://github.com/j19sch/building-an-api-testing-framework#setup--installation</p>
+						<p>assuming fast enough wifi</p>
+					</aside>
 			</section>
 
 			<section>
@@ -130,6 +155,12 @@
 				<div class="fragment" data-fragment-index="1" style="width:20%">
 					<img class="img-right" data-src="ATD2018/questionmark-innov8social.jpg" alt="question mark innov8social">
 				</div>
+				<aside class="notes">
+					<h4>next thing we need?</h4>
+					<p>do this for exercise 1 and 2</p>
+					<p>do this before each exercise</p>
+					<p>we will revisit before each exercise OR at the end of the sessions</p>
+				</aside>
 			</section>
 
 			<section>
@@ -207,11 +238,31 @@
 						<h5><span style="font-weight:bold; margin-right:0.1em">R</span>un & report</h5>
 					</div>
 				</div>
-				<aside class="notes">supports both good testing and good programming</aside>
+				<aside class="notes">
+					<h4>general</h4>
+					<p>supports both good testing and good programming</p>
+
+					<h4>Create</h4>
+					<p>can I create a first working test easily enough? NOT creating new tests after that</p>
+					<p>only applicable in a brief and very specific moment</p>
+					<h4>Read</h4>
+					<p>can I understand what the test does (and why this test?) by reading the code?</p>
+					<h4>Update</h4>
+					<p>can I keep the tests up-to-date, i.e. running as they were?</p>
+					<h4>Delete</h4>
+					<p>can I easily delete tests?</p>
+					<h4>Debug</h4>
+					<p>can I debug the tests, observing and inspecting them as they run?</p>
+					<h4>Extend</h4>
+					<p>can I add new tests? new framework functionality?</p>
+					<h4>Run & Report</h4>
+					<p>how easily can I run the tests? how much information do the reports provide?</p>
+				</aside>
 			</section>
 			
 			<section>
-				<h2>+/Δ</h2>
+				<h1>+/Δ</h1>
+				<h4  style="margin-top:1em">and please rate this workshop!</h4>
 			</section>
 
 			<section>
