@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>What To Look For in a Test Automation Tool</title>
+
+	<meta name="description"
+		content="When my team had to pick an API testing tool, we went with Postman. And the more I used it, the more frustrated I became with it. Both maintaining the tests and figuring out why tests failed (especially when in a CI pipeline) took too much effort. So I decided to write my own tool. Or rather, I set to work with pytest and the requests library, and ended up with a framework of just 300 lines of python code that fit our needs.
+
+The core idea behind my framework is that I don’t want a testing tool that only focuses on making it easy to build tests. It should also make it easy to analyse the test results. It should also make it easy to read and understand the tests, to share them, and to maintain them. Because the thing is, during most of those activities I don’t want to be aware of the tool. I want to focus on the tests and what their results tell me about the quality of the product. That’s the key idea here: only at very specific times do I want to focus on the tool as a tool. At all other times it should just help me test better.
+
+In my talk I will use my framework to illustrate these ideas and expand on them. I will also show how these ideas apply more generally than only to API testing frameworks. Since you’re only as good as your tool and a tool is only as good as its user, being able to evaluate testing tools is an important skill for any tester.">
+	<meta name="author" content="Joep Schuurkes">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="css/ukstar2019.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="css/ukstar2019-code.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides" style="text-align: left">
+			<section style="text-align: center">
+				<h1 style="margin-top:1em">What to look for in a test automation tool</h1>
+				<div style="margin-top:1.2em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+					<h5>UKStar 2019</h5>
+					<h5>11 March 2019</h5>
+				</div>
+			</section>
+			<section>
+				<h2>2016? Postman/Newman</h2>
+				<h3>issues</h3>
+				<h4>version control</h4>
+				<h4>pipeline report (better: logging)</h4>
+				<h4>setup/teardown & polling</h4>
+			</section>
+			<section>
+				<h2>2018? own tool</h2>
+				<h4>python because other tool, later: great language for test automation</h4>
+				<h4>not all migrated, because no need</h4>
+			</section>
+			<section>
+				<h2>what we´ll be doing today</h2>
+				<h3>walk through some examples</h3>
+				<h3>illustrate ideas with tool</h3>
+				<h3>two heuristics</h3>
+				<h4>ATM</h4>
+				<h4>C-RUDDER</h4>
+				<h3>heuristics</h3>			
+			</section>
+			<section>
+				<h2>my own framework</h2>
+				<h4>requests</h4>
+				<h4>pytest</h4>
+				<h4>git</h4>
+				<h4>pytest-html</h4>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>glue well-established tools and libraries together</h4>
+			</section>
+			<section>
+				<h2>my own framework</h2>
+				<h3>read test data files (pyyaml and pytest</h3>
+				<h3>pytest-logfest</h3>
+			</section>
+			<section>
+				<h2>the API we will be testing</h2>
+				<h3>books API</h3>
+			</section>
+			<section>
+				<h2>outline</h2>
+				<p>APPLIANCE: run tests, all pass</p>
+				<p>TOOL: read tests, what do we cover?</p>
+				<p>TOOL: add a new test, but problem</p>
+				<p>MACHINE: solve the problem</p>
+			</section>
+			<section>
+				<h1 style="margin-top:1.7em">wrap-up</h1>
+			</section>
+			<section>
+				<h2>C-RUDDER</h2>
+				<ul>
+					<li>Create</li>
+					<li>Read</li>
+					<li>Update</li>
+					<li>Delete</li>
+					<li>Debug</li>
+					<li>Explore</li>
+					<li>Run & Report</li>
+				</ul>
+			</section>
+			<section>
+				<h2>ATM</h2>
+				<ul>
+					<li>Appliance -> information about quality</li>
+					<li>Tool -> information about tests</li>
+					<li>Machine -> information about implementation</li>
+				</ul>
+				<h4>forced switching between levels sucks (!yak shaving)</h4>
+			</section>
+			<section>
+				<h2>heuristics - auto-tests</h2>
+				<h4>clean code but not too clean: readable code vs readable test</h4>
+				<h4>test should be readable on level of test on one screen / without scrolling</h4>
+				<h4>test should test one thing only / explainable in one sentence -> test name</h4>
+				<h4>never trust a test you haven't seen fail</h4>
+				<h4>separate test from setup/teardown</h4>
+			</section>
+			<section>
+				<h2>heuristics - framework</h2>
+				<h4>closeness to seams / touch the seams / careful with too much abstraction</h4>
+				<h4>interact with seam via transparent abstraction</h4>
+				<h4>pass/fail overview should be informative</h4>
+				<h4>glue code, don't do everything yourself</h4>
+				<h4>log all the things</h4>
+			</section>
+			<section>
+				<h2>heuristics - code</h2>
+				<h4>version control</h4>
+				<h4>don't be too smart in your code, raises barrier to entry</h4>			
+				<h4>different levels of programming skills</h4>
+			</section>
+			<section>
+				<h2>heuristics - other</h2>
+				<h4>when is which perspective more important?</h4>
+				<h4>when is which activity more important?</h4>
+				<h4>testing interacts with: product, product infra, framework/runner/auto-tests, f/r/a-t infra, testing</h4>
+			</section>
+			<section>
+				<h2>have some Python</h2>
+				<pre><code data-trim data-noescape>
+@pytest.fixture(scope='function')
+def current_date_please():
+	return datetime.datetime.now().strftime(H-%m-%s')
+				</code></pre>
+			</section>
+			<section>
+				<h2>misc</h2>
+				<h4>"it [a computer language] is a novel formal medium for expressing ideas about methodology. Thus, programs must be written for people to read, and only incidentally for machines to execute."<br>Abelson & Sussman in "Structure and Interpretation of Computer Programs"</h4>
+				<h4>People don't want an electrical drill, they want a hole in the wall. No, they want to hang up a picture.</h4>
+			</section>
+			<section>
+				<h2>notes</h2>
+				<h4>need to generalize beyond API frameworks</h4>
+				<h4>link atm/c-rudder to test processes</h4>
+				<h4>run locally or in pipeline</h4>
+				<h4>clean code: naming, structure, refactoring (DRY, separation of concerns)</h4>
+				<h4>test result: true +, true -, false +, false -</h4>
+				<h4>user vs poweruser vs toolsmith</h4>
+				<h4>testers should now basic programming: it's how software is made</h4>
+			</section>
+			<section style="text-align: center">
+				<h3 style="margin-top: 4em">thank you!</h3>
+			</section>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: true,
+			slideNumber: false,
+			history: true,
+			center: false,
+
+			// test aspect ratio 4:3
+			//width: 1024,
+			//height: 768,
+
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+			transitionspeed: 'fast',
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+
+		</script>
+
+	</body>
+	</html>
