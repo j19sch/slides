@@ -45,6 +45,13 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</div>
 			</section>
 			<section>
+				<h2>about me</h2>
+				<h3>twitter</h3>
+				<h3>blog & four-hour tester</h3>
+				<h3>slides</h3>
+				<h3>API and tests -> workshop material</h3>
+			</section>
+			<section>
 				<h2>2016? Postman/Newman</h2>
 				<h3>issues</h3>
 				<h4>version control</h4>
@@ -53,7 +60,8 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			</section>
 			<section>
 				<h2>2018? own tool</h2>
-				<h4>python because other tool, later: great language for test automation</h4>
+				<h4>scrum mastered for a bit</h4>
+				<h4>python because other tool and other tests in python, later: great language for test automation</h4>
 				<h4>not all migrated, because no need</h4>
 			</section>
 			<section>
@@ -69,12 +77,8 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				<h2>my own framework</h2>
 				<h4>requests</h4>
 				<h4>pytest</h4>
-				<h4>git</h4>
 				<h4>pytest-html</h4>
-			</section>
-			<section>
-				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>glue well-established tools and libraries together</h4>
+				<h4>git</h4>
 			</section>
 			<section>
 				<h2>my own framework</h2>
@@ -82,18 +86,103 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				<h3>pytest-logfest</h3>
 			</section>
 			<section>
+				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>glue well-established tools and libraries together with trivial code</h4>
+			</section>
+			<section>
 				<h2>the API we will be testing</h2>
 				<h3>books API</h3>
 			</section>
 			<section>
-				<h2>outline</h2>
-				<p>APPLIANCE: run tests, all pass</p>
-				<p>TOOL: read tests, what do we cover?</p>
-				<p>TOOL: add a new test, but problem</p>
-				<p>MACHINE: solve the problem</p>
+				<h2>let's run some tests</h2>
+				<h3>output of all green test suite</h3>
+				<h3>cool! let's release</h3>
 			</section>
 			<section>
+				<h3 style="margin-top: 2em">3 levels - Appliance</h3>
+				<h4>information about the product</h4>
+				<h3 style="margin-top: 2em">activity - Run & Report</h3>
+			</section>
+			<section>
+				<h2>so what did we test?</h2>
+				<h3>pytest -v</h3>
+				<h3>pytest-html report</h3>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>informative pass/fail overview</h4>
+			</section>
+			<section>
+				<h2>let's look at the code</h2>
+				<h3>show one test</h3>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>test does one thing and one thing only</h4>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>use transparent abstractions for your seams</h4>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>don't mix abstraction levels</h4>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>readable test versus readable code / DSLs and learning to program?</h4>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">3 levels - Tool</h3>
+				<h4>information about the tests</h4>
+			</section>
+			<section>
+				<h2>and then a test failed</h2>
+				<h3>let's take a look how/why</h3>
+				<h3>let's fix it</h3>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>no such thing as too much information</h4>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>never trust a test you haven't seen fail</h4>
+			</section>
+			<section>
+				<h2>let's add a test</h2>
+				<h3>why did the test error?</h3>
+			</section>
+			<section>
+				<h2>let's fix the test</h2>
+				<h2>debugging</h2>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">3 levels - Machine</h3>
+				<h4>information about the implementation</h4>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>5 things at play, make sure you can separate them</h4>
+				<h4>transparent abstractions of seams</h4>
+				<h4>separation of concerns</h4>
+			</section>
+ 			<section>
 				<h1 style="margin-top:1.7em">wrap-up</h1>
+			</section>
+			<section>
+				<h2>ATM</h2>
+				<ul>
+					<li>Appliance -> information about quality</li>
+					<li>Tool -> information about tests</li>
+					<li>Machine -> information about implementation</li>
+				</ul>
+				<h4>forced switching between levels sucks (!yak shaving)</h4>
+				<h4>levels inform decisions</h4>
+			</section>
+			<section>
+				<h2>ATM</h2>
+				<h4>levels of programming skills</h4>
 			</section>
 			<section>
 				<h2>C-RUDDER</h2>
@@ -108,13 +197,9 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</ul>
 			</section>
 			<section>
-				<h2>ATM</h2>
-				<ul>
-					<li>Appliance -> information about quality</li>
-					<li>Tool -> information about tests</li>
-					<li>Machine -> information about implementation</li>
-				</ul>
-				<h4>forced switching between levels sucks (!yak shaving)</h4>
+				<h2>C-RUDDER</h2>
+				<h4>map to ATM</h4>
+				<h4>what does it look like in practice to you?</h4>
 			</section>
 			<section>
 				<h2>heuristics - auto-tests</h2>
@@ -123,6 +208,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				<h4>test should test one thing only / explainable in one sentence -> test name</h4>
 				<h4>never trust a test you haven't seen fail</h4>
 				<h4>separate test from setup/teardown</h4>
+				<h4>no such thing as too much information if well-structured</h4>
 			</section>
 			<section>
 				<h2>heuristics - framework</h2>
@@ -160,6 +246,7 @@ def current_date_please():
 			<section>
 				<h2>notes</h2>
 				<h4>need to generalize beyond API frameworks</h4>
+				<h4>language commonly used in your environment OR Python</h4>
 				<h4>link atm/c-rudder to test processes</h4>
 				<h4>run locally or in pipeline</h4>
 				<h4>clean code: naming, structure, refactoring (DRY, separation of concerns)</h4>
