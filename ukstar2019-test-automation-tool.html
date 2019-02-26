@@ -82,12 +82,15 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			</section>
 			<section>
 				<h2>my own framework</h2>
-				<h3>read test data files (pyyaml and pytest</h3>
+				<h3>read test data files (pyyaml and pytest)</h3>
 				<h3>pytest-logfest</h3>
+				<h3>logging and default cred wrappers and convenience methods</h3>
 			</section>
 			<section>
 				<h3 style="margin-top: 2em">heuristic</h3>
 				<h4>glue well-established tools and libraries together with trivial code</h4>
+				<h4>you're not in the test tool business</h4>
+				<h4>differentiator is awesome testing, not awesome test tools</h4>
 			</section>
 			<section>
 				<h2>the API we will be testing</h2>
@@ -106,11 +109,11 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			<section>
 				<h2>so what did we test?</h2>
 				<h3>pytest -v</h3>
-				<h3>pytest-html report</h3>
+				<h3>pytest-html report (leave out?)</h3>
 			</section>
 			<section>
 				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>informative pass/fail overview</h4>
+				<h4>test does one thing and one thing only</h4>
 			</section>
 			<section>
 				<h2>let's look at the code</h2>
@@ -118,23 +121,23 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			</section>
 			<section>
 				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>test does one thing and one thing only</h4>
+				<h4>DSLs and learning to program?</h4>
 			</section>
 			<section>
 				<h3 style="margin-top: 2em">heuristic</h3>
 				<h4>use transparent abstractions for your seams</h4>
-			</section>
-			<section>
-				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>example: headers filled by requests</h4>
+				<h4>separation of concerns</h4>
 				<h4>don't mix abstraction levels</h4>
 			</section>
 			<section>
 				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>readable test versus readable code / DSLs and learning to program?</h4>
+				<h4>readable test versus readable code</h4>
 			</section>
 			<section>
 				<h3 style="margin-top: 2em">3 levels - Tool</h3>
 				<h4>information about the tests</h4>
+				<h3 style="margin-top: 2em">activity - Read</h3>
 			</section>
 			<section>
 				<h2>and then a test failed</h2>
@@ -143,11 +146,24 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			</section>
 			<section>
 				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>informative pass/fail overview</h4>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">heuristic</h3>
 				<h4>no such thing as too much information</h4>
+				<h4>if navigateable</h4>
 			</section>
 			<section>
 				<h3 style="margin-top: 2em">heuristic</h3>
 				<h4>never trust a test you haven't seen fail</h4>
+			</section>
+			<section>
+				<h2>let's add a test</h2>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">3 levels - Tool</h3>
+				<h4>information about the tests</h4>
+				<h3 style="margin-top: 2em">activity - Create</h3>
 			</section>
 			<section>
 				<h2>let's add a test</h2>
@@ -158,14 +174,18 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				<h2>debugging</h2>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">3 levels - Machine</h3>
+				<h3 style="margin-top: 2em">3 levels - Machine (nuts & bolts)</h3>
 				<h4>information about the implementation</h4>
+				<h3 style="margin-top: 2em">activity - Debug</h3>
+			</section>
+			<section>
+				<h3 style="margin-top: 2em">heuristic</h3>
+				<h4>forced switching between levels sucks (!yak shaving)</h4>
 			</section>
 			<section>
 				<h3 style="margin-top: 2em">heuristic</h3>
 				<h4>5 things at play, make sure you can separate them</h4>
-				<h4>transparent abstractions of seams</h4>
-				<h4>separation of concerns</h4>
+				<h4>product & infra, auto-tests & infra, testing</h4>
 			</section>
  			<section>
 				<h1 style="margin-top:1.7em">wrap-up</h1>
@@ -179,6 +199,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</ul>
 				<h4>forced switching between levels sucks (!yak shaving)</h4>
 				<h4>levels inform decisions</h4>
+				<h4>decide for you what level means: appliance install python etc.</h4>
 			</section>
 			<section>
 				<h2>ATM</h2>
@@ -207,7 +228,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				<h4>test should be readable on level of test on one screen / without scrolling</h4>
 				<h4>test should test one thing only / explainable in one sentence -> test name</h4>
 				<h4>never trust a test you haven't seen fail</h4>
-				<h4>separate test from setup/teardown</h4>
+				<h4>separate test from setup/teardown to clarify intention</h4>
 				<h4>no such thing as too much information if well-structured</h4>
 			</section>
 			<section>
@@ -220,7 +241,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			</section>
 			<section>
 				<h2>heuristics - code</h2>
-				<h4>version control</h4>
+				<h4>version control (nothing is lost: deletes, mistakes)</h4>
 				<h4>don't be too smart in your code, raises barrier to entry</h4>			
 				<h4>different levels of programming skills</h4>
 			</section>
