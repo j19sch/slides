@@ -63,8 +63,8 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 							<h4>pipeline report (better: logging)</h4>
 							<h4>setup/teardown & polling</h4>
 						</div>
-						<div class="flex-c" style="margin-left:3em;flex:0 1 auto;flex-direction:column;flex:0 1 auto">
-							<img class="plain" width="35%" data-src="ukstar2019/postman-logo.png" alt="postman-logo"/>
+						<div class="flex-c" style="margin-left:1em;flex:0 1 auto;flex-direction:column;flex:0 1 auto">
+							<img class="plain" style="margin-bottom:1em" width="35%" data-src="ukstar2019/postman-logo.png" alt="postman-logo"/>
 							<img class="plain" width="35%" data-src="ukstar2019/newman-logo.png" alt="newman-logo"/>
 						</div>
 					</div>
@@ -93,7 +93,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 					<h4>illustrate ideas with tool</h4>
 					<h4>three levels: ATM</h4>
 					<h4>heuristic: C-RUDDER</h4>
-					<h4>lessons learned<img style="vertical-align:middle" class="plain" width="5%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/></h4>
+					<h4>lessons learned</h4>
 				</div>
 			</section>
 			<section>
@@ -115,13 +115,12 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</div>
 			</section>
 			<section>
-				<div class="guideline">
-					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
-					<h4>glue well-established tools and libraries together with trivial code</h4>
-					<h4>you're not in the test tool business</h4>
-					<h4>differentiator is awesome testing, not awesome test tools</h4>
+				<div class="lesson">
+					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>glue well-established tools<br>and libraries together</h3>
 				</div>
-				<aside class="notes"></aside>
+				<aside class="notes">you're not in the test tool business
+				differentiator is awesome testing, not awesome test tools</aside>
 			</section>
 			<section>
 				<h2>the API we will be testing</h2>
@@ -138,10 +137,14 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			</section>
 			<section>
 				<div class="level">
-					<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/toaster.png" alt="toaster"/>Appliance</h3>
-					<h4>information about the product</h4>
-					<h4 style="margin-top: 2.6em"><span class="lighter">C-RUDDE</span>R</h4>
-					<h3>Run & Report</h3>
+					<div>
+						<h3 style="margin-bottom:0.1em"><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/toaster.png" alt="toaster"/>Appliance</h3>
+						<h4>information about the product</h4>
+					</div>
+					<div style="margin-top: 2.5em">
+						<h4 style="margin-bottom:0"><span class="lighter">C-RUDDE</span>R</h4>
+						<h3>Run & Report</h3>
+					</div>
 				</div>
 			</section>
 			<section>
@@ -152,11 +155,11 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</div>
 			</section>
 			<section>
-				<div class="guideline">
-					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
-					<h4>test does one thing and one thing only</h4>
-					<aside class="notes">one sentence -> name; size of one thing depends; several similar tests</aside>
+				<div class="lesson">
+					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>a test does one thing<br>and one thing only</h3>
 				</div>
+				<aside class="notes">one sentence -> name; size of one thing depends; several similar tests</aside>
 			</section>
 			<section>
 				<h2>let's look at the code</h2>
@@ -165,32 +168,37 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</div>
 			</section>
 			<section>
-				<div class="guideline">
-					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
-					<h4>DSLs and learning to program?</h4>
+				<div class="lesson">
+					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>progamming language > DSL</h3>
 				</div>
 			</section>
 			<section>
-				<div class="guideline">
-					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
-					<h4>use transparent abstractions for your seams</h4>
-					<h4>example: headers filled by requests</h4>
-					<h4>separation of concerns</h4>
-					<h4>don't mix abstraction levels</h4>
+				<div class="lesson">
+					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>use transparent abstractions<br>for your seams</h3>
 				</div>
+				<aside class="notes">example: headers filled by requests
+							separation of concerns; don't mix abstraction levels
+				</aside>
 			</section>
+
 			<section>
-				<div class="guideline">
-					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
-					<h4>readable test versus readable code</h4>
+				<div class="lesson">
+					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>readable tests<br>vs<br>readable code</h3>
 				</div>
 			</section>
 			<section>
 				<div class="level">
-					<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
-					<h4>information about the tests</h4>
-					<h4 style="margin-top: 2.6em"><span class="lighter">C-</span>R<span class="lighter">UDDER</span></h4>
-					<h3>Read</h3>
+					<div>
+						<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
+						<h4>information about the tests</h4>
+					</div>
+					<div style="margin-top: 2.5em">
+						<h4><span class="lighter">C-</span>R<span class="lighter">UDDER</span></h4>
+						<h3>Read</h3>
+					</div>
 				</div>
 			</section>
 			<section>
@@ -201,22 +209,22 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</div>
 			</section>
 			<section>
-				<div class="guideline">
-					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
-					<h4>informative pass/fail overview</h4>
+				<div class="lesson">
+					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>informative pass/fail overview</h3>
 				</div>
 			</section>
 			<section>
-				<div class="guideline">
-					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
-					<h4>no such thing as too much information</h4>
-					<h4>if navigateable</h4>
+				<div class="lesson">
+					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>there is no such thing as<br>too much information</h3>
+					<aside class="notes">if well-structured / navigateable</aside>
 				</div>
 			</section>
 			<section>
-				<div class="guideline">
-					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
-					<h4>never trust a test you haven't seen fail</h4>
+				<div class="lesson">
+					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>never trust a test<br>you haven't seen fail</h3>
 				</div>
 			</section>
 			<section>
@@ -227,10 +235,14 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			</section>
 			<section>
 				<div class="level">
-					<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
-					<h4>information about the tests</h4>
-					<h4 style="margin-top: 2.6em">C<span class="lighter">-RUDDER</span></h4>
-					<h3>Create</h3>
+					<div>
+						<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
+						<h4>information about the tests</h4>
+					</div>
+					<div style="margin-top: 2.5em">
+						<h4>C<span class="lighter">-RUDDER</span></h4>
+						<h3>Create</h3>
+				</div>
 				</div>
 			</section>
 			<section>
@@ -247,45 +259,62 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			</section>
 			<section>
 				<div class="level">
-					<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/nuts-bolts.png" alt="nuts and bolts"/>Machine</h3>
-					<h4>information about the implementation</h4>
-					<h4 style="margin-top: 2.6em"><span class="lighter">C-RUD</span>D<span class="lighter">ER</span></h4>
-					<h3>Debug</h3>
+					<div>
+						<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/nuts-bolts.png" alt="nuts and bolts"/>Machine</h3>
+						<h4>information about the implementation</h4>
+					</div>
+					<div style="margin-top: 2.5em">
+						<h4><span class="lighter">C-RUD</span>D<span class="lighter">ER</span></h4>
+						<h3>Debug</h3>
+					</div>
 				</div>
 			</section>
 			<section>
-				<div class="guideline">
-					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
-					<h4>forced switching between levels sucks (!yak shaving)</h4>
+				<div class="lesson">
+					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>forced switching<br>between levels sucks</h3>
+					<aside class="notes">yak shaving</aside>
 				</div>
 			</section>
 			<section>
-				<div class="guideline">
-					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
-					<h4>5 things at play, make sure you can separate them</h4>
+				<div class="lesson">
+					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>5 things at play,<br>make sure you can separate them</h3>
 					<h4>product & infra, auto-tests & infra, testing</h4>
+					<aside class="notes">5 things to keep track of</aside>
 				</div>
 			</section>
  			<section>
 				<h1 style="margin-top:1.7em">wrap-up</h1>
 			</section>
 			<section>
-				<h2>ATM</h2>
+				<h2>ATM - three levels</h2>
 				<div class="slide-body">
-					<ul>
-						<li>Appliance -> information about quality</li>
-						<li>Tool -> information about tests</li>
-						<li>Machine -> information about implementation</li>
-					</ul>
-					<h4>forced switching between levels sucks (!yak shaving)</h4>
-					<h4>levels inform decisions</h4>
-					<h4>decide for you what level means: appliance install python etc.</h4>
+					<div class="flex" style="flex-direction: column; justify-content: space-between;">
+						<div class="flex-c" style="justify-content: space-around;">
+							<img style="margin-right:1em;width:10%;height:10%" class="plain" data-src="ukstar2019/toaster.png" alt="toaster"/>
+							<h3 style="width:30%">Appliance</h3>
+							<h4 style="width:35%">product</h4>
+						</div>
+						<div class="flex-c" style="margin-top:2em; justify-content: space-around;">
+							<img style="margin-right:1em;width:10%;height:10%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>
+							<h3 style="width:30%">Tool</h3>
+							<h4 style="width:35%">tests</h4>
+						</div>
+						<div class="flex-c" style="margin-top:2em; justify-content: space-around;">
+							<img style="margin-right:1em;width:10%;height:10%" class="plain" data-src="ukstar2019/nuts-bolts.png" alt="nuts and bolts"/>
+							<h3 style="width:30%">Machine</h3>			
+							<h4 style="width:35%">implementation</h4>
+						</div>
+					</div>
 				</div>
 			</section>
 			<section>
-				<h2>ATM</h2>
+				<h2>ATM - three levels</h2>
 				<div class="slide-body">
+					<h4>levels inform decisions</h4>
 					<h4>levels of programming skills</h4>
+					<h4>decide for you what level means: appliance install python etc.</h4>
 				</div>
 			</section>
 			<section>
@@ -368,7 +397,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</div>
 			</section>
 			<section>
-				<h2>heuristics - auto-tests</h2>
+				<h2>lessons learned - auto-tests</h2>
 				<div class="slide-body">
 					<h4>clean code but not too clean: readable code vs readable test</h4>
 					<h4>test should be readable on level of test on one screen / without scrolling</h4>
@@ -379,7 +408,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</div>
 			</section>
 			<section>
-				<h2>heuristics - framework</h2>
+				<h2>lessons learned - framework</h2>
 				<div class="slide-body">
 					<h4>closeness to seams / touch the seams / careful with too much abstraction</h4>
 					<h4>interact with seam via transparent abstraction</h4>
@@ -389,7 +418,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</div>
 			</section>
 			<section>
-				<h2>heuristics - code</h2>
+				<h2>lessons learned - code</h2>
 				<div class="slide-body">
 					<h4>version control (nothing is lost: deletes, mistakes)</h4>
 					<h4>don't be too smart in your code, raises barrier to entry</h4>			
@@ -397,7 +426,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</div>
 			</section>
 			<section>
-				<h2>heuristics - other</h2>
+				<h2>lessons learned - other</h2>
 				<div class="slide-body">
 					<h4>when is which perspective more important?</h4>
 					<h4>when is which activity more important?</h4>
@@ -431,10 +460,10 @@ def current_date_please():
 			<section>
 				<h2>image attribution</h2>
 				<div class="slide-body">
-					<h4><a href="http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/light-bulb-icon.html">“lightbulb icon”</a> by <a href="http://www.iconarchive.com/artist/paomedia.html">paomedia</a> is part of the <a href="https://en.wikipedia.org/wiki/Public_domain">public domain</a></h4>
-					<h4><a href="https://www.iconfinder.com/icons/3605318/bolt_bolts_construction_rivet_screw_screws_icon">"nuts and bolts icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h4>
-					<h4><a href="https://www.iconfinder.com/icons/2023120/appliance_bread_breadfast_kitchen_toaster_icon">"toaster icon"</a> by <a href="https://www.iconfinder.com/wxchee">W.X. Chee</a> is free for commercial use (include link to author's website)</h4>
-					<h4><a href="https://www.iconfinder.com/icons/3605335/carpentry_drill_drilling_industry_machine_repair_tool_icon">"drill icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h4>
+					<h5><a href="http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/light-bulb-icon.html">“lightbulb icon”</a> by <a href="http://www.iconarchive.com/artist/paomedia.html">paomedia</a> is part of the <a href="https://en.wikipedia.org/wiki/Public_domain">public domain</a></h5>
+					<h5><a href="https://www.iconfinder.com/icons/3605318/bolt_bolts_construction_rivet_screw_screws_icon">"nuts and bolts icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h5>
+					<h5><a href="https://www.iconfinder.com/icons/2023120/appliance_bread_breadfast_kitchen_toaster_icon">"toaster icon"</a> by <a href="https://www.iconfinder.com/wxchee">W.X. Chee</a> is free for commercial use (include link to author's website)</h5>
+					<h5><a href="https://www.iconfinder.com/icons/3605335/carpentry_drill_drilling_industry_machine_repair_tool_icon">"drill icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h5>
 				</div>
 			</section>
 			<section style="text-align: center">
