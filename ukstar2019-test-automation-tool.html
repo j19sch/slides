@@ -39,217 +39,370 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 		<div class="slides" style="text-align: left">
 			<section style="text-align: center">
 				<h1 style="margin-top:1em">What to look for in a test automation tool</h1>
-				<div style="margin-top:1.2em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+				<div class="flex" style="margin-top:1.2em;justify-content:space-around">
 					<h5>UKStar 2019</h5>
 					<h5>11 March 2019</h5>
 				</div>
 			</section>
 			<section>
-				<h2>about me</h2>
-				<h3>twitter</h3>
-				<h3>blog & four-hour tester</h3>
-				<h3>slides</h3>
-				<h3>API and tests -> workshop material</h3>
+				<h2>a bit more about me</h2>
+				<div class="slide-body">
+					<h4>twitter: <a href="https://www.twitter.com/j19sch">@j19sch</a></h4>
+					<h4>blog: <a href="https://testingcurve.wordpress.com">testingcurve.wordpress.com</a></h4>
+					<h4><a href="https://www.fourhourtester.net/">fourhourtester.net</a> created with Helena Jeret-Mäe</h4>
+					<h4>slides: <a href="https://j19sch.github.io">j19sch.github.io</a></h4>
+				</div>
 			</section>
 			<section>
 				<h2>2016? Postman/Newman</h2>
-				<h3>issues</h3>
-				<h4>version control</h4>
-				<h4>pipeline report (better: logging)</h4>
-				<h4>setup/teardown & polling</h4>
+				<div class="slide-body">
+					<div class="flex-c" style="justify-content:flex-start">
+						<div style="flex:0 0 auto">
+							<h3>issues</h3>
+							<h4>version control</h4>
+							<h4>pipeline report (better: logging)</h4>
+							<h4>setup/teardown & polling</h4>
+						</div>
+						<div class="flex-c" style="margin-left:3em;flex:0 1 auto;flex-direction:column;flex:0 1 auto">
+							<img class="plain" width="35%" data-src="ukstar2019/postman-logo.png" alt="postman-logo"/>
+							<img class="plain" width="35%" data-src="ukstar2019/newman-logo.png" alt="newman-logo"/>
+						</div>
+					</div>
+				</div>			
 			</section>
 			<section>
-				<h2>2018? own tool</h2>
-				<h4>scrum mastered for a bit</h4>
-				<h4>python because other tool and other tests in python, later: great language for test automation</h4>
-				<h4>not all migrated, because no need</h4>
+				<h2>2017? own tool in Python</h2>
+				<div class="slide-body">
+					<div class="flex-c" style="justify-content:flex-start">
+						<div style="flex:0 1 auto">
+							<h3>why Python?</h3>
+							<h4>other tool and auto-tests</h4>
+							<h4>great for automation</h4>
+							<h4>still some tests in Postman</h4>
+						</div>
+						<div class="flex-c" style="margin-left:3em;flex:0 1 auto;flex-direction:column;flex:0 1 auto">
+							<img class="plain" width="100%" data-src="ukstar2019/python-logo.png" alt="python-logo"/>
+						</div>
+					</div>
+				</div>			
 			</section>
 			<section>
 				<h2>what we´ll be doing today</h2>
-				<h3>walk through some examples</h3>
-				<h3>illustrate ideas with tool</h3>
-				<h3>two heuristics</h3>
-				<h4>ATM</h4>
-				<h4>C-RUDDER</h4>
-				<h3>heuristics</h3>			
+				<div class="slide-body">
+					<h4>walk through some scenarios</h4>
+					<h4>illustrate ideas with tool</h4>
+					<h4>three levels: ATM</h4>
+					<h4>heuristic: C-RUDDER</h4>
+					<h4>lessons learned<img style="vertical-align:middle" class="plain" width="5%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/></h4>
+				</div>
 			</section>
 			<section>
 				<h2>my own framework</h2>
-				<h4>requests</h4>
-				<h4>pytest</h4>
-				<h4>pytest-html</h4>
-				<h4>git</h4>
+				<div class="slide-body">
+					<h4>requests</h4>
+					<h4>pytest</h4>
+					<h4>pytest-html</h4>
+					<h4>git</h4>
+				</div>
 			</section>
 			<section>
 				<h2>my own framework</h2>
-				<h3>read test data files (pyyaml and pytest)</h3>
-				<h3>pytest-logfest</h3>
-				<h3>logging and default cred wrappers and convenience methods</h3>
+				<div class="slide-body">
+					<h4>read test data files (pyyaml and pytest)</h4>
+					<h4>pytest-logfest</h4>
+					<h4>default API credentials</h4>
+					<h4>response body parsing</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>glue well-established tools and libraries together with trivial code</h4>
-				<h4>you're not in the test tool business</h4>
-				<h4>differentiator is awesome testing, not awesome test tools</h4>
+				<div class="guideline">
+					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
+					<h4>glue well-established tools and libraries together with trivial code</h4>
+					<h4>you're not in the test tool business</h4>
+					<h4>differentiator is awesome testing, not awesome test tools</h4>
+				</div>
+				<aside class="notes"></aside>
 			</section>
 			<section>
 				<h2>the API we will be testing</h2>
-				<h3>books API</h3>
+				<div class="slide-body">
+					<h4>books API</h4>
+				</div>
 			</section>
 			<section>
 				<h2>let's run some tests</h2>
-				<h3>output of all green test suite</h3>
-				<h3>cool! let's release</h3>
+				<div class="slide-body">
+					<h4>output of all green test suite</h4>
+					<h4>cool! let's release</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">3 levels - Appliance</h3>
-				<h4>information about the product</h4>
-				<h3 style="margin-top: 2em">activity - Run & Report</h3>
+				<div class="level">
+					<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/toaster.png" alt="toaster"/>Appliance</h3>
+					<h4>information about the product</h4>
+					<h4 style="margin-top: 2.6em"><span class="lighter">C-RUDDE</span>R</h4>
+					<h3>Run & Report</h3>
+				</div>
 			</section>
 			<section>
 				<h2>so what did we test?</h2>
-				<h3>pytest -v</h3>
-				<h3>pytest-html report (leave out?)</h3>
+				<div class="slide-body">
+					<h4>pytest -v</h4>
+					<h4>pytest-html report (leave out? yes)</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>test does one thing and one thing only</h4>
+				<div class="guideline">
+					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
+					<h4>test does one thing and one thing only</h4>
+					<aside class="notes">one sentence -> name; size of one thing depends; several similar tests</aside>
+				</div>
 			</section>
 			<section>
 				<h2>let's look at the code</h2>
-				<h3>show one test</h3>
+				<div class="slide-body">
+					<h4>show one test</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>DSLs and learning to program?</h4>
+				<div class="guideline">
+					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
+					<h4>DSLs and learning to program?</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>use transparent abstractions for your seams</h4>
-				<h4>example: headers filled by requests</h4>
-				<h4>separation of concerns</h4>
-				<h4>don't mix abstraction levels</h4>
+				<div class="guideline">
+					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
+					<h4>use transparent abstractions for your seams</h4>
+					<h4>example: headers filled by requests</h4>
+					<h4>separation of concerns</h4>
+					<h4>don't mix abstraction levels</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>readable test versus readable code</h4>
+				<div class="guideline">
+					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
+					<h4>readable test versus readable code</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">3 levels - Tool</h3>
-				<h4>information about the tests</h4>
-				<h3 style="margin-top: 2em">activity - Read</h3>
+				<div class="level">
+					<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
+					<h4>information about the tests</h4>
+					<h4 style="margin-top: 2.6em"><span class="lighter">C-</span>R<span class="lighter">UDDER</span></h4>
+					<h3>Read</h3>
+				</div>
 			</section>
 			<section>
 				<h2>and then a test failed</h2>
-				<h3>let's take a look how/why</h3>
-				<h3>let's fix it</h3>
+				<div class="slide-body">
+					<h4>let's take a look how/why</h4>
+					<h4>let's fix it</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>informative pass/fail overview</h4>
+				<div class="guideline">
+					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
+					<h4>informative pass/fail overview</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>no such thing as too much information</h4>
-				<h4>if navigateable</h4>
+				<div class="guideline">
+					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
+					<h4>no such thing as too much information</h4>
+					<h4>if navigateable</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>never trust a test you haven't seen fail</h4>
+				<div class="guideline">
+					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
+					<h4>never trust a test you haven't seen fail</h4>
+				</div>
 			</section>
 			<section>
 				<h2>let's add a test</h2>
+				<div class="slide-body">
+					<h4>ok!</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">3 levels - Tool</h3>
-				<h4>information about the tests</h4>
-				<h3 style="margin-top: 2em">activity - Create</h3>
+				<div class="level">
+					<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
+					<h4>information about the tests</h4>
+					<h4 style="margin-top: 2.6em">C<span class="lighter">-RUDDER</span></h4>
+					<h3>Create</h3>
+				</div>
 			</section>
 			<section>
 				<h2>let's add a test</h2>
-				<h3>why did the test error?</h3>
+				<div class="slide-body">
+					<h3>why did the test error?</h3>
+				</div>
 			</section>
 			<section>
 				<h2>let's fix the test</h2>
-				<h2>debugging</h2>
+				<div class="slide-body">
+					<h4>debugging</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">3 levels - Machine (nuts & bolts)</h3>
-				<h4>information about the implementation</h4>
-				<h3 style="margin-top: 2em">activity - Debug</h3>
+				<div class="level">
+					<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/nuts-bolts.png" alt="nuts and bolts"/>Machine</h3>
+					<h4>information about the implementation</h4>
+					<h4 style="margin-top: 2.6em"><span class="lighter">C-RUD</span>D<span class="lighter">ER</span></h4>
+					<h3>Debug</h3>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>forced switching between levels sucks (!yak shaving)</h4>
+				<div class="guideline">
+					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
+					<h4>forced switching between levels sucks (!yak shaving)</h4>
+				</div>
 			</section>
 			<section>
-				<h3 style="margin-top: 2em">heuristic</h3>
-				<h4>5 things at play, make sure you can separate them</h4>
-				<h4>product & infra, auto-tests & infra, testing</h4>
+				<div class="guideline">
+					<h2><img style="vertical-align:middle" class="plain" width="12%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>guideline</h2>
+					<h4>5 things at play, make sure you can separate them</h4>
+					<h4>product & infra, auto-tests & infra, testing</h4>
+				</div>
 			</section>
  			<section>
 				<h1 style="margin-top:1.7em">wrap-up</h1>
 			</section>
 			<section>
 				<h2>ATM</h2>
-				<ul>
-					<li>Appliance -> information about quality</li>
-					<li>Tool -> information about tests</li>
-					<li>Machine -> information about implementation</li>
-				</ul>
-				<h4>forced switching between levels sucks (!yak shaving)</h4>
-				<h4>levels inform decisions</h4>
-				<h4>decide for you what level means: appliance install python etc.</h4>
+				<div class="slide-body">
+					<ul>
+						<li>Appliance -> information about quality</li>
+						<li>Tool -> information about tests</li>
+						<li>Machine -> information about implementation</li>
+					</ul>
+					<h4>forced switching between levels sucks (!yak shaving)</h4>
+					<h4>levels inform decisions</h4>
+					<h4>decide for you what level means: appliance install python etc.</h4>
+				</div>
 			</section>
 			<section>
 				<h2>ATM</h2>
-				<h4>levels of programming skills</h4>
+				<div class="slide-body">
+					<h4>levels of programming skills</h4>
+				</div>
 			</section>
 			<section>
 				<h2>C-RUDDER</h2>
-				<ul>
-					<li>Create</li>
-					<li>Read</li>
-					<li>Update</li>
-					<li>Delete</li>
-					<li>Debug</li>
-					<li>Explore</li>
-					<li>Run & Report</li>
-				</ul>
+				<div class="slide-body">
+					<div style="display:flex; justify-content:space-around;">
+						<div class="flex" style="width:30%;justify-content: center;flex-direction:column; flex:auto 0 0">
+							<h3><span class="heuristic">C</span>reate</h3>
+							<h3><span class="heuristic">R</span>ead</h3>
+							<h3><span class="lighter heuristic">U</span></h3>
+							<h3><span class="lighter heuristic">D</span></h3>
+						</div>
+							<div class="flex" style="width:40%;justify-content:center;flex-direction:column; flex:auto 0 0">
+								<h3><span class="heuristic">D</span>ebug</h3>
+								<h3><span class="lighter heuristic">E</span></h3>
+								<h3><span class="heuristic">R</span>un & report</h3>
+							</div>
+						</div>
+					</div>
 			</section>
 			<section>
 				<h2>C-RUDDER</h2>
-				<h4>map to ATM</h4>
-				<h4>what does it look like in practice to you?</h4>
+				<div class="slide-body">
+					<div style="display:flex; justify-content:space-around;">
+						<div class="flex" style="width:30%;justify-content: center;flex-direction:column; flex:auto 0 0">
+							<h3><span class="heuristic">C</span>reate</h3>
+							<h3><span class="heuristic">R</span>ead</h3>
+							<h3><span class="heuristic">U</span>pdate</h3>
+							<h3><span class="lighter heuristic">D</span></h3>
+						</div>
+							<div class="flex" style="width:40%;justify-content:center;flex-direction:column; flex:auto 0 0">
+								<h3><span class="heuristic">D</span>ebug</h3>
+								<h3><span class="lighter heuristic">E</span></h3>
+								<h3><span class="heuristic">R</span>un & report</h3>
+							</div>
+						</div>
+					</div>
+			</section>
+			<section>
+				<h2>C-RUDDER</h2>
+				<div class="slide-body">
+					<div style="display:flex; justify-content:space-around;">
+						<div class="flex" style="width:30%;justify-content: center;flex-direction:column; flex:auto 0 0">
+							<h3><span class="heuristic">C</span>reate</h3>
+							<h3><span class="heuristic">R</span>ead</h3>
+							<h3><span class="heuristic">U</span>pdate</h3>
+							<h3><span class="heuristic">D</span>elete</h3>
+						</div>
+							<div class="flex" style="width:40%;justify-content:center;flex-direction:column; flex:auto 0 0">
+								<h3><span class="heuristic">D</span>ebug</h3>
+								<h3><span class="lighter heuristic">E</span></h3>
+								<h3><span class="heuristic">R</span>un & report</h3>
+							</div>
+						</div>
+					</div>
+			</section>
+			<section>
+				<h2>C-RUDDER</h2>
+				<div class="slide-body">
+					<div style="display:flex; justify-content:space-around;">
+						<div class="flex" style="width:30%;justify-content: center;flex-direction:column; flex:auto 0 0">
+							<h3><span class="heuristic">C</span>reate</h3>
+							<h3><span class="heuristic">R</span>ead</h3>
+							<h3><span class="heuristic">U</span>pdate</h3>
+							<h3><span class="heuristic">D</span>elete</h3>
+						</div>
+							<div class="flex" style="width:40%;justify-content:center;flex-direction:column; flex:auto 0 0">
+								<h3><span class="heuristic">D</span>ebug</h3>
+								<h3><span class="heuristic">E</span>xplore</h3>
+								<h3><span class="heuristic">R</span>un & report</h3>
+							</div>
+						</div>
+					</div>
+			</section>
+			<section>
+				<h2>C-RUDDER</h2>
+				<div class="slide-body">
+					<h4>map to ATM</h4>
+					<h4>what does it look like in practice to you?</h4>
+				</div>
 			</section>
 			<section>
 				<h2>heuristics - auto-tests</h2>
-				<h4>clean code but not too clean: readable code vs readable test</h4>
-				<h4>test should be readable on level of test on one screen / without scrolling</h4>
-				<h4>test should test one thing only / explainable in one sentence -> test name</h4>
-				<h4>never trust a test you haven't seen fail</h4>
-				<h4>separate test from setup/teardown to clarify intention</h4>
-				<h4>no such thing as too much information if well-structured</h4>
+				<div class="slide-body">
+					<h4>clean code but not too clean: readable code vs readable test</h4>
+					<h4>test should be readable on level of test on one screen / without scrolling</h4>
+					<h4>test should test one thing only / explainable in one sentence -> test name</h4>
+					<h4>never trust a test you haven't seen fail</h4>
+					<h4>separate test from setup/teardown to clarify intention</h4>
+					<h4>no such thing as too much information if well-structured</h4>
+				</div>
 			</section>
 			<section>
 				<h2>heuristics - framework</h2>
-				<h4>closeness to seams / touch the seams / careful with too much abstraction</h4>
-				<h4>interact with seam via transparent abstraction</h4>
-				<h4>pass/fail overview should be informative</h4>
-				<h4>glue code, don't do everything yourself</h4>
-				<h4>log all the things</h4>
+				<div class="slide-body">
+					<h4>closeness to seams / touch the seams / careful with too much abstraction</h4>
+					<h4>interact with seam via transparent abstraction</h4>
+					<h4>pass/fail overview should be informative</h4>
+					<h4>glue code, don't do everything yourself</h4>
+					<h4>log all the things</h4>
+				</div>
 			</section>
 			<section>
 				<h2>heuristics - code</h2>
-				<h4>version control (nothing is lost: deletes, mistakes)</h4>
-				<h4>don't be too smart in your code, raises barrier to entry</h4>			
-				<h4>different levels of programming skills</h4>
+				<div class="slide-body">
+					<h4>version control (nothing is lost: deletes, mistakes)</h4>
+					<h4>don't be too smart in your code, raises barrier to entry</h4>			
+					<h4>different levels of programming skills</h4>
+				</div>
 			</section>
 			<section>
 				<h2>heuristics - other</h2>
-				<h4>when is which perspective more important?</h4>
-				<h4>when is which activity more important?</h4>
-				<h4>testing interacts with: product, product infra, framework/runner/auto-tests, f/r/a-t infra, testing</h4>
+				<div class="slide-body">
+					<h4>when is which perspective more important?</h4>
+					<h4>when is which activity more important?</h4>
+					<h4>testing interacts with: product, product infra, framework/runner/auto-tests, f/r/a-t infra, testing</h4>
+				</div>
 			</section>
 			<section>
 				<h2>have some Python</h2>
@@ -275,8 +428,36 @@ def current_date_please():
 				<h4>user vs poweruser vs toolsmith</h4>
 				<h4>testers should now basic programming: it's how software is made</h4>
 			</section>
+			<section>
+				<h2>image attribution</h2>
+				<div class="slide-body">
+					<h4><a href="http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/light-bulb-icon.html">“lightbulb icon”</a> by <a href="http://www.iconarchive.com/artist/paomedia.html">paomedia</a> is part of the <a href="https://en.wikipedia.org/wiki/Public_domain">public domain</a></h4>
+					<h4><a href="https://www.iconfinder.com/icons/3605318/bolt_bolts_construction_rivet_screw_screws_icon">"nuts and bolts icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h4>
+					<h4><a href="https://www.iconfinder.com/icons/2023120/appliance_bread_breadfast_kitchen_toaster_icon">"toaster icon"</a> by <a href="https://www.iconfinder.com/wxchee">W.X. Chee</a> is free for commercial use (include link to author's website)</h4>
+					<h4><a href="https://www.iconfinder.com/icons/3605335/carpentry_drill_drilling_industry_machine_repair_tool_icon">"drill icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h4>
+				</div>
+			</section>
 			<section style="text-align: center">
 				<h3 style="margin-top: 4em">thank you!</h3>
+			</section>
+			<section>
+				<div class="level" style="text-align: left">
+					<div class="flex-c">
+						<div>
+							<h3><img style="vertical-align:middle;margin-right:1em" width="20%" class="plain" data-src="ukstar2019/toaster.png" alt="toaster"/>Appliance </h3>
+							<h4>information about the product</h4>
+						</div>
+						<div class="flex" style="margin-left:0.8em;justify-content:flex-start;align-items:left;flex-direction:column; flex:auto 0 0">
+							<h4 class="lighter heuristic">C</h4>
+							<h4 class="lighter heuristic">R</h4>
+							<h4 class="lighter heuristic">U</h4>
+							<h4 class="lighter heuristic">D</h4>
+							<h4 class="lighter heuristic">D</h4>
+							<h4 class="lighter heuristic">E</h4>
+							<h3><span class="heuristic">R</span>un & report</h3>
+						</div>
+					</div>
+				</div>
 			</section>
 		</div>
 
