@@ -50,7 +50,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 						<h4 style="width:15%">web</h4>
 						<div class="flex" style="flex-direction:column">
 							<h4><a href="https://testingcurve.wordpress.com">testingcurve.wordpress.com</a></h4>
-							<h4><a href="https://www.fourhourtester.net/">fourhourtester.net</a> <span class="sub">(created with Helena Jeret-Mäe)</span></h4>
+							<h4><a href="https://www.fourhourtester.net/">fourhourtester.net</a> <span class="sub">(with Helena Jeret-Mäe)</span></h4>
 						</div>
 					</div>
 					<div class="flex" style="margin-top:1em">
@@ -161,11 +161,19 @@ GET /books/{book-id}
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>let's run some tests</h2>
 				<div class="slide-body">
-					<h4>output of all green test suite</h4>
-					<h4>cool! let's release</h4>
-					<pre><code data-trim class="nohighlight">
-terminal output goes here
+					<pre><code data-trim data-noescape class="nohighlight">
+$ pytest
+================================= test session starts ==================================
+platform linux -- Python 3.6.7, pytest-4.3.0, py-1.8.0, pluggy-0.9.0
+rootdir: /home/jss/workspace/building-an-api-testing-framework/ukstar2019, inifile:
+plugins: metadata-1.8.0, html-1.20.0
+collected 14 items                                                                     
+
+test_books.py <span class="dark-green">..............</span>                                                     <span class="dark-teal">[100%]</span>
+
+<span class="light-green">============================== 14 passed in 0.09 seconds ===============================</span>
 					</code></pre>
+					<h4>cool! let's release</h4>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
@@ -183,9 +191,39 @@ terminal output goes here
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>so what did we test?</h2>
 				<div class="slide-body">
-					<h4>pytest -v</h4>
-					<pre><code data-trim class="nohighlight">
-terminal output goes here
+					<pre><code data-trim data-noescape class="nohighlight">
+$ pytest -v
+================================= test session starts ==================================
+platform linux -- Python 3.6.7, pytest-4.3.0, py-1.8.0, pluggy-0.9.0
+rootdir: /home/jss/workspace/building-an-api-testing-framework/ukstar2019, inifile:
+plugins: metadata-1.8.0, html-1.20.0
+collected 14 items                                                                     
+
+test_books.py::test_get_books <span class="dark-green">PASSED</span>                                     <span class="dark-teal">[  7%]</span>
+test_books.py::test_get_single_book <span class="dark-green">PASSED</span>                               <span class="dark-teal">[ 14%]</span>
+test_books.py::test_get_single_book_invalid_uuid <span class="dark-green">PASSED</span>                  <span class="dark-teal">[ 21%]</span>
+test_books.py::test_post_book <span class="dark-green">PASSED</span>                                     <span class="dark-teal">[ 28%]</span>
+test_books.py::test_post_book_invalid_request <span class="dark-green">PASSED</span>                     <span class="dark-teal">[ 35%]</span>
+
+(continues on next slide)
+					</code></pre>
+				</div>
+			</section>
+						<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<h2>so what did we test?</h2>
+				<div class="slide-body">
+					<pre><code data-trim data-noescape class="nohighlight">
+test_books.py::test_delete_book <span class="dark-green">PASSED</span>                                   <span class="dark-teal">[ 42%]</span>
+test_books.py::test_delete_nonexisting_book <span class="dark-green">PASSED</span>                       <span class="dark-teal">[ 50%]</span>
+test_books.py::test_delete_book_no_auth <span class="dark-green">PASSED</span>                           <span class="dark-teal">[ 57%]</span>
+test_books.py::test_delete_book_invalid_auth <span class="dark-green">PASSED</span>                      <span class="dark-teal">[ 64%]</span>
+test_books.py::test_delete_book_invalid_uuid <span class="dark-green">PASSED</span>                      <span class="dark-teal">[ 71%]</span>
+test_books.py::test_update_book <span class="dark-green">PASSED</span>                                   <span class="dark-teal">[ 78%]</span>
+test_books.py::test_update_nonexisting_book <span class="dark-green">PASSED</span>                       <span class="dark-teal">[ 85%]</span>
+test_books.py::test_update_book_invalid_request <span class="dark-green">PASSED</span>                   <span class="dark-teal">[ 92%]</span>
+test_books.py::test_update_book_invalid_uuid <span class="dark-green">PASSED</span>                      <span class="dark-teal">[100%]</span>
+
+<span class="light-green">============================== 14 passed in 0.09 seconds ===============================</span>
 					</code></pre>
 				</div>
 			</section>
@@ -200,8 +238,23 @@ terminal output goes here
 				<h2>let's look at the code</h2>
 				<div class="slide-body">
 					<pre><code data-trim class="python">
-def test_something():
-	assert True
+def test_post_book(books_api):
+    new_book = {
+        "author": "Neil Gaiman",
+        "pages": 299,
+        "publisher": "W.W. Norton & Company",
+        "sub_title": None,
+        "title": "Norse Mythology",
+        "year": 2017
+    }
+
+    response = books_api.post_book(new_book)
+    assert response.status_code == 201
+    new_book["id"] = response.json()['id']
+
+    response = books_api.get_one_book(new_book['id'])
+    assert response.status_code == 200
+    assert response.json() == new_book
 					</code></pre>
 				</div>
 			</section>
@@ -247,10 +300,66 @@ def test_something():
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>and then a test failed</h2>
 				<div class="slide-body">
-					<h4>let's take a look how/why</h4>
-					<h4>let's fix it</h4>
-					<pre><code data-trim class="nohighlight">
-terminal output goes here
+					<pre><code data-trim data-noescape class="nohighlight">
+$ pytest test_books.py::test_delete_book
+====================================== test session starts =============================
+platform linux -- Python 3.6.7, pytest-4.3.0, py-1.8.0, pluggy-0.9.0
+rootdir: /home/jss/workspace/building-an-api-testing-framework/ukstar2019, inifile:
+plugins: metadata-1.8.0, html-1.20.0
+collected 1 item                                                                                
+
+test_books.py <span class="red">F</span>                                                                   <span class="dark-teal">[100%]</span>
+
+======================================= FAILURES ========================================
+					</code></pre>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<h2>and then a test failed</h2>
+				<div class="slide-body">
+					<pre><code data-trim data-noescape class="nohighlight">
+<span class="red">_______________________________________ test_delete_book ________________________________________</span>
+
+books_api = ⧼ukstar2019.api_clients.Books object at 0x7f78545794a8⧽
+initial_books = [{'author': 'Gerald Weinberg', 'id': '9b30d321-d242-444f-b2db-884d04a4d806', 'pages': 182, 'publisher': 'Dorset House ...or': 'John Ousterhout', 'id': 'd917b78e-1dc2-4f3e-87ea-245c55c6fd52', 'pages': 178, 'publisher': 'Yaknyam Press', ...}]
+creds = ('bob', 'FnbLmFORYenkROl')
+new_book = {'author': 'Nicole Forsgren, Jez Humble, Gene Kim', 'id': '224ec88b-eac6-4509-8ab7-5983e764fcc6', 'pages': 257, 'publisher': 'IT Revolution', ...}
+
+    def test_delete_book(books_api, initial_books, creds, new_book):
+        book_to_delete = new_book['id']
+        user, token = creds
+    
+        response = books_api.delete_book(book_to_delete, user, token)
+>       assert response.status_code == 200
+<span class="red">E       assert 204 == 200</span>
+<span class="red">E        +  where 204 = ⧼Response [204]⧽.status_code</span>
+
+<span class="red">test_books.py:69</span>: AssertionError
+					</code></pre>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<h2>and then a test failed</h2>
+				<div class="slide-body">
+					<pre><code data-trim data-noescape class="nohighlight">
+-------------------------------------- Captured log setup ---------------------------------------
+api_clients.py    15 INFO    POST: http://localhost:8001/token/bob
+api_clients.py    16 INFO    headers: {'User-Agent': 'python-requests/2.21.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'}
+api_clients.py    20 INFO    response status: 201, elapsed: 0.001371s
+api_clients.py    21 INFO    headers: {'Server': 'gunicorn/19.9.0', 'Date': 'Sun, 03 Mar 2019 20:07:44 GMT', 'Connection': 'close', 'content-type': 'application/json; charset=UTF-8', 'content-length': '28'}
+api_clients.py    23 INFO    response body: {"token": "FnbLmFORYenkROl"}
+api_clients.py    15 INFO    POST: http://localhost:8001/books
+api_clients.py    16 INFO    headers: {'User-Agent': 'python-requests/2.21.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '210', 'Content-Type': 'application/json'}
+api_clients.py    18 INFO    request body: b'{"author": "Nicole Forsgren, Jez Humble, Gene Kim", "pages": 257, "publisher": "IT Revolution", "sub_title": "Building and scaling high performing technology organizations", "title": "Accelerate", "year": 2018}'
+api_clients.py    20 INFO    response status: 201, elapsed: 0.001469s
+api_clients.py    21 INFO    headers: {'Server': 'gunicorn/19.9.0', 'Date': 'Sun, 03 Mar 2019 20:07:44 GMT', 'Connection': 'close', 'content-type': 'application/json; charset=UTF-8', 'content-length': '46'}
+api_clients.py    23 INFO    response body: {"id": "224ec88b-eac6-4509-8ab7-5983e764fcc6"}
+--------------------------------------- Captured log call ---------------------------------------
+api_clients.py    15 INFO    DELETE: http://localhost:8001/books/224ec88b-eac6-4509-8ab7-5983e764fcc6
+api_clients.py    16 INFO    headers: {'User-Agent': 'python-requests/2.21.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'user': 'bob', 'token': 'FnbLmFORYenkROl', 'Content-Length': '0'}
+api_clients.py    20 INFO    response status: 204, elapsed: 0.000801s
+api_clients.py    21 INFO    headers: {'Server': 'gunicorn/19.9.0', 'Date': 'Sun, 03 Mar 2019 20:07:44 GMT', 'Connection': 'close'}
+<span class="red">=================================== 1 failed in 0.04 seconds ====================================</span>
 					</code></pre>
 				</div>
 			</section>

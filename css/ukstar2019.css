@@ -26,7 +26,7 @@
 
 .reveal div.slide-body {
 	margin-top: 1.0em;
-	margin-left: 0.7em;
+	margin-left: 0.6em;
 }
 
 .reveal div.slide-body-sub {
@@ -64,8 +64,34 @@
 	color: #cecece;
 }
 
+.reveal .light-green {
+	color: #8ae234;
+}
+
+.reveal .dark-green {
+	color: #4e9a06;
+}
+
+.reveal .dark-teal {
+	color: #06989a;
+}
+
+
+.reveal .red {
+	color: #cc0000;
+}
+
 .reveal section img.plain {
-  /*border: 0;*/
-  /*box-shadow: none; }*/
   margin: 0;
+}
+
+.reveal pre {
+	margin: 0;
+	font-size: 0.45em;
+	/*box-shadow: none;*/
+}
+
+.reveal pre code {
+  max-height: 450px;
+  overflow: hidden;
 }
