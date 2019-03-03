@@ -40,52 +40,57 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			<!-- template images are 1280 x 720 -->
 			<section data-background-image="ukstar2019/ukstar-title.jpg" data-background-size=contain>
 			</section>
-			<section>
-				<div  style="text-align: center">
-					<h1 style="margin-top:1em">What to look for in a test automation tool</h1>
-					<div class="flex" style="margin-top:1.2em;justify-content:space-around">
-						<h5>UKStar 2019</h5>
-						<h5>11 March 2019</h5>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<h2>a bit about me</h2>
+				<div class="slide-body">
+					<div class="flex">
+						<h4 style="width:15%">twitter</h4><h4><a href="https://www.twitter.com/j19sch">@j19sch</a></h4>
+					</div>
+					<div class="flex" style="margin-top:1em">
+						<h4 style="width:15%">web</h4>
+						<div class="flex" style="flex-direction:column">
+							<h4><a href="https://testingcurve.wordpress.com">testingcurve.wordpress.com</a></h4>
+							<h4><a href="https://www.fourhourtester.net/">fourhourtester.net</a> <span class="sub">(created with Helena Jeret-Mäe)</span></h4>
+						</div>
+					</div>
+					<div class="flex" style="margin-top:1em">
+						<h4 style="width:15%">slides</h4><h4><a href="https://j19sch.github.io">j19sch.github.io</a></h4>
 					</div>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>a bit more about me</h2>
-				<div class="slide-body">
-					<h4>twitter: <a href="https://www.twitter.com/j19sch">@j19sch</a></h4>
-					<h4>blog: <a href="https://testingcurve.wordpress.com">testingcurve.wordpress.com</a></h4>
-					<h4><a href="https://www.fourhourtester.net/">fourhourtester.net</a> created with Helena Jeret-Mäe</h4>
-					<h4>slides: <a href="https://j19sch.github.io">j19sch.github.io</a></h4>
-				</div>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>2016? Postman/Newman</h2>
+				<h2>2015 Postman & Newman</h2>
 				<div class="slide-body">
 					<div class="flex-c" style="justify-content:flex-start">
-						<div style="flex:0 0 auto">
-							<h3>issues</h3>
-							<h4>version control</h4>
-							<h4>pipeline report (better: logging)</h4>
-							<h4>setup/teardown & polling</h4>
+						<div style="flex:0 0 auto; width:35%">
+							<h3>some issues</h3>
+							<div class="slide-body-sub">
+								<h4>version control</h4>
+								<h4>details in test report</h4>
+								<h4>setup & teardown</h4>
+								<h4>polling</h4>
+							</div>
 						</div>
 						<div class="flex-c" style="margin-left:1em;flex:0 1 auto;flex-direction:column;flex:0 1 auto">
-							<img class="plain" style="margin-bottom:1em" width="35%" data-src="ukstar2019/postman-logo.png" alt="postman-logo"/>
-							<img class="plain" width="35%" data-src="ukstar2019/newman-logo.png" alt="newman-logo"/>
+							<img class="plain" style="margin-bottom:1em" width="30%" data-src="ukstar2019/postman-logo.png" alt="postman-logo"/>
+							<img class="plain" width="30%" data-src="ukstar2019/newman-logo.png" alt="newman-logo"/>
 						</div>
 					</div>
 				</div>			
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>2017? own tool in Python</h2>
+				<h2>2017 own framework</h2>
 				<div class="slide-body">
 					<div class="flex-c" style="justify-content:flex-start">
-						<div style="flex:0 1 auto">
+						<div style="flex:0 1 auto; width:50%">
 							<h3>why Python?</h3>
-							<h4>other tool and auto-tests</h4>
-							<h4>great for automation</h4>
-							<h4>still some tests in Postman</h4>
+							<div class="slide-body-sub">
+								<h4>used for other auto-tests</h4>
+								<h4>great language for automation</h4>
+								<h4>migration still ongoing</h4>
+							</div>
 						</div>
-						<div class="flex-c" style="margin-left:3em;flex:0 1 auto;flex-direction:column;flex:0 1 auto">
+						<div class="flex-c" style="margin-left:3em;flex-direction:column;flex:0 1 auto">
 							<img class="plain" width="100%" data-src="ukstar2019/python-logo.png" alt="python-logo"/>
 						</div>
 					</div>
@@ -94,21 +99,27 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>what we´ll be doing today</h2>
 				<div class="slide-body">
-					<h4>walk through some scenarios</h4>
-					<h4>illustrate ideas with tool</h4>
-					<h4>three levels: ATM</h4>
-					<h4>heuristic: C-RUDDER</h4>
-					<h4>lessons learned</h4>
+					<h4 class="fragment">walk through some scenarios</h4>
+					<h4 class="fragment">ATM: three levels of engagement</h4>
+					<h4 class="fragment">C-RUDDER: activity heuristic</h4>
+					<h4 class="fragment">lessons learned</h4>
+					<h4 class="fragment">wrap-up</h4>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>my own framework</h2>
 				<div class="slide-body">
-					<h4>requests</h4>
-					<h4>pytest</h4>
-					<h4>pytest-html</h4>
-					<h4>git</h4>
-				</div>
+					<div class="flex-c" style="justify-content:flex-start">
+						<div style="flex:0 1 auto;width:30%">
+							<h4>requests</h4>
+							<h4>pytest</h4>
+							<h4>pytest-html</h4>
+							<h4>git</h4>
+						</div>
+						<div class="flex-c" style="margin-left:3em;flex:0 1 auto">
+							<img class="plain" style="width:20%; height:auto;margin-right:2em" data-src="ukstar2019/requests.png" alt="requests library" />
+							<img class="plain" style="width:17%; height:auto" data-src="ukstar2019/pytest.png" alt="pytest" />
+						</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>my own framework</h2>
@@ -121,7 +132,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
-					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>glue well-established tools<br>and libraries together</h3>
 				</div>
 				<aside class="notes">you're not in the test tool business
@@ -130,7 +141,21 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>the API we will be testing</h2>
 				<div class="slide-body">
-					<h4>books API</h4>
+					<h4>books API <span class="sub"><a href="https://github.com/j19sch/building-an-api-testing-framework">(code)</a></span></h4>
+					<pre><code data-trim class="json">
+GET /books/{book-id}
+
+{
+    "author": "Gerald Weinberg", 
+    "id": "9b30d321-d242-444f-b2db-884d04a4d806", 
+    "pages": 182, 
+    "publisher": "Dorset House Publishing", 
+    "sub_title": null, 
+    "title": "Perfect Software And Other Illusions About Testing", 
+    "year": 2008
+}
+					</code></pre>
+					<h4>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
@@ -138,6 +163,9 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				<div class="slide-body">
 					<h4>output of all green test suite</h4>
 					<h4>cool! let's release</h4>
+					<pre><code data-trim class="nohighlight">
+terminal output goes here
+					</code></pre>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
@@ -146,7 +174,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 						<h3 style="margin-bottom:0.1em"><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/toaster.png" alt="toaster"/>Appliance</h3>
 						<h4>information about the product</h4>
 					</div>
-					<div style="margin-top: 2.5em">
+					<div class="fragment" style="margin-top: 2.5em">
 						<h4 style="margin-bottom:0"><span class="lighter">C-RUDDE</span>R</h4>
 						<h3>Run & Report</h3>
 					</div>
@@ -156,12 +184,14 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				<h2>so what did we test?</h2>
 				<div class="slide-body">
 					<h4>pytest -v</h4>
-					<h4>pytest-html report (leave out? yes)</h4>
+					<pre><code data-trim class="nohighlight">
+terminal output goes here
+					</code></pre>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
-					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>a test does one thing<br>and one thing only</h3>
 				</div>
 				<aside class="notes">one sentence -> name; size of one thing depends; several similar tests</aside>
@@ -169,18 +199,27 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>let's look at the code</h2>
 				<div class="slide-body">
-					<h4>show one test</h4>
+					<pre><code data-trim class="python">
+def test_something():
+	assert True
+					</code></pre>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
-					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
-					<h3>progamming language > DSL</h3>
+					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>progamming languages<br>are domain-specific languages</h3>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
-					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>separate test code<br>from interface code</h3>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<div class="lesson">
+					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>use transparent abstractions<br>for your seams</h3>
 				</div>
 				<aside class="notes">example: headers filled by requests
@@ -189,7 +228,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
-					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>readable tests<br>vs<br>readable code</h3>
 				</div>
 			</section>
@@ -199,7 +238,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 						<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
 						<h4>information about the tests</h4>
 					</div>
-					<div style="margin-top: 2.5em">
+					<div class="fragment" style="margin-top: 2.5em">
 						<h4><span class="lighter">C-</span>R<span class="lighter">UDDER</span></h4>
 						<h3>Read</h3>
 					</div>
@@ -210,31 +249,37 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				<div class="slide-body">
 					<h4>let's take a look how/why</h4>
 					<h4>let's fix it</h4>
+					<pre><code data-trim class="nohighlight">
+terminal output goes here
+					</code></pre>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
-					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>informative pass/fail overview</h3>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
-					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>there is no such thing as<br>too much information</h3>
 					<aside class="notes">if well-structured / navigateable</aside>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
-					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>never trust a test<br>you haven't seen fail</h3>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>let's add a test</h2>
 				<div class="slide-body">
-					<h4>ok!</h4>
+					<pre><code data-trim class="python">
+def test_something():
+	assert True
+					</code></pre>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
@@ -243,7 +288,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 						<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
 						<h4>information about the tests</h4>
 					</div>
-					<div style="margin-top: 2.5em">
+					<div class="fragment" style="margin-top: 2.5em">
 						<h4>C<span class="lighter">-RUDDER</span></h4>
 						<h3>Create</h3>
 				</div>
@@ -253,12 +298,19 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				<h2>let's add a test</h2>
 				<div class="slide-body">
 					<h3>why did the test error?</h3>
+					<pre><code data-trim class="python">
+def test_something():
+	assert True
+					</code></pre>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>let's fix the test</h2>
 				<div class="slide-body">
 					<h4>debugging</h4>
+					<pre><code data-trim class="nohighlight">
+debugger output goes here
+					</code></pre>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
@@ -267,7 +319,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 						<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/nuts-bolts.png" alt="nuts and bolts"/>Machine</h3>
 						<h4>information about the implementation</h4>
 					</div>
-					<div style="margin-top: 2.5em">
+					<div class="fragment" style="margin-top: 2.5em">
 						<h4><span class="lighter">C-RUD</span>D<span class="lighter">ER</span></h4>
 						<h3>Debug</h3>
 					</div>
@@ -275,14 +327,14 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
-					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>forced switching<br>between levels sucks</h3>
 					<aside class="notes">yak shaving</aside>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
-					<img class="plain" width="13%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>5 things at play,<br>make sure you can separate them</h3>
 					<h4>product & infra, auto-tests & infra, testing</h4>
 					<aside class="notes">5 things to keep track of</aside>
@@ -312,6 +364,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 						</div>
 					</div>
 				</div>
+				<aside class="notes">user vs poweruser vs toolsmith</aside>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>ATM - three levels</h2>
@@ -321,7 +374,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 					<h4>decide for you what level means: appliance install python etc.</h4>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section data-transition="slide-in none"data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>C-RUDDER</h2>
 				<div class="slide-body">
 					<div style="display:flex; justify-content:space-around;">
@@ -339,7 +392,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 						</div>
 					</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section data-transition="none" data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>C-RUDDER</h2>
 				<div class="slide-body">
 					<div style="display:flex; justify-content:space-around;">
@@ -357,7 +410,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 						</div>
 					</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section data-transition="none" data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>C-RUDDER</h2>
 				<div class="slide-body">
 					<div style="display:flex; justify-content:space-around;">
@@ -375,7 +428,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 						</div>
 					</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section data-transition="none" data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>C-RUDDER</h2>
 				<div class="slide-body">
 					<div style="display:flex; justify-content:space-around;">
@@ -394,25 +447,32 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 					</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>C-RUDDER</h2>
+				<h2>Applying ATM & C-RUDDER</h2>
 				<div class="slide-body">
-					<h4>map to ATM</h4>
+					<h4>map to each other</h4>
+					<h4>it depends</h4>
 					<h4>what does it look like in practice to you?</h4>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>lessons learned - auto-tests</h2>
+				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - auto-tests</h2>
 				<div class="slide-body">
 					<h4>clean code but not too clean: readable code vs readable test</h4>
 					<h4>test should be readable on level of test on one screen / without scrolling</h4>
 					<h4>test should test one thing only / explainable in one sentence -> test name</h4>
 					<h4>never trust a test you haven't seen fail</h4>
-					<h4>separate test from setup/teardown to clarify intention</h4>
-					<h4>no such thing as too much information if well-structured</h4>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>lessons learned - framework</h2>
+				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - auto-tests</h2>
+				<div class="slide-body">
+					<h4>separate test from setup/teardown to clarify intention</h4>
+					<h4>no such thing as too much information if well-structured</h4>
+					<h4>each test can be run in isolation</h4>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - framework</h2>
 				<div class="slide-body">
 					<h4>closeness to seams / touch the seams / careful with too much abstraction</h4>
 					<h4>interact with seam via transparent abstraction</h4>
@@ -422,7 +482,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>lessons learned - code</h2>
+				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - code</h2>
 				<div class="slide-body">
 					<h4>version control (nothing is lost: deletes, mistakes)</h4>
 					<h4>don't be too smart in your code, raises barrier to entry</h4>			
@@ -430,36 +490,12 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>lessons learned - other</h2>
+				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - other</h2>
 				<div class="slide-body">
 					<h4>when is which perspective more important?</h4>
 					<h4>when is which activity more important?</h4>
 					<h4>testing interacts with: product, product infra, framework/runner/auto-tests, f/r/a-t infra, testing</h4>
 				</div>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>have some Python</h2>
-				<pre><code data-trim data-noescape>
-@pytest.fixture(scope='function')
-def current_date_please():
-	return datetime.datetime.now().strftime(H-%m-%s')
-				</code></pre>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>misc</h2>
-				<h4>"it [a computer language] is a novel formal medium for expressing ideas about methodology. Thus, programs must be written for people to read, and only incidentally for machines to execute."<br>Abelson & Sussman in "Structure and Interpretation of Computer Programs"</h4>
-				<h4>People don't want an electrical drill, they want a hole in the wall. No, they want to hang up a picture.</h4>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>notes</h2>
-				<h4>need to generalize beyond API frameworks</h4>
-				<h4>language commonly used in your environment OR Python</h4>
-				<h4>link atm/c-rudder to test processes</h4>
-				<h4>run locally or in pipeline</h4>
-				<h4>clean code: naming, structure, refactoring (DRY, separation of concerns)</h4>
-				<h4>test result: true +, true -, false +, false -</h4>
-				<h4>user vs poweruser vs toolsmith</h4>
-				<h4>testers should now basic programming: it's how software is made</h4>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>image attributions</h2>
@@ -470,29 +506,21 @@ def current_date_please():
 					<h5><a href="https://www.iconfinder.com/icons/3605335/carpentry_drill_drilling_industry_machine_repair_tool_icon">"drill icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h5>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section data-transition="none" data-background-image="ukstar2019/ukstar-questions.jpg" data-background-size=contain>
 				<div style="text-align: center">
-					<h3 style="margin-top: 4em">thank you!</h3>
+					<h3 style="color:#fff;margin-top: 1.2em">Thank you!</h3>
+					<h4 style="color:#fff;margin-top: 5em">@j19sch<br>j19sch.github.io</h4>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<div class="level" style="text-align: left">
-					<div class="flex-c">
-						<div>
-							<h3><img style="vertical-align:middle;margin-right:1em" width="20%" class="plain" data-src="ukstar2019/toaster.png" alt="toaster"/>Appliance </h3>
-							<h4>information about the product</h4>
-						</div>
-						<div class="flex" style="margin-left:0.8em;justify-content:flex-start;align-items:left;flex-direction:column; flex:auto 0 0">
-							<h4 class="lighter heuristic">C</h4>
-							<h4 class="lighter heuristic">R</h4>
-							<h4 class="lighter heuristic">U</h4>
-							<h4 class="lighter heuristic">D</h4>
-							<h4 class="lighter heuristic">D</h4>
-							<h4 class="lighter heuristic">E</h4>
-							<h3><span class="heuristic">R</span>un & report</h3>
-						</div>
-					</div>
-				</div>
+				<h2>misc notes</h2>
+				<h5>"it [a computer language] is a novel formal medium for expressing ideas about methodology. Thus, programs must be written for people to read, and only incidentally for machines to execute."<br>Abelson & Sussman in "Structure and Interpretation of Computer Programs"</h5>
+				<h5>People don't want an electrical drill, they want a hole in the wall. No, they want to hang up a picture.</h5>
+				<h5>need to generalize beyond API frameworks</h5>
+				<h5>clean code: naming, structure, refactoring (DRY, separation of concerns)</h5>
+				<h5>language commonly used in your environment OR Python</h5>
+				<h5>run locally or in pipeline</h5>
+				<h5>test result: true +, true -, false +, false -</h5>
 			</section>
 		</div>
 
