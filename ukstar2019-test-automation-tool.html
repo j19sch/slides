@@ -141,7 +141,7 @@ GET /books/{book-id}
 						</div>
 						<div class="flex-c" style="margin-left:3em;flex:0 1 auto">
 							<img class="plain" style="width:20%; height:auto;margin-right:2em" data-src="ukstar2019/requests.png" alt="requests library" />
-							<img class="plain" style="width:17%; height:auto" data-src="ukstar2019/pytest.png" alt="pytest" />
+							<img class="plain" style="width:18%; height:auto" data-src="ukstar2019/pytest.png" alt="pytest" />
 						</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
@@ -174,9 +174,9 @@ rootdir: /home/jss/workspace/building-an-api-testing-framework/ukstar2019, inifi
 plugins: metadata-1.8.0, html-1.20.0
 collected 14 items                                                                     
 
-test_books.py <span class="dark-green">..............</span>                                                     <span class="dark-teal">[100%]</span>
+test_books.py <span class="green">..............</span>                                                     <span class="dark-teal">[100%]</span>
 
-<span class="light-green">============================== 14 passed in 0.09 seconds ===============================</span>
+<span class="green">============================== 14 passed in 0.09 seconds ===============================</span>
 					</code></pre>
 					<aside class="notes">cool! let's release</aside>
 				</div>
@@ -204,11 +204,11 @@ rootdir: /home/jss/workspace/building-an-api-testing-framework/ukstar2019, inifi
 plugins: metadata-1.8.0, html-1.20.0
 collected 14 items                                                                     
 
-test_books.py::test_get_books <span class="dark-green">PASSED</span>                                     <span class="dark-teal">[  7%]</span>
-test_books.py::test_get_single_book <span class="dark-green">PASSED</span>                               <span class="dark-teal">[ 14%]</span>
-test_books.py::test_get_single_book_invalid_uuid <span class="dark-green">PASSED</span>                  <span class="dark-teal">[ 21%]</span>
-test_books.py::test_post_book <span class="dark-green">PASSED</span>                                     <span class="dark-teal">[ 28%]</span>
-test_books.py::test_post_book_invalid_request <span class="dark-green">PASSED</span>                     <span class="dark-teal">[ 35%]</span>
+test_books.py::test_get_books <span class="green">PASSED</span>                                     <span class="dark-teal">[  7%]</span>
+test_books.py::test_get_single_book <span class="green">PASSED</span>                               <span class="dark-teal">[ 14%]</span>
+test_books.py::test_get_single_book_invalid_uuid <span class="green">PASSED</span>                  <span class="dark-teal">[ 21%]</span>
+test_books.py::test_post_book <span class="green">PASSED</span>                                     <span class="dark-teal">[ 28%]</span>
+test_books.py::test_post_book_invalid_request <span class="green">PASSED</span>                     <span class="dark-teal">[ 35%]</span>
 
 (continues on next slide)
 					</code></pre>
@@ -218,17 +218,17 @@ test_books.py::test_post_book_invalid_request <span class="dark-green">PASSED</s
 				<h2>so what did we test?</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
-test_books.py::test_delete_book <span class="dark-green">PASSED</span>                                   <span class="dark-teal">[ 42%]</span>
-test_books.py::test_delete_nonexisting_book <span class="dark-green">PASSED</span>                       <span class="dark-teal">[ 50%]</span>
-test_books.py::test_delete_book_no_auth <span class="dark-green">PASSED</span>                           <span class="dark-teal">[ 57%]</span>
-test_books.py::test_delete_book_invalid_auth <span class="dark-green">PASSED</span>                      <span class="dark-teal">[ 64%]</span>
-test_books.py::test_delete_book_invalid_uuid <span class="dark-green">PASSED</span>                      <span class="dark-teal">[ 71%]</span>
-test_books.py::test_update_book <span class="dark-green">PASSED</span>                                   <span class="dark-teal">[ 78%]</span>
-test_books.py::test_update_nonexisting_book <span class="dark-green">PASSED</span>                       <span class="dark-teal">[ 85%]</span>
-test_books.py::test_update_book_invalid_request <span class="dark-green">PASSED</span>                   <span class="dark-teal">[ 92%]</span>
-test_books.py::test_update_book_invalid_uuid <span class="dark-green">PASSED</span>                      <span class="dark-teal">[100%]</span>
+test_books.py::test_delete_book <span class="green">PASSED</span>                                   <span class="dark-teal">[ 42%]</span>
+test_books.py::test_delete_nonexisting_book <span class="green">PASSED</span>                       <span class="dark-teal">[ 50%]</span>
+test_books.py::test_delete_book_no_auth <span class="green">PASSED</span>                           <span class="dark-teal">[ 57%]</span>
+test_books.py::test_delete_book_invalid_auth <span class="green">PASSED</span>                      <span class="dark-teal">[ 64%]</span>
+test_books.py::test_delete_book_invalid_uuid <span class="green">PASSED</span>                      <span class="dark-teal">[ 71%]</span>
+test_books.py::test_update_book <span class="green">PASSED</span>                                   <span class="dark-teal">[ 78%]</span>
+test_books.py::test_update_nonexisting_book <span class="green">PASSED</span>                       <span class="dark-teal">[ 85%]</span>
+test_books.py::test_update_book_invalid_request <span class="green">PASSED</span>                   <span class="dark-teal">[ 92%]</span>
+test_books.py::test_update_book_invalid_uuid <span class="green">PASSED</span>                      <span class="dark-teal">[100%]</span>
 
-<span class="light-green">============================== 14 passed in 0.09 seconds ===============================</span>
+<span class="green">============================== 14 passed in 0.09 seconds ===============================</span>
 					</code></pre>
 				</div>
 			</section>
@@ -276,12 +276,6 @@ def test_post_book(books_api):
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
-					<h3>progamming languages<br>are domain-specific languages</h3>
-				</div>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<div class="lesson">
-					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>separate test code<br>from interface code</h3>
 				</div>
 			</section>
@@ -324,6 +318,32 @@ class Books(ApiClient):
 				<aside class="notes">clean code: names, structure, refactoring</aside>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<h2>let's add a test</h2>
+				<div class="slide-body">
+					<pre><code data-trim class="python">
+def test_post_book_invalid_request(books_api):
+    new_book = {
+        "pages": 299,
+        "publisher": "W.W. Norton & Company",
+        "sub_title": None,
+        "title": "Norse Mythology",
+        "year": 2017
+    }
+
+    response = books_api.post_book(new_book)
+    assert response.status_code == 400
+    assert response.json()['title'] == "Failed data validation"
+    assert response.json()['description'] == "'author' is a required property"
+					</code></pre>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<div class="lesson">
+					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
+					<h3>progamming languages<br>are domain-specific languages</h3>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="level">
 					<div>
 						<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
@@ -333,6 +353,18 @@ class Books(ApiClient):
 						<h4><span class="lighter">C-</span>R<span class="lighter">UDDER</span></h4>
 						<h3>Read</h3>
 					</div>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<div class="level">
+					<div>
+						<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
+						<h4>information about the tests</h4>
+					</div>
+					<div style="margin-top: 2.5em">
+						<h4>C<span class="lighter">-RUDDER</span></h4>
+						<h3>Create</h3>
+				</div>
 				</div>
 			</section>
 
@@ -418,12 +450,102 @@ api_clients.py    21 INFO    headers: {'Server': 'gunicorn/19.9.0', 'Date': 'Sun
 			</section>
 
 
+
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>and then a test errored</h2>
 				<div class="slide-body">
-					<h4>debugging</h4>
-					<pre><code data-trim class="nohighlight">
-debugger output goes here
+					<pre><code data-trim data-noescape class="nohighlight">
+<span class="red">_______________________________________ test_get_single_book _______________________________________</span>
+
+books_api = ⧼ukstar2019.api_clients.Books object at 0x7fe3ab605550⧽
+initial_books = [{'author': 'Gerald Weinberg', 'id': '9b30d321-d242-444f-b2db-884d04a4d806', 'pages': 182, 'publisher': 'Dorset House ...or': 'John Ousterhout', 'id': 'd917b78e-1dc2-4f3e-87ea-245c55c6fd52', 'pages': 178, 'publisher': 'Yaknyam Press', ...}]
+
+    def test_get_single_book(books_api, initial_books):
+        expected = initial_books[0].copy()
+    
+>       response = books_api.get_one_book(expected['id'])
+
+<span class="red">test_books</span>.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+					</code></pre>
+				</div>
+			</section>
+						<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<h2>and then a test errored</h2>
+				<div class="slide-body">
+					<pre><code data-trim data-noescape class="nohighlight">
+<span class="red">api_clients.py</span>:43: in get_one_book
+    return self.get(self.url + '/' + book_id)
+<span class="red">venv/lib/python3.6/site-packages/requests/sessions.py</span>:546: in get
+    return self.request('GET', url, **kwargs)
+<span class="red">venv/lib/python3.6/site-packages/requests/sessions.py</span>:533: in request
+    resp = self.send(prep, **send_kwargs)
+<span class="red">venv/lib/python3.6/site-packages/requests/sessions.py</span>:653: in send
+    r = dispatch_hook('response', hooks, r, **kwargs)
+<span class="red">venv/lib/python3.6/site-packages/requests/hooks.py</span>:31: in dispatch_hook
+    _hook_data = hook(hook_data, **kwargs)
+					</code></pre>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<h2>and then a test errored</h2>
+				<div class="slide-body">
+					<pre><code data-trim data-noescape class="nohighlight">
+response = ⧼Response [200]⧽, args = (), kwargs = {'cert': None, 'proxies': OrderedDict(), 'stream': False, 'timeout': None, ...}
+
+    @staticmethod
+    def _log_details(response, *args, **kwargs):
+        logging.info("{}: {}".format(response.request.method, response.request.url))
+        logging.info("headers: {}".format(response.request.headers))
+        if response.request.body is not None:
+            logging.info("request body: {}".format(response.request.body))
+    
+        logging.info("response status: {}, elapsed: {}s".format(response.status_code, response.elapsed.total_seconds()))
+>       logging.info("headers: {}".format(response.header))
+<span class="red">E       AttributeError: 'Response' object has no attribute 'header'</span>
+
+<span class="red">api_clients.py</span>:20: AttributeError
+<span class="red">================================== 1 failed in 0.05 seconds ==================================</span>
+					</code></pre>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<h2>let's do some debugging</h2>
+				<div class="slide-body">
+					<pre><code data-trim data-noescape class="nohighlight">
+$ pytest test_books.py::test_get_single_book --pdb
+====================================== test session starts ======================================
+platform linux -- Python 3.6.7, pytest-4.3.0, py-1.8.0, pluggy-0.9.0
+rootdir: /home/jss/workspace/building-an-api-testing-framework/ukstar2019, inifile:
+plugins: metadata-1.8.0, html-1.20.0
+collected 1 item
+
+test_books.py <span class="red">F</span>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> traceback >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+--- snip test output ---
+					</code></pre>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<h2>let's do some debugging</h2>
+				<div class="slide-body">
+					<pre><code data-trim data-noescape class="nohighlight">
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> entering PDB >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[17] > /home/jss/workspace/building-an-api-testing-framework/ukstar2019/
+	api_clients.py(20)_log_details()
+-> logging.info("headers: {}".format(response.header))
+   6 frames hidden (try 'help hidden_frames')
+(Pdb++) dir(response)
+['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__',
+'__enter__', '__eq__', '__exit__', '__format__', '__ge__', '__getattribute__',
+'__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__',
+'__le__', '__lt__', '__module__', '__ne__', '__new__', '__nonzero__', '__reduce__',
+'__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__',
+'__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next',
+'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding',
+<mark>'headers'</mark>, 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines',
+'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code',
+'text', 'url']
 					</code></pre>
 				</div>
 			</section>
@@ -638,40 +760,13 @@ debugger output goes here
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>misc notes</h2>
-				<h5>"it [a computer language] is a novel formal medium for expressing ideas about methodology. Thus, programs must be written for people to read, and only incidentally for machines to execute."<br>Abelson & Sussman in "Structure and Interpretation of Computer Programs"</h5>
+				<h5>"Thus, programs must be written for people to read, and only incidentally for machines to execute."<br>Abelson & Sussman in "Structure and Interpretation of Computer Programs"</h5>
 				<h5>People don't want an electrical drill, they want a hole in the wall. No, they want to hang up a picture.</h5>
 				<h5>need to generalize beyond API frameworks</h5>
 				<h5>clean code: naming, structure, refactoring (DRY, separation of concerns)</h5>
 				<h5>language commonly used in your environment OR Python</h5>
 				<h5>run locally or in pipeline</h5>
 				<h5>test result: true +, true -, false +, false -</h5>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<div class="lesson">
-					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
-					<h3>informative pass/fail overview</h3>
-				</div>
-			</section>
-						<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>let's add a test</h2>
-				<div class="slide-body">
-					<pre><code data-trim class="python">
-def test_something():
-	assert True
-					</code></pre>
-				</div>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<div class="level">
-					<div>
-						<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
-						<h4>information about the tests</h4>
-					</div>
-					<div class="fragment" style="margin-top: 2.5em">
-						<h4>C<span class="lighter">-RUDDER</span></h4>
-						<h3>Create</h3>
-				</div>
-				</div>
 			</section>
 		</div>
 
