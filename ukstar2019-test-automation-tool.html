@@ -209,8 +209,6 @@ test_books.py::test_get_single_book <span class="green">PASSED</span>           
 test_books.py::test_get_single_book_invalid_uuid <span class="green">PASSED</span>                  <span class="dark-teal">[ 21%]</span>
 test_books.py::test_post_book <span class="green">PASSED</span>                                     <span class="dark-teal">[ 28%]</span>
 test_books.py::test_post_book_invalid_request <span class="green">PASSED</span>                     <span class="dark-teal">[ 35%]</span>
-
-(continues on next slide)
 					</code></pre>
 				</div>
 			</section>
@@ -315,7 +313,7 @@ class Books(ApiClient):
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>readable tests<br>versus<br>clean code</h3>
 				</div>
-				<aside class="notes">clean code: names, structure, refactoring</aside>
+				<aside class="notes">clean code: names, structure, refactoring; read without scrolling</aside>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>let's add a test</h2>
@@ -350,8 +348,8 @@ def test_post_book_invalid_request(books_api):
 						<h4>information about the tests</h4>
 					</div>
 					<div class="fragment" style="margin-top: 2.5em">
-						<h4><span class="lighter">C-</span>R<span class="lighter">UDDER</span></h4>
-						<h3>Read</h3>
+						<h4>C<span class="lighter">-RUDDER</span></h4>
+						<h3>Create</h3>
 					</div>
 				</div>
 			</section>
@@ -362,9 +360,9 @@ def test_post_book_invalid_request(books_api):
 						<h4>information about the tests</h4>
 					</div>
 					<div style="margin-top: 2.5em">
-						<h4>C<span class="lighter">-RUDDER</span></h4>
-						<h3>Create</h3>
-				</div>
+						<h4><span class="lighter">C-</span>R<span class="lighter">UDDER</span></h4>
+						<h3>Read</h3>
+					</div>
 				</div>
 			</section>
 
@@ -535,7 +533,7 @@ test_books.py <span class="red">F</span>
 	api_clients.py(20)_log_details()
 -> logging.info("headers: {}".format(response.header))
    6 frames hidden (try 'help hidden_frames')
-(Pdb++) dir(response)
+(Pdb++) <mark>dir(response)</mark>
 ['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__',
 '__enter__', '__eq__', '__exit__', '__format__', '__ge__', '__getattribute__',
 '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__',
@@ -564,15 +562,15 @@ test_books.py <span class="red">F</span>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
-					<h3>forced switching<br>between levels sucks</h3>
-					<aside class="notes">yak shaving</aside>
+					<h3>many different things can go wrong<br>make sure you can find out what</h3>
+					<aside class="notes">product & infra, auto-tests & infra, testing</aside>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
-					<h3>many different things can go wrong<br>make sure you can find out what</h3>
-					<aside class="notes">product & infra, auto-tests & infra, testing</aside>
+					<h3>forced switching<br>between levels sucks</h3>
+					<aside class="notes">yak shaving</aside>
 				</div>
 			</section>
 
@@ -679,68 +677,38 @@ test_books.py <span class="red">F</span>
 					</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - recap 1</h2>
+				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - auto-tests</h2>
 				<div class="slide-body">
-					<h4>glue well-established tools and libraries together</h4>
 					<h4>a test does one thing and one thing only</h4>
 					<h4>name your tests to clarify intention</h4>
-					<h4>progamming languages are domain-specific languages</h4>
-					<h4>separate test code from interface code</h4>
-					<h4>use transparent abstractions for your seams</h4>
 					<h4>readable tests versus clean code</h4>
-					<h4>there is no such thing as too much information (if well-structured)</h4>
 					<h4>never trust a test you haven't seen fail</h4>
 				</div>
+				<aside class="notes">separate test from setup/teardown to clarify intention; each test can be run in isolation</aside>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - recap 2</h2>
+				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - reports</h2>
 				<div class="slide-body">
-					<h4>some more go here... or not</h4>
+					<h4>there is no such thing as too much information<br>(if well-structured)</h4>
+					<h4>many different things can go wrong,<br>make sure you can find out what</h4>
 					<h4>forced switching between levels sucks</h4>
-					<h4>many different things can go wrong, make sure you can find out what</h4>
-				</div>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - auto-tests</h2>
-				<div class="slide-body">
-					<h4>clean code but not too clean: readable code vs readable test</h4>
-					<h4>test should be readable on level of test on one screen / without scrolling</h4>
-					<h4>test should test one thing only / explainable in one sentence -> test name</h4>
-					<h4>never trust a test you haven't seen fail</h4>
-				</div>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - auto-tests</h2>
-				<div class="slide-body">
-					<h4>separate test from setup/teardown to clarify intention</h4>
-					<h4>no such thing as too much information if well-structured</h4>
-					<h4>each test can be run in isolation</h4>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - framework</h2>
 				<div class="slide-body">
-					<h4>closeness to seams / touch the seams / careful with too much abstraction</h4>
-					<h4>interact with seam via transparent abstraction</h4>
-					<h4>pass/fail overview should be informative</h4>
-					<h4>glue code, don't do everything yourself</h4>
-					<h4>log all the things</h4>
+					<h4>glue well-established tools and libraries together</h4>
+					<h4>separate test code from interface code</h4>
+					<h4>use transparent abstractions for your seams</h4>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - code</h2>
 				<div class="slide-body">
-					<h4>version control (nothing is lost: deletes, mistakes)</h4>
-					<h4>don't be too smart in your code, raises barrier to entry</h4>			
-					<h4>different levels of programming skills</h4>
-				</div>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - other</h2>
-				<div class="slide-body">
-					<h4>when is which perspective more important?</h4>
-					<h4>when is which activity more important?</h4>
-					<h4>testing interacts with: product, product infra, framework/runner/auto-tests, f/r/a-t infra, testing</h4>
+					<h4>progamming languages are domain-specific languages</h4>
+					<h4>version control is a great way to do version control</h4>
+					<h4>don't be too smart in your code</h4>
+					<h4>logging and debugging are your friends</h4>
 				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
@@ -762,11 +730,6 @@ test_books.py <span class="red">F</span>
 				<h2>misc notes</h2>
 				<h5>"Thus, programs must be written for people to read, and only incidentally for machines to execute."<br>Abelson & Sussman in "Structure and Interpretation of Computer Programs"</h5>
 				<h5>People don't want an electrical drill, they want a hole in the wall. No, they want to hang up a picture.</h5>
-				<h5>need to generalize beyond API frameworks</h5>
-				<h5>clean code: naming, structure, refactoring (DRY, separation of concerns)</h5>
-				<h5>language commonly used in your environment OR Python</h5>
-				<h5>run locally or in pipeline</h5>
-				<h5>test result: true +, true -, false +, false -</h5>
 			</section>
 		</div>
 
