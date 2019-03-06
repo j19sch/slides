@@ -233,16 +233,16 @@ test_books.py::test_update_book_invalid_uuid <span class="green">PASSED</span>  
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
-					<h3>a test does one thing<br>and one thing only</h3>
+					<h3>name your tests<br>to clarify intention</h3>
 				</div>
-				<aside class="notes">one sentence -> name; size of one thing depends; several similar tests</aside>
+				<aside class="notes">prevents fixing the tests</aside>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
-					<h3>name your tests<br>to clarify intention</h3>
+					<h3>a test does one thing<br>and one thing only</h3>
 				</div>
-				<aside class="notes">prevents fixing the tests</aside>
+				<aside class="notes">one sentence -> name; size of one thing depends; several similar tests</aside>
 			</section>
 
 
@@ -283,12 +283,12 @@ def test_post_book(books_api):
 					<pre><code data-trim class="python">
 class ApiClient(requests.Session):
     def __init__(self):
-        super(ApiClient, self).__init__()
+        super().__init__()
         self.hooks['response'].append(self._log_details)
 
-class Books(ApiClient):
+class BooksApi(ApiClient):
     def __init__(self):
-        super(Books, self).__init__()
+        super().__init__()
         self.url = f"{BASE_URL}/books"
 
     def get_one_book(self, book_id):
@@ -314,6 +314,18 @@ class Books(ApiClient):
 					<h3>readable tests<br>versus<br>clean code</h3>
 				</div>
 				<aside class="notes">clean code: names, structure, refactoring; read without scrolling</aside>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<div class="level">
+					<div>
+						<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
+						<h4>information about the tests</h4>
+					</div>
+					<div class="fragment" style="margin-top: 2.5em">
+						<h4><span class="lighter">C-</span>R<span class="lighter">UDDER</span></h4>
+						<h3>Read</h3>
+					</div>
+				</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2>let's add a test</h2>
@@ -353,18 +365,6 @@ def test_post_book_invalid_request(books_api):
 					</div>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<div class="level">
-					<div>
-						<h3><img style="vertical-align:middle;margin-right:1em" width="15%" class="plain" data-src="ukstar2019/drill.png" alt="drill"/>Tool</h3>
-						<h4>information about the tests</h4>
-					</div>
-					<div style="margin-top: 2.5em">
-						<h4><span class="lighter">C-</span>R<span class="lighter">UDDER</span></h4>
-						<h3>Read</h3>
-					</div>
-				</div>
-			</section>
 
 
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
@@ -390,7 +390,7 @@ test_books.py <span class="red">F</span>                                        
 					<pre><code data-trim data-noescape class="nohighlight">
 <span class="red">_______________________________________ test_delete_book ________________________________________</span>
 
-books_api = ⧼ukstar2019.api_clients.Books object at 0x7f78545794a8⧽
+books_api = ⧼ukstar2019.api_clients.BooksApi object at 0x7f78545794a8⧽
 initial_books = [{'author': 'Gerald Weinberg', 'id': '9b30d321-d242-444f-b2db-884d04a4d806', 'pages': 182, 'publisher': 'Dorset House ...or': 'John Ousterhout', 'id': 'd917b78e-1dc2-4f3e-87ea-245c55c6fd52', 'pages': 178, 'publisher': 'Yaknyam Press', ...}]
 creds = ('bob', 'FnbLmFORYenkROl')
 new_book = {'author': 'Nicole Forsgren, Jez Humble, Gene Kim', 'id': '224ec88b-eac6-4509-8ab7-5983e764fcc6', 'pages': 257, 'publisher': 'IT Revolution', ...}
@@ -455,7 +455,7 @@ api_clients.py    21 INFO    headers: {'Server': 'gunicorn/19.9.0', 'Date': 'Sun
 					<pre><code data-trim data-noescape class="nohighlight">
 <span class="red">_______________________________________ test_get_single_book _______________________________________</span>
 
-books_api = ⧼ukstar2019.api_clients.Books object at 0x7fe3ab605550⧽
+books_api = ⧼ukstar2019.api_clients.BooksApi object at 0x7fe3ab605550⧽
 initial_books = [{'author': 'Gerald Weinberg', 'id': '9b30d321-d242-444f-b2db-884d04a4d806', 'pages': 182, 'publisher': 'Dorset House ...or': 'John Ousterhout', 'id': 'd917b78e-1dc2-4f3e-87ea-245c55c6fd52', 'pages': 178, 'publisher': 'Yaknyam Press', ...}]
 
     def test_get_single_book(books_api, initial_books):
@@ -677,6 +677,32 @@ test_books.py <span class="red">F</span>
 					</div>
 			</section>
 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<div class="lesson">
+					<h2>forget about the shiny</h2>
+					<h2 class="fragment" style="margin-top: 1em">is your tool helping you<br>to do better testing?</h2>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<h2>image attributions</h2>
+				<div class="slide-body">
+					<h5><a href="http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/light-bulb-icon.html">“lightbulb icon”</a> by <a href="http://www.iconarchive.com/artist/paomedia.html">paomedia</a> is part of the <a href="https://en.wikipedia.org/wiki/Public_domain">public domain</a></h5>
+					<h5><a href="https://www.iconfinder.com/icons/3605318/bolt_bolts_construction_rivet_screw_screws_icon">"nuts and bolts icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h5>
+					<h5><a href="https://www.iconfinder.com/icons/2023120/appliance_bread_breadfast_kitchen_toaster_icon">"toaster icon"</a> by <a href="https://www.iconfinder.com/wxchee">W.X. Chee</a> is free for commercial use (include link to author's website)</h5>
+					<h5><a href="https://www.iconfinder.com/icons/3605335/carpentry_drill_drilling_industry_machine_repair_tool_icon">"drill icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h5>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-questions.jpg" data-background-size=contain>
+				<div style="text-align: center">
+					<h3 style="color:#fff;margin-top: 1.2em">Thank you!</h3>
+					<h4 style="color:#fff;margin-top: 5em">@j19sch<br>j19sch.github.io</h4>
+				</div>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				<h2>misc notes</h2>
+				<h5>"Thus, programs must be written for people to read, and only incidentally for machines to execute."<br>Abelson & Sussman in "Structure and Interpretation of Computer Programs"</h5>
+				<h5>People don't want an electrical drill, they want a hole in the wall. No, they want to hang up a picture.</h5>
+			</section>
+			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
 				<h2><img class="plain" width="6%" style="vertical-align:-10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>lessons learned - auto-tests</h2>
 				<div class="slide-body">
 					<h4>a test does one thing and one thing only</h4>
@@ -710,32 +736,6 @@ test_books.py <span class="red">F</span>
 					<h4>don't be too smart in your code</h4>
 					<h4>logging and debugging are your friends</h4>
 				</div>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<div class="lesson">
-					<h2>forget about the shiny</h2>
-					<h2 class="fragment" style="margin-top: 1em">is you tool helping you<br>to do better testing?</h2>
-				</div>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>image attributions</h2>
-				<div class="slide-body">
-					<h5><a href="http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/light-bulb-icon.html">“lightbulb icon”</a> by <a href="http://www.iconarchive.com/artist/paomedia.html">paomedia</a> is part of the <a href="https://en.wikipedia.org/wiki/Public_domain">public domain</a></h5>
-					<h5><a href="https://www.iconfinder.com/icons/3605318/bolt_bolts_construction_rivet_screw_screws_icon">"nuts and bolts icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h5>
-					<h5><a href="https://www.iconfinder.com/icons/2023120/appliance_bread_breadfast_kitchen_toaster_icon">"toaster icon"</a> by <a href="https://www.iconfinder.com/wxchee">W.X. Chee</a> is free for commercial use (include link to author's website)</h5>
-					<h5><a href="https://www.iconfinder.com/icons/3605335/carpentry_drill_drilling_industry_machine_repair_tool_icon">"drill icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h5>
-				</div>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-questions.jpg" data-background-size=contain>
-				<div style="text-align: center">
-					<h3 style="color:#fff;margin-top: 1.2em">Thank you!</h3>
-					<h4 style="color:#fff;margin-top: 5em">@j19sch<br>j19sch.github.io</h4>
-				</div>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>misc notes</h2>
-				<h5>"Thus, programs must be written for people to read, and only incidentally for machines to execute."<br>Abelson & Sussman in "Structure and Interpretation of Computer Programs"</h5>
-				<h5>People don't want an electrical drill, they want a hole in the wall. No, they want to hang up a picture.</h5>
 			</section>
 		</div>
 
