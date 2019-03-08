@@ -92,10 +92,12 @@
 .reveal pre {
 	margin: 0;
 	font-size: 0.50em;
-	/*box-shadow: none;*/
 }
 
 .reveal pre code {
   max-height: 450px;
   overflow: hidden;
 }
+
+.reveal .progress {
+  color: #595959; }
