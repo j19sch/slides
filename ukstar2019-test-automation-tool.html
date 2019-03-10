@@ -361,7 +361,7 @@ test_books.py <span class="red">F</span>                                        
 					<pre><code data-trim data-noescape class="nohighlight">
 <span class="red">_______________________________________ test_delete_book ________________________________________</span>
 
-books_api = ⧼ukstar2019.api_clients.BooksApi object at 0x7f78545794a8⧽
+books_api = &lt;ukstar2019.api_clients.BooksApi object at 0x7f78545794a8&gt;
 initial_books = [{'author': 'Gerald Weinberg', 'id': '9b30d321-d242-444f-b2db-884d04a4d806', 'pages': 182, 'publisher': 'Dorset House ...or': 'John Ousterhout', 'id': 'd917b78e-1dc2-4f3e-87ea-245c55c6fd52', 'pages': 178, 'publisher': 'Yaknyam Press', ...}]
 creds = ('bob', 'FnbLmFORYenkROl')
 new_book = {'author': 'Nicole Forsgren, Jez Humble, Gene Kim', 'id': '224ec88b-eac6-4509-8ab7-5983e764fcc6', 'pages': 257, 'publisher': 'IT Revolution', ...}
@@ -373,7 +373,7 @@ new_book = {'author': 'Nicole Forsgren, Jez Humble, Gene Kim', 'id': '224ec88b-e
         response = books_api.delete_book(book_to_delete, user, token)
 >       assert response.status_code == 200
 <span class="red">E       assert 204 == 200</span>
-<span class="red">E        +  where 204 = ⧼Response [204]⧽.status_code</span>
+<span class="red">E        +  where 204 = &lt;Response [204]&gt;.status_code</span>
 
 <span class="red">test_books.py:69</span>: AssertionError
 					</code></pre>
@@ -431,7 +431,7 @@ api_clients.py    21 INFO    headers: {'Server': 'gunicorn/19.9.0', 'Date': 'Sun
 					<pre><code data-trim data-noescape class="nohighlight">
 <span class="red">_______________________________________ test_get_single_book _______________________________________</span>
 
-books_api = ⧼ukstar2019.api_clients.BooksApi object at 0x7fe3ab605550⧽
+books_api = &lt;ukstar2019.api_clients.BooksApi object at 0x7fe3ab605550&gt;
 initial_books = [{'author': 'Gerald Weinberg', 'id': '9b30d321-d242-444f-b2db-884d04a4d806', 'pages': 182, 'publisher': 'Dorset House ...or': 'John Ousterhout', 'id': 'd917b78e-1dc2-4f3e-87ea-245c55c6fd52', 'pages': 178, 'publisher': 'Yaknyam Press', ...}]
 
     def test_get_single_book(books_api, initial_books):
@@ -465,7 +465,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 				<h2>and then a test errored</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
-response = ⧼Response [200]⧽, args = (), kwargs = {'cert': None, 'proxies': OrderedDict(), 'stream': False, 'timeout': None, ...}
+response = &lt;Response [200]&gt;, args = (), kwargs = {'cert': None, 'proxies': OrderedDict(), 'stream': False, 'timeout': None, ...}
 
     @staticmethod
     def _log_details(response, *args, **kwargs):
