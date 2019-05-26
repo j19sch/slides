@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Testing our testing types</title>
+
+	<meta name="description"
+		content="Friday 14 June 2019, 15:00 - 15:45
+
+Which of these don’t belong: functional testing, whitebox testing, regression testing, mobile testing, UI testing?
+
+The answer is all of them. Although they’re all <something> testing, each of them belongs to a different category of types of testing. And unfortunately, we often use these terms in this isolated way, making them lose a large part of their meaning. In my talk we will explore the meaning of several of these ‘<something> testing’ terms. Manual and automated testing. Whitebox and blackbox testing. Unit, integration and UI testing. I will show there are better ways to define the meaning of these terms than through a definition.
+
+For instance by pointing out examples, or by contrasting them with the other terms in the category, or by looking at what’s missing from the category. Why is there no common term for the testing that’s not “regression testing”?
+
+All of this will illustrate that these terms have very little meaning if not connected to a specific context and to specific practices. And it allows us to ask some new questions, such as: what power dynamics can be at play in distinguishing blackbox testing from whitebox testing? The main idea behind this talk is Ludwig Wittgenstein’s argument that the meaning of a word is its use in language. Or put differently, outside of the social conventions of its usage, a word has no meaning. His ideas about language will form the theoretical underpinnings of my talk.">
+	<meta name="author" content="Joep Schuurkes">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="css/rtc2019.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="css/xcode_code.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides" style="text-align: left">
+			<section>
+				<h1 style="margin-bottom:1em">testing our testing types</h1>
+				<h6 style="margin-bottom:0.3em">Joep Schuurkes - <a href="https://twitter.com/j19sch">@j19sch</a></h6>
+				<h6>slides at <a href="https://j19sch.github.io">https://j19sch.github.io</a></h6>
+			</section>
+			<section>
+				<h2>a bit about me</h2>
+				<div class="slide-body">
+					<div class="flex">
+						<h4 style="width:15%">twitter</h4><h4><a href="https://www.twitter.com/j19sch">@j19sch</a></h4>
+					</div>
+					<div class="flex" style="margin-top:1em">
+						<h4 style="width:15%">web</h4>
+						<div class="flex" style="flex-direction:column">
+							<h4><a href="https://testingcurve.wordpress.com">testingcurve.wordpress.com</a></h4>
+							<h4><a href="https://www.fourhourtester.net/">fourhourtester.net</a> <span class="sub">(with Helena Jeret-Mäe)</span></h4>
+						</div>
+					</div>
+					<div class="flex" style="margin-top:1em">
+						<h4 style="width:15%">slides</h4><h4><a href="https://j19sch.github.io">j19sch.github.io</a></h4>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>notes</h1>
+				<h4>some types are part of several categories, try to limit that</h4>
+			</section>
+
+			</section>
+
+			<section>
+				<h2>Testing our testing types</h2>
+				<h4>different ways of exploring meaning</h4>
+				<h4>Wittgenstein (one of the most epic mic drops in history of philosophy)</h4>
+				<h4>goal: leave you confused</h4>
+				<h4>goal: encourage dialogue and exploration</h4>
+			</section>
+			<section>
+				<h2>Testing our testing types</h2>
+				<h4>experience in:</h4>
+				<h4>functional testing, whitebox testing, regression testing, mobile testing, UI testing</h4>
+				<aside class="notes">not saying: don't; am saying: consider what you want to communicate</aside>
+			</section>
+			<section>
+				<h2>is it really that difficult?</h2>
+				<h4>google gave up on it</h4>
+				<h4>small/medium/large instead of unit, integration, ui, etc.</h4>
+				<h4>source: How Google Tests Software</h4>
+			</section>
+			<section>
+				<h2>warning - disclaimer</h2>
+				<h4>semantic satiation</h4>
+				<h4>101 Experiments in the Philosophy of Everyday Life - Roger Pol-Droit</h4>
+			</section>
+
+			<section>
+				<h1>definitions</h1>
+			</section>
+			<section>
+				<h2>definitions</h2>
+				<h4>regression testing: Testing of a previously tested component or system following modification to ensure that defects have not been introduced or have been uncovered in unchanged areas of the software, as a result of the changes made.</h4>
+				<h4>integration testing: Testing performed to expose defects in the interfaces and in the interactions between integrated components or systems.</h4>
+				<h4>functional testing: Testing conducted to evaluate the compliance of a component or system with functional requirements.</h4>
+				<h4>non-functional testing: Testing conducted to evaluate the compliance of a component or system with non-functional requirements.</h4>
+				<h4>white-box testing: Testing based on an analysis of the internal structure of the component or system.</h4>
+				<h4>black-box testing: Testing, either functional or non-functional, without reference to the internal structure of the component or system.</h4>
+			</section>
+			<section>
+				<h4>API testing: Testing performed by submitting commands to the software under test using programming interfaces of the application directly.</h4>
+				<h4>negative testing: Tests aimed at showing that a component or system does not work. Negative testing is related to the tester's attitude rather than a specific test approach or test design technique, e.g., testing with invalid input values or exceptions.</h4>
+				<h4>positive testing: not defined</h4>
+				<h4>source: ISTQB Glossary - http://glossary.istqb.org/</h4>
+				<h4>source: let's ignore ISO29119</h4>
+			</section>
+			<section>
+				<h2>definition inception</h2>
+				<h4>black-box testing: Testing, either functional or non-functional, without reference to the internal structure of the component or system.</h4>
+				<h4>component: A minimal part of a system that can be tested in isolation.</h4>
+				<h4>system: A collection of interacting elements organized to accomplish a specific function or set of functions.</h4>
+				<h4>functional testing: Testing conducted to evaluate the compliance of a component or system with functional requirements.</h4>
+				<h4>compliance: The capability of the software product to adhere to standards, conventions or regulations in laws and similar prescriptions.</h4>
+				<h4>functional requirement: A requirement that specifies a function that a component or system must be able to perform.</h4>
+			</section>
+			<section>
+				<h4>non-functional testing: Testing conducted to evaluate the compliance of a component or system with non-functional requirements.</h4>
+				<h4>non-functional requirement: A requirement that describes how the component or system will do what it is intended to do.</h4>					
+				<h4>testing: The process consisting of all lifecycle activities, both static and dynamic, concerned with planning, preparation and evaluation of software products and related work products to determine that they satisfy specified requirements, to demonstrate that they are fit for purpose and to detect defects.</h4>
+				<h4>not found: requirements, internal structure, capability</h4>
+			</section>
+			<section>
+				<h2>definitions</h2>
+				<h4> alpha testing - beta testing</h4>
+				<h4>alpha is not completely meaningless, but close to it</h4>
+			</section>
+			<section>
+				<h2>definitions - underlying views</h2>
+				<h3>not sure what to do with this slide, it is a good point though</h3>
+				<h4>regression testing: Testing of a previously tested component or system following modification to ensure that defects have not been introduced or have been uncovered in unchanged areas of the software, as a result of the changes made.</h4>
+				<h4>by definition whitebox?</h4>
+				<h4>Arborosa: "To ensure that except for the parts of the areas that were intentionally changed no other parts of these areas or other areas of the software are impacted by those changes and that these still function and behave as before" - https://arborosa.org/2015/07/31/regression-testing/</h4>
+				<h4>define 'unchanged' vs 'changed'? especially wrt definintions relating to knowledge</h4>
+			</section>
+			<section>
+				<h2>definition</h2>
+				<h4>assume domain/contextual knowledge</h4>
+				<h4>ordering of concepts related to each other</h4>
+				<h4>abstract, tiresome</h4>
+				<h4>definition inception</h4>
+				<h4>no instructions</h4>
+				<h4>but what does it look like?</h4>
+				<h4>would you recognise it when you see it?</h4>
+			</section>
+
+			<section>
+				<h1>opposites</h1>
+			</section>
+			<section>
+				<h2>opposites</h2>
+				<h4>functional testing vs non-functional</h4>
+				<h4>manual vs automated</h4>
+				<h4>negative vs positive (positive not defined in ISTQB Glossary)</h4>
+				<h4>dynamic vs static testing</h4>
+				<h4>manual vs automated testing</h4>
+				<h4>regression testing vs ???</h4>
+				<h4>agile testing vs ???</h4>
+			</section>
+			<section>
+				<h2>opposites</h2>
+				<h4>what does it mean if there is no opposite?</h4>
+				<h4>danger of false dichotomies (also: testing vs checking)</h4>
+			</section>
+
+			<section>
+				<h1>Wittgenstein I</h1>
+			</section>
+			<section>
+				<h2>Wittgenstein</h2>
+				<h4>some dates and events</h4>
+			</section>
+			<section>
+				<h2>Wittgenstein</h2>
+				<h4>Tractatus Logico-Philosophicus</h4>
+				<h4>picture theory of language</h4>
+				<h4>solve philosohpy, philosophy happens in language, so think about language</h4>
+				<h4>philosophy, not linguistics</h4>
+				<h3>how important is this or am I indulging myself?</h3>
+				<h3>answer: in line with language refers to something out there</h3>
+				<h3>answer: helps to differentiate philosophy from language</h3>
+			</section>
+
+			<section>
+				<h1>software development model</h1>
+			</section>
+			<section>
+				<h2>software development model</h2>
+				<h4>acceptance testing: V-model, verification & validation, ATDD</h4>
+				<h4>agile testing</h4>
+				<h4>manual and automated testing: execution, CI/CD</h4>
+			</section>
+
+			<section>
+				<h1>all the elements</h1>
+				<h4>quality characteristic testing</h4>
+				<h4>test automation pyramid: unit, integration, ui</h4>
+				<h4>desktop, mobile, browser testing</h4>
+			</section>
+
+			<section>
+				<h1>Wittgenstein II</h1>
+				<aside class="notes">definitions are usage too</aside>
+			</section>
+			<section>
+				<h2>Wittgenstein</h2>
+				<h4>some dates and events</h4>
+			</section>
+			<section>
+				<h2>Wittgenstein</h2>
+				<h4>philosophers still struggle with interpretation</h4>
+				<h4>this is a possible interpretation</h4>
+				<h4>published only three things during life, inc one short book review</h4>
+				<h4>both other things have been misinterpreted</h4>
+			</section>
+			<section>
+				<h2>Wittgenstein</h2>
+				<h4>why he reconsidered</h4>
+			</section>
+			<section>
+				<h2>Wittgenstein</h2>
+				<h4>most of the time, meaning is usage</h4>
+				<h3>what exactly is his argument here?</h3>
+				<h4>problem with ostensive definition</h4>
+				<h4>destructive for the project of Western philosophy</h4>
+			</section>
+
+
+			<section>
+				<h1>social context</h1>
+			</section>
+			<section>
+				<h2>social context</h2>
+				<h4>white-box testing to keep testers away from code</h4>
+				<h4>end-to-end testing: devs mean full-stack, testers mean chain</h4>
+				<h4>automated testing: job market, status</h4>
+				<h4>technical testing: job market, status</h4>
+				<h4>developer testing (vs QA team testing?) (there's a book!)</h4>
+			</section>
+
+			<section>
+				<h1>combinations</h1>
+			</section>
+			<section>
+				<h2>combinations</h2>
+				<h4>manual unit testing</h4>
+				<h4>manual API testing</h4>
+				<h4>unit UI testing</h4>
+				<h4>automated usability testing</h4>
+			</section>
+			<section>
+				<h2>combinations</h2>
+				<h4>heuristic: makes sense, wrong, not even wrong</h4>
+			</section>
+
+			<section>
+				<h1>one more to close off</h1>
+				<h4>mutation testing</h4>
+				<h4>testing your auto-tests through mutations of the product</h4>
+			</section>
+
+			<section>
+				<h1>wrap-up</h1>
+			</section>
+			<section>
+				<h2>"X" testing</h2>
+				<h4>anything can be X</h4>
+				<h4>so meaning of the term can be anything</h4>
+			</section>
+			<section>
+				<h2>most of the time, meaning is usage</h2>
+				<h4>link to different ways of exploring meaning</h4>
+				<h4>list of heuristics we have used today</h4>
+			</section>
+			<section>
+				<h2>so...</h2>
+				<h4>NOT lamenting sloppy language, because it's sloppy by definition</h4>
+				<h4>IS argument in favor of dialogue and exploration</h4>
+			</section>
+
+			<section>
+				<h2>image attributions</h2>
+				<div class="slide-body">
+					<h5><a href="http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/light-bulb-icon.html">“lightbulb icon”</a> by <a href="http://www.iconarchive.com/artist/paomedia.html">paomedia</a> is part of the <a href="https://en.wikipedia.org/wiki/Public_domain">public domain</a></h5>
+					<h5><a href="https://www.iconfinder.com/icons/3605318/bolt_bolts_construction_rivet_screw_screws_icon">"nuts and bolts icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h5>
+					<h5><a href="https://www.iconfinder.com/icons/2023120/appliance_bread_breadfast_kitchen_toaster_icon">"toaster icon"</a> by <a href="https://www.iconfinder.com/wxchee">W.X. Chee</a> is free for commercial use (include link to author's website)</h5>
+					<h5><a href="https://www.iconfinder.com/icons/3605335/carpentry_drill_drilling_industry_machine_repair_tool_icon">"drill icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h5>
+				</div>
+			</section>
+			<section>
+					<h1>thank you!</h1>
+					<div style="position:relative;top:1em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+						<h4>j19sch.github.io</h4>
+						<h4>@j19sch</h4>
+					</div>
+			</section>
+			<section>
+				<div style="text-align: center">
+					<h3 style="color:#000;margin-top: 1.2em">Thank you!</h3>
+					<h4 style="color:#000;margin-top: 5em">@j19sch<br>j19sch.github.io</h4>
+				</div>
+			</section>
+
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: true,
+			slideNumber: false,
+			history: true,
+			center: false,
+			pdfSeparateFragments: false,
+
+			// test aspect ratio 4:3
+			// because template images
+			// width: 1280,
+			// height: 720,
+
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+			transitionspeed: 'default',
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+
+		</script>
+
+	</body>
+	</html>

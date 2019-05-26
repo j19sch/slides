@@ -1,0 +1,103 @@
+@import "../reveal.js/css/theme/simple.css";
+
+.reveal h1 {
+	font-size: 2.7em;
+}
+
+.reveal h2 {
+	font-size: 2.0em; 
+}
+
+.reveal h3 {
+	font-size: 1.2em;
+}
+
+.reveal h4 {
+	font-size: 0.7em;
+}
+
+.reveal h4 span.sub {
+	font-size: 0.7em;
+}
+
+.reveal h5 {
+	font-size: 0.7em;
+}
+
+.reveal div.slide-body {
+	margin-top: 1.0em;
+	margin-left: 0.6em;
+}
+
+.reveal div.slide-body-sub {
+	margin-left: 0.7em;
+}
+
+.reveal div.lesson {
+	margin-top: 3.2em;
+	/*margin-left: 0.7em;*/
+	text-align: center;
+}
+
+.reveal div.level {
+	margin-top: 2em;
+	text-align: center;
+}
+
+.reveal div.level-alt {
+	margin-top: 5.3em;
+	text-align: center;
+}
+
+.reveal .level-alt h1 {
+	color: white;
+}
+
+.reveal .flex {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.reveal .flex-c {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center
+}
+
+.reveal .heuristic {
+	font-weight: 600;
+	margin-right: 0.1em;
+}
+
+.reveal .lighter {
+	color: #cecece;
+}
+
+.reveal .green {
+	color: #6eb529;
+}
+
+.reveal .dark-teal {
+	color: #06989a;
+}
+
+.reveal .red {
+	color: #cc0000;
+}
+
+.reveal section img.plain {
+  margin: 0;
+}
+
+.reveal pre {
+	margin: 0;
+	font-size: 0.50em;
+}
+
+.reveal pre code {
+  max-height: 450px;
+  overflow: hidden;
+}
+
+.reveal .progress {
+  color: #595959; }
