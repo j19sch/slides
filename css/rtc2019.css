@@ -1,22 +1,40 @@
 @import "../reveal.js/css/theme/simple.css";
+/*@import "../reveal.js/css/theme/serif.css";*/
+
+.reveal {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+}
+
+.slides .footer-right{
+  position:absolute;
+  right: 0%;
+  bottom: 10%;
+  font-size: 0.4em
+}
+
 
 .reveal h1 {
-	font-size: 2.7em;
+	font-size: 2.4em;
 }
 
 .reveal h2 {
-	font-size: 2.0em; 
+	font-size: 1.8em; 
 }
 
 .reveal h3 {
-	font-size: 1.2em;
+	font-size: 1.0em;
 }
 
 .reveal h4 {
-	font-size: 0.7em;
-}
-
-.reveal h4 span.sub {
 	font-size: 0.7em;
 }
 
@@ -24,9 +42,19 @@
 	font-size: 0.7em;
 }
 
+.reveal h5 span.sub {
+	font-size: 0.7em;
+}
+
 .reveal div.slide-body {
 	margin-top: 1.0em;
 	margin-left: 0.6em;
+}
+
+.reveal div.slide-body-c {
+	margin-top: 1.0em;
+	margin-left: 0.6em;
+	text-align: center;
 }
 
 .reveal div.slide-body-sub {
@@ -87,6 +115,17 @@
 
 .reveal section img.plain {
   margin: 0;
+}
+
+/*.reveal section img {
+  border: 0px solid #000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+ }*/
+
+ .reveal section img {
+  background: none;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 }
 
 .reveal pre {
