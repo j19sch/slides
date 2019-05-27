@@ -122,10 +122,11 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
  }*/
 
- .reveal section img {
-  background: none;
-  border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+.reveal section img {
+	margin: 20px;
+	background: none;
+	border: none;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .reveal pre {
