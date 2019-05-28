@@ -18,7 +18,7 @@
   position:absolute;
   right: 0%;
   bottom: 10%;
-  font-size: 0.4em
+  font-size: 0.5em
 }
 
 
@@ -35,7 +35,7 @@
 }
 
 .reveal h4 {
-	font-size: 0.7em;
+	font-size: 0.70em;
 }
 
 .reveal h5 {
@@ -47,12 +47,12 @@
 }
 
 .reveal div.slide-body {
-	margin-top: 1.0em;
+	margin-top: 0.8em;
 	margin-left: 0.6em;
 }
 
 .reveal div.slide-body-c {
-	margin-top: 1.0em;
+	margin-top: 0.8em;
 	margin-left: 0.6em;
 	text-align: center;
 }
@@ -61,10 +61,8 @@
 	margin-left: 0.7em;
 }
 
-.reveal div.lesson {
-	margin-top: 3.2em;
-	/*margin-left: 0.7em;*/
-	text-align: center;
+.reveal div.section-title {
+	margin-top: 2.5em;
 }
 
 .reveal div.level {

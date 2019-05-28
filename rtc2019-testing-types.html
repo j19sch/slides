@@ -46,9 +46,9 @@ All of this will illustrate that these terms have very little meaning if not con
 			</div>
 
 			<section>
-					<h1 style="margin-bottom:0em">testing our testing types</h1>
-					<div style="margin-top:1.5em;display:flex;flex-wrap:nowrap;justify-content:space-around;align-items:center">
-						<img class="plain" src="./rtc2019/ntd2019-logo.png" width="20%" alt="Nordic Testing Days logo"/>
+					<h1 style="margin-top:1em; margin-bottom:0em">testing<br>our testing types</h1>
+					<div style="margin-top:1.8em;display:flex;flex-wrap:nowrap;justify-content:space-around;align-items:center">
+						<img class="plain" src="./rtc2019/ntd2019-logo.png" width="25%" alt="Nordic Testing Days logo"/>
 						<div>
 							<h5>Joep Schuurkes - <a href="https://twitter.com/j19sch">@j19sch</a></h5>
 							<h5><a href="https://testingcurve.wordpress.com">testingcurve.wordpress.com</a></h5>
@@ -77,8 +77,8 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section>
 				<h2>is it really that difficult?</h2>
 				<div class="slide-body flex-c">
-					<img src="./rtc2019/how-google-tests-software.jpg" width="30%" alt="How Google tests software"/>
-					<div>
+					<img src="./rtc2019/how-google-tests-software.jpg" style="width:30%" alt="How Google tests software"/>
+					<div style="margin-left:40px">
 						<h3>"Instead of distinguishing between code, integration, and system testing, Google uses the language of <i>small</i>, <i>medium</i>,
 							and <i>large</i> tests, emphasizing scope over form."</h3>
 						<h4>- How Google Tests Software</h4>
@@ -107,60 +107,64 @@ All of this will illustrate that these terms have very little meaning if not con
 				<h2>warning - semantic satiation</h2>
 				<div class="slide-body">
 					<div class="slide-body flex-c">
-						<div>
+						<div style="margin-right:40px">
 							<h3>a psychological phenomenon in which repetition causes a word or phrase to temporarily lose meaning for the listener, who then perceives the speech as repeated meaningless sounds.</h3>
 						</div>
 						<div>
-							<img src="./rtc2019/101-exercises-pol-droit.jpg" width="70%" alt="101 exericises - Droit"/>
+							<img src="./rtc2019/101-exercises-pol-droit.jpg" width="80%" alt="101 exericises - Droit"/>
 						</div>
 					</div>
 				</div>
 				<aside class='notes'>goal: leave you confused</aside>
 			</section>
 
+
 			<section>
-				<h1>definitions</h1>
-				<img src="./rtc2019/mw-definition-of-definition.png" width="80%" alt="Merriam-Webster's definition of definition"/>
+				<div class="section-title">
+					<h1 class="section-title">definitions</h1>
+					<img src="./rtc2019/mw-definition-of-definition.png" width="80%" alt="Merriam-Webster's definition of definition"/>
+				</div>
 			</section>
 			<section>
 				<h2>definitions</h2>
 				<div class="slide-body">
-					<h4>integration testing<br>Testing performed to expose defects in the interfaces and in the interactions between integrated components or systems.</h4>
-					<h4>regression testing<br>Testing of a previously tested component or system following modification to ensure that defects have not been introduced or have been uncovered in unchanged areas of the software, as a result of the changes made.</h4>
-					<h4>negative testing<br>Tests aimed at showing that a component or system does not work. Negative testing is related to the tester's attitude rather than a specific test approach or test design technique, e.g., testing with invalid input values or exceptions.</h4>
+					<h4><b>integration testing</b><br>Testing performed to expose defects in the interfaces and in the interactions between integrated components or systems.</h4>
+					<h4><b>regression testing</b><br>Testing of a previously tested component or system following modification to ensure that defects have not been introduced or have been uncovered in unchanged areas of the software, as a result of the changes made.</h4>
+					<h4><b>negative testing</b><br>Tests aimed at showing that a component or system does not work. Negative testing is related to the tester's attitude rather than a specific test approach or test design technique, e.g., testing with invalid input values or exceptions.</h4>
 				</div>
 			</section>
 			<section>
 				<h2>definitions all the way down</h2>
 				<div class="slide-body">
-					<h4>black-box testing<br>Testing, either functional or non-functional, without reference to the internal structure of the component or system.</h4>
-					<h4>component<br>A minimal part of a system that can be tested in isolation.</h4>
-					<h4>system<br>A collection of interacting elements organized to accomplish a specific function or set of functions.</h4>
+					<h4><b>black-box testing</b><br>Testing, either functional or non-functional, without reference to the internal structure of the component or system.</h4>
+					<h4 class="fragment"><b>component</b><br>A minimal part of a system that can be tested in isolation.</h4>
+					<h4 class="fragment"><b>system</b><br>A collection of interacting elements organized to accomplish a specific function or set of functions.</h4>
 				</div>
 				<aside class='notes'>not in glossary: internal structure, function</aside>
 			</section>
 			<section>
 				<h2>definitions all the way down</h2>
 				<div class="slide-body">
-					<h4>(non-)functional testing<br>Testing conducted to evaluate the compliance of a component or system with (non-)functional requirements.</h4>
-					<h4>compliance<br>The capability of the software product to adhere to standards, conventions or regulations in laws and similar prescriptions.</h4>
-					<h4>functional requirement<br>A requirement that specifies a function that a component or system must be able to perform.</h4>
-					<h4>non-functional requirement<br>A requirement that describes how the component or system will do what it is intended to do.</h4>					
+					<h4 class="fragment"><b>(non-)functional testing</b><br>Testing conducted to evaluate the compliance of a component or system with (non-)functional requirements.</h4>
+					<h4 class="fragment"><b>compliance</b><br>The capability of the software product to adhere to standards, conventions or regulations in laws and similar prescriptions.</h4>
+					<h4 class="fragment"><b>functional requirement</b><br>A requirement that specifies a function that a component or system must be able to perform.</h4>
+					<h4 class="fragment"><b>non-functional requirement</b><br>A requirement that describes how the component or system will do what it is intended to do.</h4>					
 				</div>
 				<aside class='notes'>not in glossary: capability, requirement</aside>
 			</section>
 			<section>
 				<h2>definitions all the way down</h2>
 				<div class="slide-body">
-					<h4>testing<br>The process consisting of all lifecycle activities, both static and dynamic, concerned with planning, preparation and evaluation of software products and related work products to determine that they satisfy specified requirements, to demonstrate that they are fit for purpose and to detect defects.</h4>
+					<h4><b>testing</b><br>The process consisting of all lifecycle activities, both static and dynamic, concerned with planning, preparation and evaluation of software products and related work products to determine that they satisfy specified requirements, to demonstrate that they are fit for purpose and to detect defects.</h4>
 					<h4>source: ISTQB Glossary - http://glossary.istqb.org/</h4>
 				</div>
 			</section>
 			<section>
 				<h2>definitions</h2>
 				<div class="slide-body">
-					<h3>ordering of concepts related to each other, abstract</h3>
-					<h3>assume domain/contextual knowledge to start somewhere</h3>
+					<h3>abstract</h3>
+					<h3>how concepts relate to each other</h3>
+					<h3>assume a starting point of domain/contextual knowledge</h3>
 					<h3>no instructions on how to do it</h3>
 					<h3>would you recognise it when you see it?</h3>
 				</div>
@@ -169,41 +173,52 @@ All of this will illustrate that these terms have very little meaning if not con
 				</aside>
 			</section>
 
+
 			<section>
-				<h1>opposites</h1>
-				<img src="./rtc2019/not-a-pipe.png" width="40%" alt="Select all squares not a pipe"/>
+				<div class="flex-c section-title">
+					<h1 style="margin-right:30px">opposites</h1>
+					<img src="./rtc2019/not-a-pipe.png" style="width:40%;height:40%" alt="Select all squares not a pipe"/>
+				</div>
 			</section>
 			<section>
 				<h2>opposites</h2>
 				<div class="slide-body">
 					<h3>dynamic vs static testing</h3>
-					<h3>negative vs positive (positive not defined in ISTQB Glossary)</h3>
-					<h3>functional vs non-functional testing</h3>
-					<h3>manual vs automated testing</h3>
+					<h3 class="fragment">negative vs positive testing</h3>
+					<h3 class="fragment">functional vs non-functional testing</h3>
+					<h3 class="fragment">manual vs automated testing</h3>
 				</div>
+				<aside class="notes">
+					positive testing is not defined in the ISTQB Glossary
+				</aside>
 			</section>
 			<section>
 				<h2>terms without opposite</h2>
 				<div class="slide-body">
 					<h3>regression testing vs ???</h3>
-					<h3>agile testing vs ???</h3>
-					<h3>developer testing vs ???</h3>
+					<h3 class="fragment">agile testing vs ???</h3>
+					<h3 class="fragment">developer testing vs ???</h3>
 				</div>
 			</section>
 			<section>
 				<h2>opposites</h2>
 				<div class="slide-body">
-					<h3>meaning through what something isn't</h3>
-					<h3>danger of false dichotomies (also: testing vs checking)</h3>
+					<h3>explore meaning through what something isn't</h3>
+					<h3>danger of false dichotomies</h3>
 					<h3>dynamic testing / static testing / monitoring</h3>
 					<h3>what does it mean if there is no opposite?</h3>
 				</div>
+				<aside class="notes">
+					false dichotomies: testing vs checking
+				</aside>
 			</section>
 
 
 			<section>
-				<h1>Wittgenstein</h1>
-				<img src="./rtc2019/wittgenstein-1922.jpg" width="50%" alt="Wittgenstein in 1922"/>
+				<div class="flex-c section-title">
+					<h1>Wittgenstein</h1>
+					<img src="./rtc2019/wittgenstein-1922.jpg" width="50%" alt="Wittgenstein in 1922"/>
+				</div>
 			</section>
 			<section>
 				<h2>Wittgenstein</h2>
@@ -220,10 +235,10 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section>
 				<h2>Tractatus Logico-Philosophicus</h2>
 				<div class="slide-body">
-					<h3>sense<br>propositions corresponding to a state of affairs in the world</h3>
-					<h3>senseless<br>logic - tautologies and contradictions</h3>
-					<h3>nonsense<br>value - ethics, aesthetics and religion</h3>
-					<h3>philosophy is solved!</h3>
+					<h3><b>sense</b><br>propositions corresponding to a state of affairs in the world</h3>
+					<h3><b>senseless</b><br>logic: tautologies and contradictions</h3>
+					<h3><b>nonsense</b><br>value: ethics, aesthetics and religion</h3>
+					<h2 class="fragment">philosophy is solved!</h2>
 				</div>
 				<aside class='notes'>
 					picture theory of language
@@ -236,31 +251,42 @@ All of this will illustrate that these terms have very little meaning if not con
 
 
 			<section>
-				<h1>all the elements</h1>
-				<img src="./rtc2019/CI-table-elements-2018.png" width="70%" alt="Periodic table of elements"/>
+				<div class="flex-c section-title">
+					<h1>all the elements</h1>
+					<img src="./rtc2019/CI-table-elements-2018.png" width="55%" alt="Periodic table of elements"/>
+				</div>
 			</section>
 			<section>
 				<h2>all the elements</h2>
 				<div class="slide-body">
-					<h3>quality characteristic testing</h3>
-					<h3>test automation pyramid: unit, integration, ui</h3>
-					<h3>desktop, mobile, browser testing</h3>
+					<h3>quality characteristic testing<br>performamce, security, accessibility, testability, charisma</h3>
+					<h3>test automation pyramid: unit, service/integration, ui<br>
+						<a href="http://www.testingreferences.com/here_be_pyramids.php">here be pyramids</a> - Joris Meerts</h3>
+					<h3>desktop, mobile, browser, mainframe testing</h3>
+				</div>
+			</section>
+			<section>
+				<h2>all the elements</h2>
+				<div class="slide-body">
+					<h3>elements in a category clarify each other's meaning</h3>
 				</div>
 			</section>
 
 
 			<section>
-				<h1>combinations</h1>
-				<img src="./rtc2019/xkcd-laser_products.png" width="70%" alt="xkcd combinations of laser products"/>
+				<div class="flex-c section-title">
+					<h1>combinations</h1>
+					<img src="./rtc2019/xkcd-laser_products.png" width="55%" alt="xkcd combinations of laser products"/>
+				</div>
 			</section>
 			<section>
 				<h2>combinations</h2>
 				<div class="slide-body">
 					<h3>manual unit testing</h3>
 					<h3>manual API testing</h3>
-					<h3>unit UI testing</h3>
-					<h3>automated usability testing</h3>
-					<h3>white-box end-to-end testing</h3>
+					<h3 class="fragment">automated usability testing</h3>
+					<h3 class="fragment">white-box end-to-end testing</h3>
+					<h3 class="fragment">functional, whitebox, regression, mobile, UI testing</h3>
 				</div>
 			</section>
 			<section>
@@ -272,8 +298,10 @@ All of this will illustrate that these terms have very little meaning if not con
 
 
 			<section>
-				<h1>Wittgenstein</h1>
-				<img src="./rtc2019/wittgenstein-1947.jpg" width="30%" alt="Wittgenstein in 1947"/>
+				<div class="flex-c section-title">
+					<h1>Wittgenstein</h1>
+					<img src="./rtc2019/wittgenstein-1947.jpg" width="30%" alt="Wittgenstein in 1947"/>
+				</div>
 				<aside class="notes">definitions are usage too</aside>
 			</section>
 			<section>
@@ -313,7 +341,7 @@ All of this will illustrate that these terms have very little meaning if not con
 					<h3>[...] we are committed to a faulty view of language, one that thinks that, to every meaningful
 						word there must correspond some <i>object</i>.</h3>
 					<h3>names of numbers, names of colours, names of objects</h3>
-					<h3>pain and sensations, private language and the "beetle in the box"</h3>
+					<h3>pain and sensations<br>private language and the "beetle in the box"</h3>
 				</div>
 				<aside class='notes'>
 					How to read Wittgenstein, p 73, 75-76, 92, 93, 83-93
@@ -348,58 +376,79 @@ All of this will illustrate that these terms have very little meaning if not con
 
 
 			<section>
-				<h1>software development model</h1>
-				<img src="./rtc2019/xkcd-software_development.png" width="30%" alt="xkcd software development"/>
+				<div class="flex-c section-title">
+					<h1>software development model</h1>
+					<img src="./rtc2019/xkcd-software_development.png" width="30%" alt="xkcd software development"/>
+				</div>
 			</section>
 			<section>
 				<h2>software development model</h2>
 				<div class="slide-body">
-					<h3>acceptance testing: V-model, verification & validation, ATDD</h3>
+					<h3>acceptance testing: V-model</h3>
 					<img src="./rtc2019/User-Acceptance-Testing.png" width="30%" alt="V-model acceptance testing"/>
+					<h3>acceptance testing: ATDD</h3>
 				</div>
 			</section>
 			<section>
 				<h2>software development model</h2>
 				<div class="slide-body">
 					<h3>agile testing</h3>
-					<h3>manual and automated testing: execution, CI/CD</h3>
+					<h3>manual and automated testing: to CI/CD or not?</h3>
 				</div>
 				<aside class='notes'>
 					https://www.techbeamers.com/user-acceptance-testing/
 				</aside>
 			</section>
+			<section>
+				<h2>software development model</h2>
+				<div class="slide-body">
+					<h3>a testing type does not exist in isolation</h3>
+				</div>
+			</section>
+
 
 			<section>
-				<h1>social context</h1>
+				<div class="section-title">
+					<h1>social context</h1>
+				</div>
 			</section>
 			<section>
 				<h2>social context</h2>
 				<div class="slide-body">
 					<h3>end-to-end testing: devs mean full-stack, testers mean chain</h3>
-					<h3>developer testing (vs QA team testing?) (there's a book!)</h3>
-					<h3>white-box testing to keep testers away from code</h3>
-					<h3>automated testing: job market, status</h3>
-					<h3>technical testing: job market, status</h3>
+					<h3 class="fragment">developer testing:  vs QA team testing?</h3>
+					<h3 class="fragment">white-box testing: keep testers away from code?</h3>
+					<h3 class="fragment">automated testing, technical testing: status, job market</h3>
 				</div>
 			</section>
+			<section>
+				<h2>social context</h2>
+				<div class="slide-body">
+					<h3>people using language do not exist in isolation</h3>
+				</div>
+			</section>
+
 
 			<section>
 				<h1>one more to close off</h1>
 				<div class="slide-body">
-					<h3>mutation testing</h3>
-					<h3>testing your auto-tests through mutations of the product</h3>
+					<h3><b>mutation testing</b><br>testing your auto-tests through mutations of the product</h3>
 				</div>
 			</section>
 
+
 			<section>
-				<h1>wrap-up</h1>
+				<div class="section-title">
+					<h1>wrap-up</h1>
+				</div>
 			</section>
 			<section>
 				<h2>"X" testing</h2>
 				<div class="slide-body">
 					<h3>anything can be X</h3>
-					<h3>so meaning of the term can be anything</h3>
+					<h3>so the meaning of "X" testing can be anything</h3>
 					<h3>most of the time, meaning is usage</h3>
+					<h3>usage is a very broad concept: it includes the social</h3>
 				</div>
 			</section>
 			<section>
@@ -418,17 +467,20 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section>
 				<h2>so...</h2>
 				<div class="slide-body">
-					<h3>NOT lamenting sloppy language, because it's sloppy by definition</h3>
-					<h3>IS argument in favor of dialogue and exploration</h3>
-					<h3>clarification over correction</h3>
+					<h3>language is slippery territory, deal with it</h3>
+					<h3>clarifying over correcting</h3>
+					<h3>clarification requires exploration and dialogue</h3>
 				</div>
 			</section>
 
+
 			<section>
-					<h1>thank you!</h1>
-					<div style="position:relative;top:1em;display:flex;flex-wrap:nowrap;justify-content:space-around">
-						<h3>testingcurve.wordpress.com</h3>
-						<h3>@j19sch</h3>
+					<div style="margin-top: 4em">
+						<h1>thank you!</h1>
+						<div style="position:relative;top:1em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+							<h3>Joep Schuurkes<br>testingcurve.wordpress.com<br>fourhourtester.net</h3>
+							<h3></h3>
+						</div>
 					</div>
 			</section>
 
