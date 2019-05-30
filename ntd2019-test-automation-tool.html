@@ -25,6 +25,10 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 	<!-- Code syntax highlighting -->
 	<link rel="stylesheet" href="css/ukstar2019-code.css">
 
+	<style>
+		.reveal .progress {color: #4ea022; }
+	</style>
+
 	<!-- Printing and PDF exports -->
 	<script>
 	var link = document.createElement( 'link' );
@@ -37,28 +41,27 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 <body>
 	<div class="reveal">
 		<div class="slides" style="text-align: left">
-			<!-- template images are 1280 x 720 -->
-			<section data-background-image="ukstar2019/ukstar-title.jpg" data-background-size=contain>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h2>a bit about me</h2>
-				<div class="slide-body">
-					<div class="flex">
-						<h4 style="width:15%">twitter</h4><h4><a href="https://www.twitter.com/j19sch">@j19sch</a></h4>
-					</div>
-					<div class="flex" style="margin-top:1em">
-						<h4 style="width:15%">web</h4>
-						<div class="flex" style="flex-direction:column">
-							<h4><a href="https://testingcurve.wordpress.com">testingcurve.wordpress.com</a></h4>
-							<h4><a href="https://www.fourhourtester.net/">fourhourtester.net</a> <span class="sub">(with Helena Jeret-Mäe)</span></h4>
+			<div class="footer-right">
+				<p>@j19sch</p>
+			</div>
+			<div class="footer-left">
+				<p>#ntd2019</p>
+			</div>
+
+			<section style="text-align: center">
+					<h1 style="margin-top:0.7em; margin-bottom:0em">what to look for in a test automation tool</h1>
+					<div style="margin-top:1.7em;display:flex;flex-wrap:nowrap;justify-content:space-around;align-items:center">
+						<img class="plain" src="./rtc2019/ntd2019-logo.png" width="25%" alt="Nordic Testing Days logo"/>
+						<div>
+							<h5>Joep Schuurkes</h5>
+							<h5><a href="https://twitter.com/j19sch">@j19sch</a></h5>
+							<h5>slides at <a href="https://19sch.github.io">j19sch.github.io</a></h5>
 						</div>
+						<img class="plain" src="./rtc2019/mendix-logo-full.png" width="20%" alt="Mendix logo"/>
 					</div>
-					<div class="flex" style="margin-top:1em">
-						<h4 style="width:15%">slides</h4><h4><a href="https://j19sch.github.io">j19sch.github.io</a></h4>
-					</div>
-				</div>
-			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+				</section>
+
+			<section>
 				<h2>2014 Postman & Newman</h2>
 				<div class="slide-body">
 					<div class="flex-c" style="justify-content:flex-start">
@@ -78,7 +81,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 					</div>
 				</div>			
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>2017 own framework</h2>
 				<div class="slide-body">
 					<div class="flex-c" style="justify-content:flex-start">
@@ -96,7 +99,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 					</div>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>my own framework</h2>
 				<div class="slide-body">
 					<div class="flex-c" style="justify-content:flex-start">
@@ -111,7 +114,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 							<img class="plain" style="width:18%; height:auto" data-src="ukstar2019/pytest.png" alt="pytest" />
 						</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>my own framework</h2>
 				<div class="slide-body">
 					<h4>read test data files (pyyaml and pytest)</h4>
@@ -120,7 +123,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 					<h4>response body parsing</h4>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>glue well-established tools<br>and libraries together</h3>
@@ -129,15 +132,7 @@ In my talk I will use my framework to illustrate these ideas and expand on them.
 				differentiator is awesome testing, not awesome test tools</aside>
 			</section>
 
-
-			<section data-background-image="ukstar2019/ukstar-section.jpg" data-background-size=contain>
-				<div class="level-alt level-alt-white">
-						<h1>what we'll be doing today</h1>
-				</div>
-			</section>
-
-
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>the API we will be using</h2>
 				<div class="slide-body">
 					<h4>books API <span class="sub"><a href="https://github.com/j19sch/building-an-api-testing-framework">(GitHub)</a></span></h4>
@@ -157,7 +152,7 @@ GET /books/{book-id}
 					<h4>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>let's run some tests</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
@@ -175,12 +170,12 @@ test_books.py <span class="green">..............</span>                         
 					<aside class="notes">cool! let's release</aside>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-section.jpg" data-background-size=contain>
-				<div class="level-alt level-alt-white">
+			<section data-background-color="#4ea022">
+				<div class="level-alt">
 						<h1>Run & Report</h1>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>so what did we test?</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
@@ -199,7 +194,7 @@ test_books.py::test_add_book_invalid_request <span class="green">PASSED</span>  
 					</code></pre>
 				</div>
 			</section>
-						<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+						<section>
 				<h2>so what did we test?</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
@@ -217,14 +212,14 @@ test_books.py::test_update_book_invalid_uuid <span class="green">PASSED</span>  
 					</code></pre>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>name your tests<br>to clarify intention</h3>
 				</div>
 				<aside class="notes">prevents fixing the tests</aside>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>a test does one thing<br>and one thing only</h3>
@@ -234,7 +229,7 @@ test_books.py::test_update_book_invalid_uuid <span class="green">PASSED</span>  
 
 
 
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>let's look at the code</h2>
 				<div class="slide-body">
 					<pre><code data-trim class="python">
@@ -258,13 +253,13 @@ def test_add_book(books_api):
 					</code></pre>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>separate test code<br>from interface code</h3>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>let's look at more code</h2>
 				<div class="slide-body">
 					<pre><code data-trim class="python">
@@ -282,7 +277,7 @@ class BooksApi(requests.Session):
 					</code></pre>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>use transparent abstractions<br>for your seams</h3>
@@ -291,21 +286,21 @@ class BooksApi(requests.Session):
 							separation of concerns; don't mix abstraction levels
 				</aside>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>readable tests<br>versus<br>clean code</h3>
 				</div>
 				<aside class="notes">clean code: names, structure, refactoring; read without scrolling</aside>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-section.jpg" data-background-size=contain>
-				<div class="level-alt level-alt-white">
+			<section data-background-color="#4ea022">
+				<div class="level-alt">
 						<h1>Read</h1>
 				</div>
 			</section>
 
 
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>let's add a test</h2>
 				<div class="slide-body">
 					<pre><code data-trim class="python">
@@ -325,20 +320,20 @@ def test_add_book_invalid_request(books_api):
 					</code></pre>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>programming languages<br>are domain-specific languages</h3>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-section.jpg" data-background-size=contain>
-				<div class="level-alt level-alt-white">
+			<section data-background-color="#4ea022">
+				<div class="level-alt">
 						<h1>Create</h1>
 				</div>
 			</section>
 
 
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>and then a test failed</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
@@ -355,7 +350,7 @@ test_books.py <span class="red">F</span>                                        
 					</code></pre>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>and then a test failed</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
@@ -379,7 +374,7 @@ new_book = {'author': 'Nicole Forsgren, Jez Humble, Gene Kim', 'id': '224ec88b-e
 					</code></pre>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>and then a test failed</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
@@ -404,28 +399,28 @@ api_clients.py    21 INFO    headers: {'Server': 'gunicorn/19.9.0', 'Date': 'Sun
 					</code></pre>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>there is no such thing as<br>too much information<br><span class="fragment">if it's well-structured</span></h3>
 					<aside class="notes">if well-structured / navigateable</aside>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>never trust a test<br>you haven't seen fail</h3>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-section.jpg" data-background-size=contain>
-				<div class="level-alt level-alt-white">
+			<section data-background-color="#4ea022">
+				<div class="level-alt">
 						<h1>Run & Report</h1>
 				</div>
 			</section>
 
 
 
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>and then a test errored</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
@@ -444,7 +439,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 					</code></pre>
 				</div>
 			</section>
-						<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+						<section>
 				<h2>and then a test errored</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
@@ -461,7 +456,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 					</code></pre>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>and then a test errored</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
@@ -483,7 +478,7 @@ response = &lt;Response [200]&gt;, args = (), kwargs = {'cert': None, 'proxies':
 					</code></pre>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>let's do some debugging</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
@@ -500,7 +495,7 @@ test_books.py <span class="red">F</span>
 					</code></pre>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>let's do some debugging</h2>
 				<div class="slide-body">
 					<pre><code data-trim data-noescape class="nohighlight">
@@ -523,19 +518,19 @@ test_books.py <span class="red">F</span>
 					</code></pre>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-section.jpg" data-background-size=contain>
-				<div class="level-alt level-alt-white">
+			<section data-background-color="#4ea022">
+				<div class="level-alt">
 						<h1>Debug</h1>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>many different things can go wrong<br>make sure you can find out what</h3>
 					<aside class="notes">product & infra, auto-tests & infra, testing</aside>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<div class="lesson">
 					<img class="plain" width="10%" data-src="ukstar2019/light-bulb-icon.png" alt="lightbulb"/>
 					<h3>forced switching<br>between levels sucks</h3>
@@ -544,10 +539,10 @@ test_books.py <span class="red">F</span>
 			</section>
 
 
- 			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
-				<h1 style="margin-top:1.7em">wrap-up</h1>
+ 			<section  data-background-color="#4ea022">
+				<h1 class="section-title">wrap-up</h1>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>Activities</h2>
 				<div class="slide-body">
 					<div style="display:flex; justify-content:space-around;">
@@ -565,7 +560,7 @@ test_books.py <span class="red">F</span>
 						</div>
 					</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>Activities</h2>
 				<div class="slide-body">
 					<div style="display:flex; justify-content:space-around;">
@@ -583,7 +578,7 @@ test_books.py <span class="red">F</span>
 						</div>
 					</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>Activities</h2>
 				<div class="slide-body">
 					<div style="display:flex; justify-content:space-around;">
@@ -601,7 +596,7 @@ test_books.py <span class="red">F</span>
 						</div>
 					</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>Activities</h2>
 				<div class="slide-body">
 					<div style="display:flex; justify-content:space-around;">
@@ -619,7 +614,7 @@ test_books.py <span class="red">F</span>
 						</div>
 					</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>Levels</h2>
 				<div class="slide-body">
 					<div class="flex" style="flex-direction: column; justify-content: space-between;">
@@ -645,13 +640,13 @@ test_books.py <span class="red">F</span>
 				</div>
 				<aside class="notes">levels inform decisions; levels of programming skills; decide for you what each level means</aside>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<div class="lesson">
 					<h2>forget about the shiny</h2>
 					<h2 class="fragment" style="margin-top: 1em">is your tool helping you<br>to do better testing?</h2>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-slide.jpg" data-background-size=contain>
+			<section>
 				<h2>image attributions</h2>
 				<div class="slide-body">
 					<h5><a href="http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/light-bulb-icon.html">“lightbulb icon”</a> by <a href="http://www.iconarchive.com/artist/paomedia.html">paomedia</a> is part of the <a href="https://en.wikipedia.org/wiki/Public_domain">public domain</a></h5>
@@ -660,16 +655,37 @@ test_books.py <span class="red">F</span>
 					<h5><a href="https://www.iconfinder.com/icons/3605335/carpentry_drill_drilling_industry_machine_repair_tool_icon">"drill icon"</a> by <a href="https://www.iconfinder.com/Chanut-is">Chanut is Industries</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></h5>
 				</div>
 			</section>
-			<section data-background-image="ukstar2019/ukstar-questions.jpg" data-background-size=contain>
+			<section data-background-color="#4ea022" class="last-slide">
 				<div style="text-align: center">
-					<h3 style="color:#fff;margin-top: 1.2em">Thank you!</h3>
-					<h4 style="color:#fff;margin-top: 5em">@j19sch<br>j19sch.github.io</h4>
+					<h1 style="margin-top: 1.5em">Thank you!</h1>
+					<h5 style="margin-top: 4em">@j19sch<br>j19sch.github.io</h5>
 				</div>
 			</section>
 
 
 		<script src="reveal.js/lib/js/head.min.js"></script>
 		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			document.getElementsByClassName("footer-right")[0].hidden = true;
+		 	document.getElementsByClassName("footer-left")[0].hidden = true;
+
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				 if (Reveal.isFirstSlide()) {
+				 	console.log("first slide")
+				 	document.getElementsByClassName("footer-right")[0].hidden = true;
+				 	document.getElementsByClassName("footer-left")[0].hidden = true;
+				 } else if (Reveal.getCurrentSlide().className.includes("last-slide")) {
+				 	console.log("last slide")
+				 	document.getElementsByClassName("footer-right")[0].hidden = true;
+				 	document.getElementsByClassName("footer-left")[0].hidden = true;
+				 } else {
+				 	document.getElementsByClassName("footer-right")[0].hidden = false;
+				 	document.getElementsByClassName("footer-left")[0].hidden = false;
+				 }
+			} );
+
+		</script>
 
 		<script>
 
