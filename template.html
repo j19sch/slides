@@ -16,10 +16,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 	<link rel="stylesheet" href="reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="css/simple_jss.css" id="theme">
+	<link rel="stylesheet" href="css/j19sch-base.css" id="theme">
 
 	<!-- Code syntax highlighting -->
-	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/j19sch-base-code.css">
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -32,21 +32,111 @@
 </head>
 <body>
 	<div class="reveal">
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
 		<div class="slides">
-			<section>
+			<div class="footer-left">
+				<p>footer left</p>
+			</div>
+				<div class="footer-right">
+				<p>footer right</p>
+			</div>
+
+
+
+			<section data-state="h-cent-v-cent">
 				<h1>presentation title</h1>
-				<div style="margin-top:1.2em;display:flex;flex-wrap:nowrap;justify-content:space-around">
+				<div style="margin-top:1.2em;" class="flex">
 					<h5>event</h5>
 					<h5>date</h5>
 				</div>
+			</section>		
+
+			<section data-state="h-left-v-cent">
+				<h2>section title</h2>
 			</section>
-			<section>
+	
+			<section data-state="h-left-v-left">
+				<h3>slide title</h3>
+				<div class="slide-body">
+					<h4>slide contents in h4</h4>
+					<h5>slide contents in h5</h5>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>slide with two columns</h3>
+				<div class="slide-body flex">
+					<div>
+						<h4>left column</h4>
+						<h5>words</h5>
+						<h5>stuff</h5>
+						<h5>things</h5>
+					</div>
+					<div>
+						<h4>right column</h4>
+						<h5>words</h5>
+						<h5>stuff</h5>
+						<h5>things</h5>
+					</div>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>slide with two columns</h3>
+				<div class="slide-body flex">
+					<h4>column 1</h4>
+					<h4>column 2</h4>
+					<h4>column 3</h4>
+				</div>
+			</section>
+			
+			<section data-state="h-cent-v-cent">
 				<h3>thank you!</h3>
 			</section>
 		</div>
 
-		<script src="reveal.js/lib/js/head.min.js"></script>
-		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			document.getElementsByClassName("footer-right")[0].hidden = true;
+		 	document.getElementsByClassName("footer-left")[0].hidden = true;
+
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				 if (Reveal.isFirstSlide() ||  Reveal.isLastSlide() ||
+				 	Reveal.getCurrentSlide().className.includes("no-footers")) {
+				 	document.getElementsByClassName("footer-left")[0].hidden = true;
+				 	document.getElementsByClassName("footer-right")[0].hidden = true;
+				 } else {
+				 	document.getElementsByClassName("footer-left")[0].hidden = false;
+				 	document.getElementsByClassName("footer-right")[0].hidden = false;
+				 }
+			} );
+
+			Reveal.addEventListener( 'h-left-v-left', function() {
+				console.log('h-left-v-left');
+    			Reveal.configure({center: false});
+    			document.getElementsByClassName('slides')[0].style.textAlign = 'left';
+			}, false );
+
+			Reveal.addEventListener( 'h-left-v-cent', function() {
+				console.log('h-left-v-cent');
+    			Reveal.configure({center: true});
+    			document.getElementsByClassName('slides')[0].style.textAlign = 'left';
+			}, false );
+
+			Reveal.addEventListener( 'h-cent-v-left', function() {
+				console.log('h-cent-v-left');
+    			Reveal.configure({center: false});
+    			document.getElementsByClassName('slides')[0].style.textAlign = 'center';
+			}, false );
+
+			Reveal.addEventListener( 'h-cent-v-cent', function() {
+				console.log('h-cent-v-cent');
+    			Reveal.configure({center: true});
+    			document.getElementsByClassName('slides')[0].style.textAlign = 'center';
+			}, false );
+
+		</script>
 
 		<script>
 
@@ -57,7 +147,8 @@
 			progress: true,
 			slideNumber: false,
 			history: true,
-			center: true,
+			center: false,
+			pdfSeparateFragments: false,
 
 			// test aspect ratio 4:3
 			//width: 1024,
