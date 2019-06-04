@@ -16,10 +16,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 	<link rel="stylesheet" href="reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="css/j19sch-base.css" id="theme">
+	<link rel="stylesheet" href="css/j19sch-base-v1.css" id="theme">
 
 	<!-- Code syntax highlighting -->
-	<link rel="stylesheet" href="css/j19sch-base-code.css">
+	<link rel="stylesheet" href="css/j19sch-base-code-v1.css">
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -32,8 +32,6 @@
 </head>
 <body>
 	<div class="reveal">
-		<script src="reveal.js/lib/js/head.min.js"></script>
-		<script src="reveal.js/js/reveal.js"></script>
 		<div class="slides">
 			<div class="footer-left">
 				<p>footer left</p>
@@ -41,7 +39,6 @@
 				<div class="footer-right">
 				<p>footer right</p>
 			</div>
-
 
 
 			<section data-state="h-cent-v-cent">
@@ -65,6 +62,23 @@
 			</section>
 
 			<section data-state="h-left-v-left">
+				<h3>slide title</h3>
+				<div class="slide-body">
+					<h3>slide contents in h3 <span class="sub">and sub</span></h3>
+					<h4>slide contents in h4 <span class="sub">and sub</span></h4>
+					<h5>slide contents in h5  <span class="sub">and sub</span></h5>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>slide title</h3>
+				<div class="slide-body-c">
+					<h4>slide contents in h4</h4>
+					<h5>slide contents in h5</h5>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left">
 				<h3>slide with two columns</h3>
 				<div class="slide-body flex">
 					<div>
@@ -76,7 +90,22 @@
 					<div>
 						<h4>right column</h4>
 						<h5>words</h5>
+						<h5>things</h5>
+					</div>
+				</div>
+			</section>
+			<section data-state="h-left-v-left">
+				<h3>slide with two columns</h3>
+				<div class="slide-body flex-c">
+					<div>
+						<h4>left column</h4>
+						<h5>words</h5>
 						<h5>stuff</h5>
+						<h5>things</h5>
+					</div>
+					<div>
+						<h4>right column</h4>
+						<h5>words</h5>
 						<h5>things</h5>
 					</div>
 				</div>
@@ -90,12 +119,22 @@
 					<h4>column 3</h4>
 				</div>
 			</section>
+
+			<section data-state="v-left-v-left">
+				<h3>images</h3>
+				<div class="slide-body flex-c">
+					<img style="padding:7px" src="./rtc2019/mendix-logo-full.png" width="20%" alt="Mendix logo"/>
+					<img class="plain" src="./rtc2019/mendix-logo-full.png" width="20%" alt="Mendix logo"/>
+				</div>
+			</section>
 			
 			<section data-state="h-cent-v-cent">
 				<h3>thank you!</h3>
 			</section>
 		</div>
 
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
 
 		<script>
 			document.getElementsByClassName("footer-right")[0].hidden = true;
