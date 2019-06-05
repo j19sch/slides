@@ -140,12 +140,13 @@ body {
 .reveal blockquote {
   display: block;
   position: relative;
-  width: 70%;
-  margin: 20px auto;
-  padding: 5px;
+  width: 85%;
+  /*margin: 20px auto;*/
+  margin: 15px 0px;
+  padding: 5px 7px;
   font-style: italic;
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2); }
 
 .reveal blockquote p:first-child,
 .reveal blockquote p:last-child {
