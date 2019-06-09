@@ -54,8 +54,7 @@ All of this will illustrate that these terms have very little meaning if not con
 						<img class="plain" src="./rtc2019/RTC-logo_main-19.png" width="25%" alt="Romanian Testing Conference logo"/>
 						<div>
 							<h5>Joep Schuurkes - <a href="https://twitter.com/j19sch">@j19sch</a></h5>
-							<h5><a href="https://testingcurve.wordpress.com">testingcurve.wordpress.com</a></h5>
-							<h5><a href="https://www.fourhourtester.net/">fourhourtester.net</a> <span class="sub">(with Helena Jeret-Mäe)</span></h5>
+							<h5>slides at <a href="https://j19sch.github.io">j19sch.github.io</a></h5>
 						</div>
 						<img class="plain" src="./rtc2019/mendix-logo-full.png" width="20%" alt="Mendix logo"/>
 					</div>
@@ -73,8 +72,8 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>testing our testing types</h3>
 				<div class="slide-body">
-					<blockquote>experience in functional testing, whitebox testing, regression testing, mobile testing, UI testing</blockquote>
-					<blockquote>we should do integration testing</blockquote>
+					<h4><i>"experience in functional testing, whitebox testing, regression testing, mobile testing and UI testing"</i></h4>
+					<h4 class="fragment"><i>"we should do integration testing"</i></h4>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
@@ -84,7 +83,7 @@ All of this will illustrate that these terms have very little meaning if not con
 					<div style="margin-left:40px">
 						<h4>"Instead of distinguishing between code, integration, and system testing, Google uses the language of <i>small</i>, <i>medium</i>,
 							and <i>large</i> tests, emphasizing scope over form."</h4>
-						<h5>- How Google Tests Software</h5>
+						<h5>How Google Tests Software<br>- Whittaker, Arbon, Carollo</h5>
 					</div>
 					<aside class='notes'>p.37, inc footnote 5: testing types had multiple and conflicting meanings in previous jobs, so new terms needed
 						"The original purpose of using small, medium, and large was to standardize terms that so many testers brought in from other
@@ -104,22 +103,11 @@ All of this will illustrate that these terms have very little meaning if not con
 					different ways of exploring meaning
 					Wittgenstein (one of the most epic mic drops in history of philosophy)
 					goal: encourage dialogue and exploration
+
+					warning - semantic satiation / 101 exericises by Roger-Pol Droit
 				</aside>
 			</section>
-			<section data-state="h-left-v-left">
-				<h3>warning - semantic satiation</h3>
-				<div class="slide-body">
-					<div class="slide-body flex-c">
-						<div style="margin-right:40px">
-							<h4>a psychological phenomenon in which repetition causes a word or phrase to temporarily lose meaning for the listener, who then perceives the speech as repeated meaningless sounds.</h4>
-						</div>
-						<div>
-							<img src="./rtc2019/101-exercises-pol-droit.jpg" width="80%" alt="101 exericises - Droit"/>
-						</div>
-					</div>
-				</div>
-				<aside class='notes'>goal: leave you confused</aside>
-			</section>
+
 
 
 			<section data-state="h-left-v-cent">
@@ -131,9 +119,9 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>definitions</h3>
 				<div class="slide-body">
-					<h5><b>integration testing</b><br>Testing performed to expose defects in the interfaces and in the interactions between integrated components or systems.</h5>
-					<h5><b>regression testing</b><br>Testing of a previously tested component or system following modification to ensure that defects have not been introduced or have been uncovered in unchanged areas of the software, as a result of the changes made.</h5>
-					<h5><b>negative testing</b><br>Tests aimed at showing that a component or system does not work. Negative testing is related to the tester's attitude rather than a specific test approach or test design technique, e.g., testing with invalid input values or exceptions.</h5>
+					<h5><b>integration testing</b><br>Testing performed to expose defects in the <u>interfaces</u> and in the <u>interactions</u> between integrated components or systems.</h5>
+					<h5><b>regression testing</b><br>Testing of a previously tested component or system following modification to ensure that defects have not been introduced or have been uncovered in <u>unchanged areas</u> of the software, as a result of the changes made.</h5>
+					<h5><b>negative testing</b><br>Tests aimed at showing that a component or system does not work. Negative testing is related to the <u>tester's attitude</u> rather than a specific test approach or test design technique, e.g., testing with invalid input values or exceptions.</h5>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
@@ -159,7 +147,7 @@ All of this will illustrate that these terms have very little meaning if not con
 				<h3>definitions all the way down</h3>
 				<div class="slide-body">
 					<h5><b>testing</b><br>The process consisting of all lifecycle activities, both static and dynamic, concerned with planning, preparation and evaluation of software products and related work products to determine that they satisfy specified requirements, to demonstrate that they are fit for purpose and to detect defects.</h5>
-					<h5>source: ISTQB Glossary - http://glossary.istqb.org/</h5>
+					<h5>source: <a href="https://glossary.istqb.org/">ISTQB Glossary</a></h5>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
@@ -167,8 +155,8 @@ All of this will illustrate that these terms have very little meaning if not con
 				<div class="slide-body">
 					<h4>abstract</h4>
 					<h4>how concepts relate to each other</h4>
-					<h4>assume a starting point of domain/contextual knowledge</h4>
-					<h4>would you recognise it when you see it?</h4>
+					<h4 class="fragment">assume a starting point of domain/contextual knowledge</h4>
+					<h4 class="fragment">would you recognise it when you see it?</h4>
 				</div>
 				<aside class='notes'>
 					skipped: alpha/beta testing; regression testing (https://arborosa.org/2015/07/31/regression-testing/)
@@ -186,12 +174,12 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>opposites</h3>
 				<div class="slide-body">
-					<h4>dynamic vs static testing</h4>
-					<h4 class="fragment">negative vs positive testing</h4>
+					<h4>white-box vs black-box testing</h4>
 					<h4 class="fragment">functional vs non-functional testing</h4>
-					<h4 class="fragment">white-box vs black-box testing</h4>
-					<h4 class="fragment">manual vs automated testing</h4>
+					<h4 class="fragment">dynamic vs static testing</h4>
+					<h4 class="fragment">negative vs positive testing</h4>
 					<h4 class="fragment">scripted vs exploratory testing</h4>
+					<h4 class="fragment">manual vs automated testing</h4>
 				</div>
 				<aside class="notes">
 					positive testing is not defined in the ISTQB Glossary
@@ -210,8 +198,9 @@ All of this will illustrate that these terms have very little meaning if not con
 				<div class="slide-body">
 					<h4>explore meaning through what something isn't</h4>
 					<h4>danger of false dichotomies</h4>
-					<h4>white-box vs black-box</h4>
-					<h4>dynamic testing / static testing / monitoring</h4>
+					<h4>white-box vs black-box testing, but grey-box?</h4>
+					<h4>dynamic vs static testing, but monitoring?</h4>
+					<h4>scripted vs explorarory testing, but automation?</h4>
 					<h4>what does it mean if there is no opposite?</h4>
 				</div>
 				<aside class="notes">
@@ -241,13 +230,14 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>Tractatus Logico-Philosophicus</h3>
 				<div class="slide-body">
-					<h4><b>sense</b><br>propositions corresponding to a state of affairs in the world</h4>
-					<h4><b>senseless</b><br>logic: tautologies and contradictions</h4>
-					<h4><b>nonsense</b><br>value: ethics, aesthetics and religion</h4>
+					<h4><b>sense - the empirical</b><br>propositions corresponding to a state of affairs in the world</h4>
+					<h4><b>senseless - the logical</b><br>tautologies and contradictions</h4>
+					<h4><b>nonsense - the transcendental</b><br>ethics, values, aesthetics, meaning of life and religion</h4>
 					<h3 class="fragment">philosophy is solved!</h3>
 				</div>
 				<aside class='notes'>
-					picture theory of language
+					picture theory of language; better than picture: model
+					very common view on language
 					philosophy is not a doctrine, but an activity, the logical clarification of thoughts
 					reason for explaining Wittgenstein I: picture theory of language to disagree with later
 					philosophy happens in language, so think about language
@@ -266,10 +256,10 @@ All of this will illustrate that these terms have very little meaning if not con
 				<h3>all the elements</h3>
 				<div class="slide-body">
 					<h4>quality characteristic testing<br>performamce, security, accessibility, testability, charisma</h4>
+					<h4>desktop, mobile, tablet, browser, mainframe testing</h4>
+					<h4>unit, component, system, integration, end-to-end<br>or<br>unit, api, cli/gui</h4>
 					<h4>test automation pyramid: unit, service/integration, ui<br>
 						<a href="http://www.testingreferences.com/here_be_pyramids.php">here be pyramids</a> - Joris Meerts</h4>
-					<h4>unit, component, system, end-to-end<br>or<br>unit, api, cli, gui</h4>
-					<h4>desktop, mobile, tablet, browser, mainframe testing</h4>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
@@ -313,8 +303,19 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>combinations</h3>
 				<div class="slide-body">
-					<h4>heuristic: makes sense, wrong, weird, not even wrong</h4>
+					<h4>obvious</h4>
+					<h4>curious</h4>
+					<h4>weird</h4>
+					<h4>wrong</h4>
+					<h4>not even wrong</h4>
 				</div>
+				<aside class="notes">
+					obvious: white-box unit testing
+					curious: static integration testing
+					weird: manual API testing
+					wrong: 
+					not even wrong: 
+				</aside>
 			</section>
 
 
@@ -330,39 +331,45 @@ All of this will illustrate that these terms have very little meaning if not con
 				<div class="slide-body">
 					<h5>1929: returns to Cambridge, starts lecturing in 1930</h5>
 					<h5>1936-1937: writes much of what is now part I of Philosophical Investigations</h5>
-					<h5>1938: March becomes a German citizen (Anschluss); April becomes a British citizen</h5>
-					<h5>1947: resigns his Cambridge professorship (elected in 1939)</h5>
+					<h5>1938: March becomes a German citizen (Anschluss); April applies for British citizenship</h5>
+					<h5>1939: elected Professor of Philosophy at Cambridge</h5>
+					<h5>1941-1944: works as a hospital porter and as a laboratory assistant</h5>
+					<h5>1947: resigns his Cambridge professorship</h5>
 					<h5>1947-1949: writes what is now Part II of Philosophical Investigations</h5>
 					<h5>28 April 1951: dies in Cambridge (aged 62)</h5>
 					<h5>1953: Philosophical Investigations published</h5>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>Wittgenstein</h3>
+				<h3>the problem with the Tractatus</h3>
 				<div class="slide-body">
 					<h4>the problem</h4>
 					<h5>The statement that a point in the visual field has two different colours at the same time is a contradiction.</h5>
 					<h5>The logical product of two atomic propositions can neither be a tautology nor a contradiction.</h5>
 
-					<h4>the solution</h4>
+					<h4>the 'solution'</h4>
 					<h5>Not all atomic propositions are logically indepent of each other.</h5>
 
 					<h4>the result</h4>
-					<h5>Whole theory comes crashing down.</h5>
+					<h5>The logical is no longer a clear boundary and the whole theory comes crashing down.</h5>
 									
 				</div>
 				<aside class='notes'>
-					How to read Wittgenstein, p 58-60
-					If logic can't seperate sense from non-sense, the whole Tractatus is meaningless.
+					The solution is not really a solution and Wittgenstein realized it and moved on.
+					Contradiction was based on the structure of the proposition. This is no longer the case. Some contradictions are
+					not-p and p, others p and q. But most 'p and q' are not contradictions, so logic is no longer a clear separation
+					bewteen the epmirical and the transcendental. And thus everything falls apart.
+					How to read Wittgenstein, p 58-60; Biography p. 273-274.
+					Frank Ramsey pointed out the problem in his review.
 				</aside>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>Wittgenstein</h3>
+				<h3>Philosophical Investigations</h3>
 				<div class="slide-body">
-					<h4>[...] we are committed to a faulty view of language, one that thinks that, to every meaningful
-						word there must correspond some <i>object</i>.</h4>
+					<h4>[...] "we are committed to a faulty view of language, one that thinks that, to every meaningful
+					word there must correspond some <i>object</i>" - Ray Monk?</h4>
 					<h4>names of numbers, names of colours, names of objects</h4>
-					<h4>pain and sensations<br>private language and the "beetle in the box"</h4>
+					<h4>pain, private language and the "beetle in the box" argument (PI 293)</h4>
 				</div>
 				<aside class='notes'>
 					How to read Wittgenstein, p 73, 75-76, 92, 93, 83-93
@@ -370,29 +377,32 @@ All of this will illustrate that these terms have very little meaning if not con
 				</aside>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>Wittgenstein</h3>
+				<h3>a behavior theory of language</h3>
 				<div class="slide-body">
-					<h4>Not all meaningful uses of language are meaningful in the <i>same</i> way.</h4>
-					<h4>The paradox disappears only if we make a radical break with the idea that language always functions
-						in one way, always serves the same purpose: to convey thoughts - which may be about houses,
-						pains, good and evil, or anything else you please. (PI 304)</h4>
-					<h4>most of the time, meaning is usage</h4>
+					<h4><i>"The paradox disappears only if we make a radical break with the idea that language always functions
+					in one way, always serves the same purpose: to convey thoughts - which may be about houses,
+					pains, good and evil, or anything else you please."</i>" (PI 304)</h4>
+					<h4><i>"For a </i>large<i> class of cases of the employment of the word 'meaning' - though not for all - 
+					this word can be explained in this way: the meaning of a word is its use in language."</i> (PI 43)</h4>
+					<aside class="notes">
+						instead of a model/picture theory of language
+						Not all meaningful uses of language are meaningful in the <i>same</i> way.
+						How to read Wittgenstein, p 73, 93
+						destructive for the project of Western philosophy
+						"any interpretation still hangs in the air along with what it interprets, and cannot give it any support. Interpretations by themselves do not determine meaning" (PI 198a)
+					</aside>
 				</div>
-				<aside class='notes'>
-					most of the time, meaning is usage (PI 43)
-					How to read Wittgenstein, p 73, 93
-					destructive for the project of Western philosophy
-					"any interpretation still hangs in the air along with what it interprets, and cannot give it any support. Interpretations by themselves do not determine meaning" (PI 198a)
-				</aside>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>Wittgenstein</h3>
+				<h3>Further reading</h3>
 				<div class="slide-body flex-c">
 					<div>
 						<h4>How to read Wittgenstein<br>- Ray Monk</h4>
+						<h4>Wittgenstein, The duty of genius<br>- Ray Monk</h4>
+						<h4>Wittgenstein's Vienna<br>- Allan Janik and Stephen Toulmin</h4>
 					</div>
-					<img src="./rtc2019/how-to-read-wittgenstein.jpg" width="27%" alt="How to read Wittgenstein - Ray Monk"/>
-				</div>			
+					<img src="./rtc2019/how-to-read-wittgenstein.jpg" width="25%" alt="How to read Wittgenstein - Ray Monk"/>
+				</div>
 			</section>
 
 
@@ -415,7 +425,8 @@ All of this will illustrate that these terms have very little meaning if not con
 				<div class="slide-body">
 					<h4>agile testing</h4>
 					<h4>developer testing</h4>
-					<h4>does automated testing imply CI/CD or not?</h4>
+					<h4>does automated testing mean something different in waterfall, agile and DevOps?<br>
+					Does it imply CI/CD?</h4>
 				</div>
 				<aside class='notes'>
 					https://www.techbeamers.com/user-acceptance-testing/
@@ -425,6 +436,7 @@ All of this will illustrate that these terms have very little meaning if not con
 				<h3>software development model</h3>
 				<div class="slide-body">
 					<h4>a testing type does not exist in isolation</h4>
+					<h4>it is one element of an approach to software development</h4>
 				</div>
 			</section>
 
@@ -437,32 +449,21 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>social context</h3>
 				<div class="slide-body">
-					<h4>end-to-end testing: devs mean full-stack, testers mean chain</h4>
-					<h4 class="fragment">pair vs mob vs crowd vs developer vs ???</h4>
+					<h4>pair - mob - crowd</h4>
+					<h4 class="fragment">end-to-end testing: devs mean full-stack, testers mean chain</h4>
 					<h4 class="fragment">developer testing:  vs QA team testing?</h4>
-				</div>
-			</section>
-			<section data-state="h-left-v-left">
-				<h3>social context</h3>
-				<div class="slide-body">
-					<h4 class="fragment">white-box testing: keep testers away from code?</h4>
+					<h4 class="fragment">black-box testing: keep testers away from code?</h4>
 					<h4 class="fragment">automated testing, technical testing: status, job market</h4>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
 				<h3>social context</h3>
 				<div class="slide-body">
-					<h4>people using language do not exist in isolation</h4>
+					<h4>language does not exist in isolation from people</h4>
+					<h4>it affects how they relate to each other and vice-versa</h4>
 				</div>
 			</section>
 
-
-			<section data-state="h-left-v-left">
-				<h1>one more to close off</h1>
-				<div class="slide-body">
-					<h4><b>mutation testing</b><br>testing your auto-tests through mutations of the product</h4>
-				</div>
-			</section>
 
 
 			<section data-state="h-left-v-cent">
@@ -475,9 +476,12 @@ All of this will illustrate that these terms have very little meaning if not con
 				<div class="slide-body">
 					<h4>anything can be X</h4>
 					<h4>so the meaning of "X" testing can be anything</h4>
-					<h4>most of the time, meaning is usage</h4>
-					<h4>usage is a very broad concept: it includes the social</h4>
+					<h4>most of the time, meaning is usage, not reference</h4>
 				</div>
+				<aside class="notes">
+					meaning can be anything: mutation testing
+					usage is a broad concept -> heuristics
+				</aside>
 			</section>
 			<section data-state="h-left-v-left">
 				<h3>today's heuristics</h3>
@@ -491,10 +495,15 @@ All of this will illustrate that these terms have very little meaning if not con
 						<li>social context/aspects</li>
 					</ol>
 				</div>
+				<aside class="notes">
+					definitions are just another type of usage
+				</aside>
 			</section>
 			<section data-state="h-left-v-left">
 				<h3>so...</h3>
 				<div class="slide-body">
+					<h4>Alice and Humpty Dumpty?</h4>
+					<h4>clarity of meaning matters in communication</h4>
 					<h4>language is slippery territory, deal with it</h4>
 					<h4>clarifying over correcting</h4>
 					<h4>clarification requires exploration and dialogue</h4>
@@ -506,11 +515,20 @@ All of this will illustrate that these terms have very little meaning if not con
 					<div>
 						<h2>thank you!</h2>
 						<div class="flex-c" style="margin-top:2.5em">
-							<h5>Joep Schuurkes<br>testingcurve.wordpress.com<br>fourhourtester.net</h5>
-							<h5>@j19sch</h5>
+							<div>
+								<h5>Joep Schuurkes - <a href="https://twitter.com/j19sch">@j19sch</a></h5>
+								<h5><a href="https://j19sch.github.io">j19sch.github.io</a></h5>
+							</div>
+							<div>
+								<h5><a href="https://testingcurve.wordpress.com">testingcurve.wordpress.com</a></h5>
+								<h5><a href="https://www.fourhourtester.net/">fourhourtester.net</a> <span class="sub">(with Helena Jeret-Mäe)</span></h5>
+							</div>
 						</div>
 					</div>
 			</section>
+
+
+
 
 		<script src="reveal.js/lib/js/head.min.js"></script>
 		<script src="reveal.js/js/reveal.js"></script>
