@@ -299,27 +299,27 @@ body {
 .slides .header-left{
   position:absolute;
   left: 0%;
-  font-size: 0.40em;
+  font-size: 0.45em;
 }
 
 .slides .header-right{
   position:absolute;
   right: 0%;
-  font-size: 0.40em;
+  font-size: 0.45em;
 }
 
 .slides .footer-left{
   position:absolute;
   left: 0%;
   bottom: 0%;
-  font-size: 0.40em
+  font-size: 0.45em
 }
 
 .slides .footer-right{
   position:absolute;
   right: 0%;
   bottom: 0%;
-  font-size: 0.40em
+  font-size: 0.45em
 }
 
 /*********************************************
@@ -352,5 +352,12 @@ body {
   display:flex;
   flex-wrap:nowrap;
   justify-content:space-around;
+  align-items: center;
+}
+
+.reveal .slides div.flex-start-c {
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:flex-start;
   align-items: center;
 }
