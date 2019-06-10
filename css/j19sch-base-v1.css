@@ -372,6 +372,12 @@ body {
   align-items: center;
 }
 
+.reveal .slides div.flex-start {
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:flex-start;
+}
+
 .reveal .slides div.flex-start-c {
   display:flex;
   flex-wrap:nowrap;
