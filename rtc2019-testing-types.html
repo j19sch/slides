@@ -48,13 +48,13 @@ All of this will illustrate that these terms have very little meaning if not con
 				<p>@j19sch</p>
 			</div>
 
-			<section data-state="h-cent-v-cent">
-					<h1 style="margin-bottom:0em">testing<br>our testing types</h1>
-					<div class="flex-c" style="margin-top:1.8em;">
+			<section data-state="h-left-v-left" data-background-image="./rtc2019/RTC19-title.png" data-background-color="#3069b3">
+					<h1 style="margin:1.7em 0em 0em 0.45em"><b>testing<br>our testing types</b></h1>
+					<div class="flex-c" style="margin-top:1.5em;">
 						<img class="plain" src="./rtc2019/RTC-logo_main-19.png" width="25%" alt="Romanian Testing Conference logo"/>
 						<div>
-							<h5>Joep Schuurkes - <a href="https://twitter.com/j19sch">@j19sch</a></h5>
-							<h5>slides at <a href="https://j19sch.github.io">j19sch.github.io</a></h5>
+							<h6>Joep Schuurkes - <a href="https://twitter.com/j19sch">@j19sch</a></h6>
+							<h6>slides at <a href="https://j19sch.github.io">j19sch.github.io</a></h6>
 						</div>
 						<img class="plain" src="./rtc2019/mendix-logo-full.png" width="20%" alt="Mendix logo"/>
 					</div>
@@ -64,8 +64,8 @@ All of this will illustrate that these terms have very little meaning if not con
 
 			<section data-state="h-left-v-left">
 				<h3>testing type or test type?</h3>
-				<div class="slide-body">
-					<img src="./rtc2019/ngram-test-type-testing-type.png" width="100%" alt="Google Ngram test type vs testing type"/>
+				<div class="slide-body-c">
+					<img src="./rtc2019/ngram-test-type-testing-type.png" width="80%" alt="Google Ngram test type vs testing type"/>
 				</div>
 			</section>
 
@@ -73,17 +73,19 @@ All of this will illustrate that these terms have very little meaning if not con
 				<h3>testing our testing types</h3>
 				<div class="slide-body">
 					<h4><i>"experience in functional testing, whitebox testing, regression testing, mobile testing and UI testing"</i></h4>
-					<h4 class="fragment"><i>"we should do integration testing"</i></h4>
+					<h4 class="fragment" style="margin-top:2em"><i>"we should do integration testing"</i></h4>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
 				<h3>is it really that difficult?</h3>
 				<div class="slide-body flex-c">
-					<img src="./rtc2019/how-google-tests-software.jpg" style="width:30%" alt="How Google tests software"/>
+					<div>
+						<img src="./rtc2019/how-google-tests-software.jpg" alt="How Google tests software"/>
+					</div>
 					<div style="margin-left:40px">
 						<h4>"Instead of distinguishing between code, integration, and system testing, Google uses the language of <i>small</i>, <i>medium</i>,
 							and <i>large</i> tests, emphasizing scope over form."</h4>
-						<h5>How Google Tests Software<br>- Whittaker, Arbon, Carollo</h5>
+						<h5>How Google Tests Software - Whittaker, Arbon, Carollo</h5>
 					</div>
 					<aside class='notes'>p.37, inc footnote 5: testing types had multiple and conflicting meanings in previous jobs, so new terms needed
 						"The original purpose of using small, medium, and large was to standardize terms that so many testers brought in from other
@@ -95,9 +97,10 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>testing our testing types</h3>
 				<div class="slide-body-c">
-					<img src="./rtc2019/wittgenstein-philosophy.jpg" width="80%" alt="Wittgenstein: philosophy is an activity"/>
+					<img src="./rtc2019/wittgenstein-philosophy.jpg" width="70%" alt="Wittgenstein: philosophy is an activity"/>
 				</div>
 				<aside class="notes">
+					this will be a weird talk
 					irony: two periods in Wittgenstein's thinking, both misinterpreted
 					not saying: don't; am saying: consider what you want to communicate
 					different ways of exploring meaning
@@ -113,7 +116,7 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-cent">
 				<div class="flex-c">
 					<h1>definitions</h1>
-					<img src="./rtc2019/mw-definition-of-definition.png" width="80%" alt="Merriam-Webster's definition of definition"/>
+					<img src="./rtc2019/mw-definition-of-definition.png" width="45%" alt="Merriam-Webster's definition of definition"/>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
@@ -127,7 +130,7 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>definitions all the way down</h3>
 				<div class="slide-body">
-					<h5><b>black-box testing</b><br>Testing, either functional or non-functional, without reference to the internal structure of the component or system.</h5>
+					<h5><b>black-box testing</b><br>Testing, either functional or non-functional, without reference to the internal structure of the <u>component</u> or <u>system</u>.</h5>
 					<h5 class="fragment"><b>component</b><br>A minimal part of a system that can be tested in isolation.</h5>
 					<h5 class="fragment"><b>system</b><br>A collection of interacting elements organized to accomplish a specific function or set of functions.</h5>
 				</div>
@@ -136,7 +139,8 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>definitions all the way down</h3>
 				<div class="slide-body">
-					<h5 class="fragment"><b>(non-)functional testing</b><br>Testing conducted to evaluate the compliance of a component or system with (non-)functional requirements.</h5>
+					<h5><b>black-box testing</b><br>Testing, either <u>functional</u> or <u>non-functional</u>, without reference to the internal structure of the component or system.</h5>
+					<h5 class="fragment"><b>(non-)functional testing</b><br>Testing conducted to evaluate the <u>compliance</u> of a component or system with <u>(non-)functional requirements</u>.</h5>
 					<h5 class="fragment"><b>compliance</b><br>The capability of the software product to adhere to standards, conventions or regulations in laws and similar prescriptions.</h5>
 					<h5 class="fragment"><b>functional requirement</b><br>A requirement that specifies a function that a component or system must be able to perform.</h5>
 					<h5 class="fragment"><b>non-functional requirement</b><br>A requirement that describes how the component or system will do what it is intended to do.</h5>					
@@ -146,6 +150,7 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>definitions all the way down</h3>
 				<div class="slide-body">
+					<h5><b>black-box testing</b><br><u>Testing</u>, either functional or non-functional, without reference to the internal structure of the component or system.</h5>
 					<h5><b>testing</b><br>The process consisting of all lifecycle activities, both static and dynamic, concerned with planning, preparation and evaluation of software products and related work products to determine that they satisfy specified requirements, to demonstrate that they are fit for purpose and to detect defects.</h5>
 					<h5>source: <a href="https://glossary.istqb.org/">ISTQB Glossary</a></h5>
 				</div>
@@ -153,16 +158,18 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>definitions</h3>
 				<div class="slide-body">
-					<h4>abstract</h4>
-					<h4>how concepts relate to each other</h4>
-					<h4 class="fragment">assume a starting point of domain/contextual knowledge</h4>
-					<h4 class="fragment">would you recognise it when you see it?</h4>
+					<h3 class="sub">relations between concepts</h3>
+					<h3 class="fragment sub">assume a starting point of knowledge</h3>
+					<h3 class="fragment sub">would you recognise it when you see it?</h3>
 				</div>
 				<aside class='notes'>
+					abstract
 					skipped: alpha/beta testing; regression testing (https://arborosa.org/2015/07/31/regression-testing/)
 					dropped: no instructions on how to do it
 				</aside>
 			</section>
+
+
 
 
 			<section data-state="h-left-v-cent">
@@ -188,23 +195,23 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>terms without opposite</h3>
 				<div class="slide-body">
-					<h4>regression testing vs ???</h4>
-					<h4 class="fragment">agile testing vs ???</h4>
-					<h4 class="fragment">developer testing vs ???</h4>
+					<h4>regression testing</h4>
+					<h4 class="fragment">agile testing</h4>
+					<h4 class="fragment">developer testing</h4>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
 				<h3>opposites</h3>
 				<div class="slide-body">
-					<h4>explore meaning through what something isn't</h4>
-					<h4>danger of false dichotomies</h4>
-					<h4>white-box vs black-box testing, but grey-box?</h4>
-					<h4>dynamic vs static testing, but monitoring?</h4>
-					<h4>scripted vs explorarory testing, but automation?</h4>
-					<h4>what does it mean if there is no opposite?</h4>
+					<h3 class="sub">explore meaning through what something isn't</h3>
+					<h3 class="sub">danger of false dichotomies</h3>
+					<h3 class="sub">what does it mean if there is no opposite?</h3>
 				</div>
 				<aside class="notes">
 					false dichotomies: testing vs checking
+					white-box vs black-box testing, but grey-box?
+					dynamic vs static testing, but monitoring?
+					scripted vs explorarory testing, but automation?
 				</aside>
 			</section>
 
@@ -212,19 +219,19 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-cent">
 				<div class="flex-c">
 					<h1>Wittgenstein</h1>
-					<img src="./rtc2019/wittgenstein-1922.jpg" width="50%" alt="Wittgenstein in 1922"/>
+					<img src="./rtc2019/wittgenstein-1922.jpg" width="35%" alt="Wittgenstein in 1922"/>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
 				<h3>Wittgenstein</h3>
 				<div class="slide-body">
-					<h5>26 April 1889: born in Vienna</h5>
-					<h5>1906 - 1911: studies engineering in Berlin and Manchester</h5>
-					<h5>1911: arrives in Cambridge to study philosophy with Bertrand Russell</h5>
-					<h5>1914-1918: fights for the Austrian army on the Russian and Italian front</h5>
-					<h5>1919: finishes Tractatus Logico-Philosophicus</h5>
-					<h5>1919: becomes a school teacher</h5>
-					<h5>1921: Tractatus Logico-Philosophicus published</h5>
+					<h4>26 April 1889: born in Vienna</h4>
+					<h4>1906 - 1911: studies engineering in Berlin and Manchester</h4>
+					<h4>1911: arrives in Cambridge to study philosophy with Bertrand Russell</h4>
+					<h4>1914-1918: fights for the Austrian army on the Russian and Italian front</h4>
+					<h4>1919: finishes Tractatus Logico-Philosophicus</h4>
+					<h4>1919: becomes a school teacher</h4>
+					<h4>1921: Tractatus Logico-Philosophicus published</h4>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
@@ -233,7 +240,7 @@ All of this will illustrate that these terms have very little meaning if not con
 					<h4><b>sense - the empirical</b><br>propositions corresponding to a state of affairs in the world</h4>
 					<h4><b>senseless - the logical</b><br>tautologies and contradictions</h4>
 					<h4><b>nonsense - the transcendental</b><br>ethics, values, aesthetics, meaning of life and religion</h4>
-					<h3 class="fragment">philosophy is solved!</h3>
+					<h3 style="margin-top:0.7em" class="fragment">philosophy is solved!</h3>
 				</div>
 				<aside class='notes'>
 					picture theory of language; better than picture: model
@@ -249,7 +256,7 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-cent">
 				<div class="flex-c">
 					<h1>all the elements</h1>
-					<img src="./rtc2019/CI-table-elements-2018.png" width="55%" alt="Periodic table of elements"/>
+					<img src="./rtc2019/CI-table-elements-2018.png" width="45%" alt="Periodic table of elements"/>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
@@ -274,9 +281,9 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>all the elements</h3>
 				<div class="slide-body">
-					<h4>elements in a category clarify each other's meaning</h4>
-					<h4>in what way are they the same?</h4>
-					<h4>in what way are they the different?</h4>
+					<h3 class="sub">elements in a category clarify each other's meaning</h3>
+					<h3 class="sub">in what way are they the same?</h3>
+					<h3 class="sub">in what way are they the different?</h3>
 				</div>
 			</section>
 
@@ -284,23 +291,23 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-cent">
 				<div class="flex-c">
 					<h1>combinations</h1>
-					<img src="./rtc2019/xkcd-laser_products.png" width="55%" alt="xkcd combinations of laser products"/>
+					<img src="./rtc2019/xkcd-laser_products.png" width="40%" alt="xkcd combinations of laser products"/>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
 				<h3>combinations</h3>
 				<div class="slide-body">
 					<h4>manual unit testing</h4>
-					<h4>manual API testing</h4>
-					<h4>automated usability testing</h4>
+					<h4 class="fragment">manual API testing</h4>
+					<h4 class="fragment">automated usability testing</h4>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
 				<h3>combinations</h3>
 				<div class="slide-body">
 					<h4>scripted user acceptance testing</h4>
-					<h4>static integration testing</h4>
-					<h4>white-box end-to-end testing</h4>
+					<h4 class="fragment">static integration testing</h4>
+					<h4 class="fragment">white-box end-to-end testing</h4>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
@@ -312,11 +319,18 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>combinations</h3>
 				<div class="slide-body">
-					<h4>obvious</h4>
-					<h4>curious</h4>
-					<h4>weird</h4>
-					<h4>wrong</h4>
-					<h4>not even wrong</h4>
+					<h3 class="sub">combine testing types and see what happens</h3>
+					<h3 class="sub fragment">is the result
+						<div style="margin-left: 1em">
+							<span class="fragment">obvious?</span>
+							<br>
+							<span class="fragment">curious?</span>
+							<br>
+							<span class="fragment">weird?</span>
+							<br>
+							<span class="fragment">wrong?</span>
+						</div>
+					</h3>
 				</div>
 				<aside class="notes">
 					obvious: white-box unit testing
@@ -331,36 +345,41 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-cent">
 				<div class="flex-c">
 					<h1>Wittgenstein</h1>
-					<img src="./rtc2019/wittgenstein-1947.jpg" width="30%" alt="Wittgenstein in 1947"/>
+					<img src="./rtc2019/wittgenstein-1947.jpg" width="25%" alt="Wittgenstein in 1947"/>
 				</div>
 				<aside class="notes">definitions are usage too</aside>
 			</section>
 			<section data-state="h-left-v-left">
 				<h3>Wittgenstein</h3>
 				<div class="slide-body">
-					<h5>1929: returns to Cambridge, starts lecturing in 1930</h5>
-					<h5>1936-1937: writes much of what is now part I of Philosophical Investigations</h5>
-					<h5>1938: becomes German citizen (Anschluss), applies for British citizenship</h5>
-					<h5>1939: elected Professor of Philosophy at Cambridge</h5>
-					<h5>1941-1944: works as a hospital porter and as a laboratory assistant</h5>
-					<h5>1947: resigns his Cambridge professorship</h5>
-					<h5>1947-1949: writes what is now Part II of Philosophical Investigations</h5>
-					<h5>28 April 1951: dies in Cambridge (aged 62)</h5>
-					<h5>1953: Philosophical Investigations published</h5>
+					<h4>1929: returns to Cambridge, starts lecturing in 1930</h4>
+					<h4>1936-1937: writes much of what is now part I of Philosophical Investigations</h4>
+					<h4>1938: becomes German citizen (Anschluss), applies for British citizenship</h4>
+					<h4>1939: elected Professor of Philosophy at Cambridge (resigns in 1947)</h4>
+					<h4>1941-1944: works as a hospital porter and as a laboratory assistant</h4>
+					<h4>1947-1949: writes what is now Part II of Philosophical Investigations</h4>
+					<h4>28 April 1951: dies in Cambridge (aged 62)</h4>
+					<h4>1953: Philosophical Investigations published</h4>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
 				<h3>the problem with the Tractatus</h3>
 				<div class="slide-body">
-					<h4>the problem</h4>
-					<h5>The statement that a point in the visual field has two different colours at the same time is a contradiction.</h5>
-					<h5>The logical product of two atomic propositions can neither be a tautology nor a contradiction.</h5>
+					<div>
+						<h4 style="margin-bottom: 0em"><b>the problem</b></h4>
+						<h5 style="margin-bottom: 0.3em">The statement that a point in the visual field has two different colours at the same time is a contradiction.</h5>
+						<h5>The logical product of two atomic propositions can neither be a tautology nor a contradiction.</h5>
+					</div>
 
-					<h4>the 'solution'</h4>
-					<h5>Not all atomic propositions are logically indepent of each other.</h5>
+					<div class="fragment" style="margin-top: 1.5em">
+						<h4 style="margin-bottom: 0em"><b>the 'solution'</b></h4>
+						<h5>Not all atomic propositions are logically indepent of each other.</h5>
+					</div>
 
-					<h4>the result</h4>
-					<h5>The logical is no longer a clear boundary and the whole theory comes crashing down.</h5>
+					<div class="fragment" style="margin-top: 1.5em">
+						<h4 style="margin-bottom: 0em"><b>the result</b></h4>
+						<h5>The logical is no longer a clear boundary and the whole theory comes crashing down.</h5>
+					</div>
 									
 				</div>
 				<aside class='notes'>
@@ -375,10 +394,10 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>Philosophical Investigations</h3>
 				<div class="slide-body">
-					<h4><b>five red apples</b> <span class="sub">(PI 1)</span><br>names of numbers, names of colours, names of objects</h4>
-					<h4><b>the beetle in the box</b> <span class="sub">(PI 293)</span><br>pain and private languages</h4>
 					<h4>"[...] we are committed to a faulty view of language, one that thinks that, to every meaningful
 					word there must correspond some <i>object</i>" - Ray Monk</h4>
+					<h4 class="fragment"><b>five red apples</b> <span class="sub">(PI 1)</span><br>names of numbers, names of colours, names of objects</h4>
+					<h4 class="fragment"><b>the beetle in the box</b> <span class="sub">(PI 293)</span><br>pain and private languages</h4>
 				</div>
 				<aside class='notes'>
 					citaat: How to read Wittgenstein p. 93, thougts/desires/pain are not a thing, not nothing, not behavior
@@ -389,7 +408,7 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>a behavior theory of language</h3>
 				<div class="slide-body">
-					<h4><i>"The paradox disappears only if we make a radical break with the idea that language always functions
+					<h4><i>"[...] a radical break with the idea that language always functions
 					in one way, always serves the same purpose: to convey thoughts - which may be about houses,
 					pains, good and evil, or anything else you please."</i> <span class="sub">(PI 304)</span></h4>
 					<h4><i>"For a </i>large<i> class of cases of the employment of the word 'meaning' - though not for all - 
@@ -419,24 +438,22 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-cent">
 				<div class="flex-c">
 					<h1>software development model</h1>
-					<img src="./rtc2019/xkcd-software_development.png" width="30%" alt="xkcd software development"/>
+					<img src="./rtc2019/xkcd-software_development.png" width="25%" alt="xkcd software development"/>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
 				<h3>software development model</h3>
 				<div class="slide-body">
-					<h4>acceptance testing: V-model</h4>
-					<img src="./rtc2019/User-Acceptance-Testing.png" width="30%" alt="V-model acceptance testing"/>
-					<h4>acceptance testing: ATDD</h4>
-				</div>
-			</section>
-			<section data-state="h-left-v-left">
-				<h3>software development model</h3>
-				<div class="slide-body">
-					<h4>agile testing</h4>
-					<h4>developer testing</h4>
-					<h4>does automated testing mean something different in waterfall, agile and DevOps?<br>
-					Does it imply CI/CD?</h4>
+					<div class="flex">
+						<div style="flex: 1 1 0">
+							<h4>V-model acceptance testing</h4>
+							<img src="./rtc2019/User-Acceptance-Testing.png" style="width:70%; height:70%" alt="V-model acceptance testing"/>
+						</div>
+						<div style="flex: 1 1 0">
+							<h4>acceptance test-driven design (ATDD)</h4>
+							<img src="./rtc2019/ATDD.png" style="width:75%; height:75%" alt="ATDD"/>
+						</div>
+					</div>
 				</div>
 				<aside class='notes'>
 					https://www.techbeamers.com/user-acceptance-testing/
@@ -445,38 +462,63 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>software development model</h3>
 				<div class="slide-body">
-					<h4>a testing type does not exist in isolation</h4>
-					<h4>it is one element of an approach to software development</h4>
+					<h4>agile testing</h4>
+					<h4 class="fragment">developer testing</h4>
+					<h4 class="fragment">automated testing</h4>
+				</div>
+				<aside class='notes'>
+					automated testing in  in waterfall, agile, XP, DevOps, ...
+				</aside>
+			</section>
+			<section data-state="h-left-v-left">
+				<h3>software development model</h3>
+				<div class="slide-body">
+					<h3 class="sub">a testing type does not exist in isolation</h3>
+					<h3 class="sub">one element of an approach to software development</h3>
 				</div>
 			</section>
 
 
 			<section data-state="h-left-v-cent">
-				<div>
-					<h1>social context/aspects</h1>
+				<div class="flex-c">
+					<h1>social aspects</h1>
+					<img src="./rtc2019/social.png" width="30%" style="padding:5px" alt="people talking"/>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>social context</h3>
+				<h3>social aspects</h3>
 				<div class="slide-body">
-					<h4>pair - mob - crowd</h4>
-					<h4 class="fragment">end-to-end testing: devs mean full-stack, testers mean chain</h4>
-					<h4 class="fragment">developer testing:  vs QA team testing?</h4>
-					<h4 class="fragment">black-box testing: keep testers away from code?</h4>
-					<h4 class="fragment">automated testing, technical testing: status, job market</h4>
+					<h4>pair testing</h4>
+					<h4 class="fragment">mob testing</h4>
+					<h4 class="fragment">crowd testing</h4>
+					<h4 class="fragment">developer testing</h4>
 				</div>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>social context</h3>
+				<h3>social aspects</h3>
 				<div class="slide-body">
-					<h4>language does not exist in isolation from people</h4>
-					<h4>it affects how they relate to each other and vice-versa</h4>
+					<h4>end-to-end testing`</h4>
+					<h4 class="fragment">black-box testing</h4>
+					<h4 class="fragment">automated testing</h4>
+					<h4 class="fragment">technical testing</h4>
+				</div>
+				<aside class="notes">
+					end-to-end: full-stack or chain?
+					black-box testing: keeping testers away from code
+					automated, technical testing: status, job market
+				</aside>
+			</section>
+			<section data-state="h-left-v-left">
+				<h3>social aspects</h3>
+				<div class="slide-body">
+					<h3 class="sub">language does not exist in isolation from people</h3>
+					<h3 class="sub">it affects how they relate to each other and vice-versa</h3>
 				</div>
 			</section>
 
 
 
-			<section data-state="h-left-v-cent">
+			<section data-state="h-left-v-cent" class="no-footers" data-background-image="./rtc2019/RTC19-background.png" data-background-color="#3069b3">
 				<div>
 					<h1>wrap-up</h1>
 				</div>
@@ -484,13 +526,14 @@ All of this will illustrate that these terms have very little meaning if not con
 			<section data-state="h-left-v-left">
 				<h3>"X" testing</h3>
 				<div class="slide-body">
-					<h4>anything can be X</h4>
-					<h4>so the meaning of "X" testing can be anything</h4>
-					<h4>most of the time, meaning is usage, not reference</h4>
+					<h3 class="sub">anything can be X</h3>
+					<h3 class="sub fragment">so the meaning of "X" testing can be anything</h3>
+					<h3 class="sub fragment">most of the time, meaning is usage</h3>
 				</div>
 				<aside class="notes">
 					meaning can be anything: mutation testing
 					usage is a broad concept -> heuristics
+					reference -> models and pictures
 				</aside>
 			</section>
 			<section data-state="h-left-v-left">
@@ -502,30 +545,35 @@ All of this will illustrate that these terms have very little meaning if not con
 						<li>all the elements</li>
 						<li>combinations</li>
 						<li>software development method</li>
-						<li>social context/aspects</li>
+						<li>social aspects</li>
 					</ol>
 				</div>
 				<aside class="notes">
+					note a complete list
 					definitions are just another type of usage
 				</aside>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>so...</h3>
+				<h3>conclusion</h3>
 				<div class="slide-body">
-					<h4>clarity of meaning matters in communication</h4>
-					<h4>language is slippery territory, deal with it</h4>
-					<h4>clarifying over correcting</h4>
-					<h4>clarification requires exploration and dialogue</h4>
+					<h3 class="sub fragment">clarity of meaning matters in communication</h3>
+					<h3 class="sub fragment">if meaning is usage... <span class="fragment">clarfifying trumps correcting</span></h3>
+					<h3 class="sub">
+						<span class="fragment">explore</span><br>
+						<span class="fragment">engage in dialogue</span><br>
+						<span class="fragment">ask "can you show me?"</span>
+					</h3>
 				</div>
 				<aside class="notes">
+					language is slippery territory, deal with it
 					Alice and Humpty Dumpty?
 				</aside>
 			</section>
 
 
-			<section data-state="h-cent-v-cent" class="no-footers">
+			<section data-state="h-cent-v-cent" class="no-footers" data-background-image="./rtc2019/RTC19-background.png" data-background-color="#3069b3">
 					<div>
-						<h2>thank you!</h2>
+						<h1>thank you!</h1>
 						<div class="flex-c" style="margin-top:2.5em">
 							<div>
 								<h5>Joep Schuurkes - <a href="https://twitter.com/j19sch">@j19sch</a></h5>
@@ -600,8 +648,8 @@ All of this will illustrate that these terms have very little meaning if not con
 
 			// test aspect ratio 4:3
 			// because template images
-			// width: 1280,
-			// height: 720,
+			width: 1280,
+			height: 720,
 
 			transition: 'none', // none/fade/slide/convex/concave/zoom
 			transitionspeed: 'default',

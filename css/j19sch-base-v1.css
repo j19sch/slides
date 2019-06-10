@@ -15,12 +15,23 @@ to do:
 .reveal a {
   line-height: 1.3em; }
 
+section.has-dark-background,
+section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6,
+section.has-dark-background a
+{
+  color: #fff; }
+
+
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #F0F1EB;
-  background-color: #F0F1EB; }
+/*  background: #F0F1EB;
+  background-color: #F0F1EB;*/
+  background: #ffffff;
+  background-color: #ffffff;
+}
 
 .reveal {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
@@ -75,6 +86,9 @@ body {
   font-size: 1em; }
 
 .reveal h5 {
+  font-size: 0.75em; }
+
+.reveal h6 {
   font-size: 0.7em; }
 
 .reveal span.sub {
@@ -110,7 +124,9 @@ body {
 .reveal ul {
   display: inline-block;
   text-align: left;
-  margin: 0 0 0 1em; }
+  margin: 0 0 0 0em;
+  list-style-position: inside;
+}
 
 .reveal ol {
   list-style-type: decimal; }
@@ -119,10 +135,10 @@ body {
   list-style-type: disc; }
 
 .reveal ul ul {
-  list-style-type: square; }
+  list-style-type: circle; }
 
 .reveal ul ul ul {
-  list-style-type: circle; }
+  list-style-type: square; }
 
 .reveal ul ul,
 .reveal ul ol,
@@ -247,9 +263,10 @@ body {
  *********************************************/
 .reveal section img {
   margin: 15px; /*15px 0px;*/
-  background: rgba(255, 255, 255, 0.12);
+  /*background: rgba(255, 255, 255, 0.12);*/
+  background: #ffffff;
   border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
 
 .reveal section img.plain {
   border: 0;

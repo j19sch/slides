@@ -1,1 +1,43 @@
 @import "./j19sch-base-v1.css";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:600);
+@import url(https://fonts.googleapis.com/css?family=Mukta+Vaani:400);
+
+.reveal,
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: "Mukta Vaani", FreeSans, sans-serif;
+}
+
+.reveal section h1,
+.reveal section > h3 {
+	font-family: "Montserrat", FreeSans, sans-serif;
+}
+
+.reveal section > h3 {
+	color: #3069b3;
+}
+
+.reveal section h3.sub {
+	font-size: 1.3em;
+    margin-bottom: 1.2em;
+}
+
+
+.slides .header-left,
+.slides .header-right,
+.slides .footer-left,
+.slides .footer-right,
+.reveal section > h3 {
+	color: #3069b3;
+}
+
+
+.reveal .slides section div.slide-body,
+.reveal .slides section div.slide-body-c {
+  margin-top: 0.7em;
+  margin-left: 0.6em;
+}
