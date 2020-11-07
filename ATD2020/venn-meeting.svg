@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="158.99083mm"
+   height="151.24002mm"
+   viewBox="0 0 158.99083 151.24002"
+   version="1.1"
+   id="svg843"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="venn-meeting.svg">
+  <defs
+     id="defs837">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1778">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop1774" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop1776" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1778"
+       id="linearGradient1780"
+       x1="9.3234262"
+       y1="67.783081"
+       x2="62.209087"
+       y2="67.783081"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:menu-tooltip="In and out glow with a possible offset and colorizable flood"
+       inkscape:menu="Shadows and Glows"
+       inkscape:label="Cutout Glow"
+       style="color-interpolation-filters:sRGB"
+       id="filter2308">
+      <feOffset
+         dy="3"
+         dx="-100"
+         id="feOffset2298" />
+      <feGaussianBlur
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur2300" />
+      <feFlood
+         flood-color="rgb(0,0,0)"
+         flood-opacity="1"
+         result="flood"
+         id="feFlood2302" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite"
+         id="feComposite2304" />
+      <feBlend
+         in="blur"
+         in2="composite"
+         mode="normal"
+         id="feBlend2306" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="98.844328"
+     inkscape:cy="346.2188"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1040"
+     inkscape:window-x="0"
+     inkscape:window-y="18"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata840">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-11.509857,-55.405609)">
+    <ellipse
+       style="opacity:0.35;fill:#d4ff2a;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path1388"
+       cx="63.342876"
+       cy="106.43682"
+       rx="51.583019"
+       ry="50.781212" />
+    <ellipse
+       style="opacity:0.35;fill:#ff0000;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path1388-3"
+       cx="118.66767"
+       cy="108.30772"
+       rx="51.583019"
+       ry="50.781212" />
+    <ellipse
+       style="opacity:0.32000002;fill:#0000ff;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path1388-3-6"
+       cx="88.466209"
+       cy="155.61443"
+       rx="51.583019"
+       ry="50.781212" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:125%;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:url(#linearGradient1780);stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="35.797264"
+       y="70.622704"
+       id="text1460"><tspan
+         sodipodi:role="line"
+         id="tspan1458"
+         x="35.797264"
+         y="79.883118"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333397px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-align:center;text-anchor:middle;opacity:0.92932865;stroke:url(#linearGradient1780);stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="23.018749"
+       y="84.010414"
+       id="text2324"><tspan
+         sodipodi:role="line"
+         id="tspan2322"
+         x="23.018749"
+         y="84.010414"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.52500057px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';stroke-width:0.26458332px">Synchronous</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="115.99292"
+       y="96.904205"
+       id="text2324-7"><tspan
+         sodipodi:role="line"
+         id="tspan2322-5"
+         x="115.99292"
+         y="96.904205"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.52500057px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';stroke-width:0.26458332px">Collaboration</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="64.460136"
+       y="187.41081"
+       id="text2324-7-3"><tspan
+         sodipodi:role="line"
+         id="tspan2322-5-5"
+         x="64.460136"
+         y="187.41081"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.52500057px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';stroke-width:0.26458332px">Purpose</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="76.199997"
+       y="124.75626"
+       id="text2383"><tspan
+         sodipodi:role="line"
+         id="tspan2381"
+         x="76.199997"
+         y="124.75626"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;font-family:Roboto;-inkscape-font-specification:'Roboto Italic';stroke-width:0.26458332px">meeting</tspan></text>
+  </g>
+</svg>
