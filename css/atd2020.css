@@ -255,16 +255,18 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #00008B;
+  /*color: #00008B;*/
   /*color: #51483D;*/
+  color: #0061A2;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #0000f1;
+  /*color: #0000f1;*/
   /*color: #8b7c69;*/
+  color: #0076b2;
   text-shadow: none;
   border: none; }
 
@@ -397,5 +399,20 @@ body {
   display:flex;
   flex-wrap:nowrap;
   justify-content:flex-start;
+  align-items: center;
+}
+
+.reveal .slides div.flex-between-c {
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.reveal .slides div.flex-vert {
+  display:flex;
+  flex-direction: column;
+  flex-wrap:nowrap;
+  justify-content:space-between;
   align-items: center;
 }
