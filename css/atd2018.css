@@ -1,7 +1,7 @@
-@import "../reveal.js/css/theme/serif.css";
+@import "../reveal.js/dist/theme/serif.css";
 
 
-body {
+.reveal-viewport {
   background: #7E7F97;
   background: -moz-radial-gradient(center, circle cover, #ffffff 10%, #7E7F97 100%);
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(10%, #ffffff), color-stop(100%, #7E7F97));

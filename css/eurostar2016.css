@@ -1,6 +1,6 @@
-@import "../reveal.js/css/theme/serif.css";
+@import "../reveal.js/dist/theme/serif.css";
 
-body { background: #fff; background-color: #fff; }
+.reveal-viewport { background: #fff; background-color: #fff; }
 
 .reveal h1 { font-size: 2.1em}
 

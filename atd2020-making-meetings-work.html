@@ -18,21 +18,15 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
-	<link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	
+	<link rel="stylesheet" href="reveal.js/dist/reset.css">
+	<link rel="stylesheet" href="reveal.js/dist/reveal.css">
 	<link rel="stylesheet" href="css/atd2020.css" id="theme">
 
 	<!-- Code syntax highlighting -->
 	<link rel="stylesheet" href="css/j19sch-base-code-v1.css">
 
-	<!-- Printing and PDF exports -->
-	<script>
-	var link = document.createElement( 'link' );
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-	document.getElementsByTagName( 'head' )[0].appendChild( link );
-	</script>
 </head>
 <body>
 	<div class="reveal">
@@ -61,13 +55,13 @@
 			<section data-state="h-cent-v-cent"  data-background-image="./ATD2020/ATD2020-tpl.svg" data-background-size="contain">
 				<img src="./ATD2020/902px-Punishment_sisyph.jpg" alt="Sisyphus by Titian" class="plain" style="width:35%; height:35%"/>
 				<h3>we struggle with meetings</h3>
-				<aside class="notes">
-					zoom: https://twitter.com/RealGeneKim/status/1319742441646243840
-					1 person meeting room: https://twitter.com/StevenShorrock/status/1318422836025896960
-					not another meeting
-					telling the scrum master about a meeting both of you were in: not very effective
-					poor me/you, a meeting day
-					getting time / your life back when a meeting ends early
+				<aside class="notes" data-markdown>
+					- zoom: https://twitter.com/RealGeneKim/status/1319742441646243840
+					- 1 person meeting room: https://twitter.com/StevenShorrock/status/1318422836025896960
+					- not another meeting
+					- telling the scrum master about a meeting both of you were in: not very effective
+					- poor me/you, a meeting day
+					- getting time / your life back when a meeting ends early
 				</aside>
 			</section>
 
@@ -439,8 +433,12 @@
 				<h4 style="margin-top:3rem;">please rate this session on<br><a href="http://agiletestingdays.com/session-ratings" target="_blank">agiletestingdays.com/session-ratings</a></h4>
 			</section>
 
-		<script src="reveal.js/lib/js/head.min.js"></script>
-		<script src="reveal.js/js/reveal.js"></script>
+		<script src="reveal.js/dist/reveal.js"></script>
+		<script src="reveal.js/plugin/zoom/zoom.js"></script>
+		<script src="reveal.js/plugin/notes/notes.js"></script>
+		<script src="reveal.js/plugin/search/search.js"></script>
+		<script src="reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js/plugin/highlight/highlight.js"></script>
 
 		<script>
 
@@ -504,15 +502,8 @@
 			transition: 'none', // none/fade/slide/convex/concave/zoom
 			transitionspeed: 'fast',
 
-			// Optional reveal.js plugins
-			dependencies: [
-				{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-				{ src: 'reveal.js/plugin/notes/notes.js', async: true }
-			]
+			plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+
 		});
 
 		</script>
