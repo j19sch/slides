@@ -34,28 +34,30 @@
 				<p>@joeposaurus@chaos.social</p>
 			</div>
 			<div class="footer-right">
-				<p>XP2023</p>
+				<p>#XP2023</p>
 			</div>
 
 			<!-- notes to self
 				12 minutes is not that long, so focus on what supports title and lessons learned
 				currently at 15 / 13.5 minutes
+				XP2023 blue for top bar: #015DB0
 			-->
 
 
 			<section data-state="h-cent-v-cent">
 					<h1 style="margin-top:0.7em; margin-bottom:0em">I'm a quality engineer</h1>
-					<h2 style="font-size:1.6em;">and I'm not sure how I feel about that</h2>
+					<h2 style="font-size:1.4em;">and I'm not sure how I feel about that</h2>
 					<div style="margin-top:1.7em;display:flex;flex-wrap:nowrap;justify-content:space-around;align-items:center;">
-						<div style="width:40%">
+						<div style="width:45%">
 							<img class="plain" src="./xp2023/xp2023-banner-2.jpg" width="100%" alt="XP2023 banner"/>
 						</div>
 						<div style="width:40%">
 							<h5>Joep Schuurkes</h5>
-							<h6><a href="https://chaos.social/@joeposaurus">@joeposaurus@chaos.social</a></h6>
 							<h6>
-								<a href="https://smallsheds.garden">https://smallsheds.garden</a><br />
+								<a href="https://chaos.social/@joeposaurus">@joeposaurus@chaos.social</a><br/>
+								<a href="https://smallsheds.garden">https://smallsheds.garden</a>
 							</h6>
+							<h6><a href="https://frogsconf.nl">FroGS conf</a></h6>
 						</div>
 					</div>
 					<aside class="notes">
@@ -67,22 +69,25 @@
 				</section>
 
 			<section data-state="h-left-v-left">
-				<h3>agenda</h3>
-				<div style="margin-left: 1rem;">
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">outline</h2>
+				</div>
+				<div class="slide-body">
 					<div class="flex-start">
 						<div style="width:45%">
-							<h4>my story</h4>
-							<h6>background</h6>
-							<h6>the first four months</h6>
-							<h6>the nex two months</h6>
-							<h6>layoffs and a reorg</h6>
-							<h6>epilogue</h6>
+							<h3 style="font-style: italic;">my story</h3>
+							<h4>background</h4>
+							<h4>the first four months</h4>
+							<h4>the next two months</h4>
+							<h4>layoffs and a reorg</h4>
+							<h4>epilogue</h4>
 						</div>
 						<div style="width:45%">
-							<h4>lessons learned</h4>
-							<h6>personal reflections</h6>
-							<h6>quality engineering</h6>
-							<h6>testing-related roles</h6>
+							<h3 style="font-style: italic;">lessons learned</h3>
+							<h4>personal reflections</h4>
+							<h4>quality engineering</h4>
+							<h4>testing-related roles</h4>
 						<div>
 					</div>
 				</div>
@@ -95,17 +100,20 @@
 
 
 			<section data-state="h-cent-v-cent">
-				<h1>my story</h1>
+				<h1 class="section-title">my story</h1>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>background</h3>
-				<div style="margin-left: 1rem;">
-					<h5>joined in Aug '22</h5>
-					<h5>scale-up, founded in 2019, EOR, fully remote</h5>
-					<h5>web platform</h5>
-					<h5>support two teams as quality engineer</h5>
-					<h5>none of us had previous experience with quality engineering</h5>
-					<h5>principal quality engineer and other quality engineers</h5>
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">background</h2>
+				</div>
+				<div class="slide-body">
+					<h4>joined in Aug '22</h4>
+					<h4>scale-up, founded in 2019, fully remote</h4>
+					<h4>web platform, Employer of Record (EOR)</h4>
+					<h4>support two teams as quality engineer</h4>
+					<h4>no one had previous experience with quality engineering</h4>
+					<h4>principal quality engineer and vision</h4>
 				</div>
 				<aside class="notes">
 					<ul>
@@ -117,14 +125,19 @@
 			</section>
 
 			<section data-state="h-left-v-left">
-				<h3>the first four months</h3>
-				<div style="margin-left: 1rem;">
-					<h5>start with risk sessions and exploratory testing sessions</h5>
-					<h5>some of the things I did:</h5>
-					<h6>process workshop with team A</h6>
-					<h6>diagram about the Salesforce - platform integration</h6>
-					<h6>quality engineering menu</h6>
-					<h6>talking with colleagues</h6>
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">the first four months</h2>
+				</div>
+				<div class="slide-body">
+					<h4>start with risk sessions and exploratory testing sessions</h4>
+					<div style="margin-top:1em;">
+						<h4>some of the things I did:</h4>
+						<h5>- process workshop with team A</h5>
+						<h5>- diagram about the Salesforce - platform integration</h5>
+						<h5>- quality engineering menu</h5>
+						<h5>- talking with colleagues</h5>
+					</div>
 				</div>
 				<aside class="notes">
 					<ul>
@@ -135,11 +148,16 @@
 				</aside>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>the first four months - looking back</h3>
-				<div style="margin-left: 1rem;">
-					<h5>tried different things, none if it really stuck</h5>
-					<h5>positive or no feedback, but none negative</h5>
-					<h5>frustrated and demotivated</h5>
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">the first four months</h2>
+				</div>
+				<div class="slide-body">
+					<div>
+						<h4>tried different things, none of it really stuck</h4>
+						<h4>positive or no feedback, but none negative</h4>
+						<h4>frustrated and demotivated</h4>
+					</div>
 				</div>
 				<aside class="notes">
 					<ul>
@@ -150,13 +168,18 @@
 			</section>
 
 			<section data-state="h-left-v-left">
-				<h3>the next two months</h3>
-				<div style="margin-left: 1rem;">
-					<h5>let go of expectations (to some degree)</h5>
-					<h5>some of the things I did:</h5>
-					<h6>PoC for test automation for Salesforce integration</h6>
-					<h6>pointing out the obvious in team B's retro</h6>
-					<h6>helping team A with test scenarios</h6>
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">the next two months</h2>
+				</div>
+				<div class="slide-body">
+					<h4>let go of expectations (to some degree)</h4>
+					<div style="margin-top:1em;">
+						<h4>some of the things I did:</h4>
+						<h5>- PoC for test automation for Salesforce integration</h5>
+						<h5>- pointing out the obvious in team B's retro</h5>
+						<h5>- helping team A with test scenarios</h5>
+					</div>
 				</div>
 				<aside class="notes">
 					<ul>
@@ -165,11 +188,14 @@
 				</aside>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>the next two months - looking back</h3>
-				<div style="margin-left: 1rem;">
-					<h5>shift focus to making myself useful</h5>
-					<h5>still something had to change</h5>
-					<h5>that change ended up being layoffs and a reorg</h5>
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">the next two months</h2>
+				</div>
+				<div class="slide-body">
+					<h4>shift focus to making myself useful</h4>
+					<h4>still something had to change</h4>
+					<h4>that change ended up being layoffs and a reorg</h4>
 				</div>
 				<aside class="notes">
 					<ul>
@@ -179,10 +205,14 @@
 			</section>
 
 			<section data-state="h-left-v-left">
-				<h3>epilogue</h3>
-				<div style="margin-left: 1rem;">
-					<h5>my new role</h5>
-					<h5>"It's a leadership problem, isn't it?"</h5>
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">epilogue</h2>
+				</div>
+				<div class="slide-body">
+					<h4>my new role</h4>
+					<h4>vision on quality engineering, execution is lacking</h4>
+					<h4>"It's a leadership problem, isn't it?"</h4>
 				</div>
 				<aside class="notes">
 					<ul>
@@ -195,14 +225,17 @@
 
 
 			<section data-state="h-cent-v-cent">
-				<h1>lessons learned</h1>
+				<h1 class="section-title">lessons learned</h1>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>personal reflections</h3>
-				<div style="margin-left: 1rem;">
-					<h5>feeling of failure</h5>
-					<h5>adapted to the environment, for better and for worse</h5>
-					<h5>so many conversations that never happened</h5>
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">personal reflections</h2>
+				</div>
+				<div class="slide-body">
+					<h4>feeling of failure</h4>
+					<h4>adapted to the environment</h4>
+					<h4>so many conversations that never happened</h4>
 				</div>
 				<aside class="notes">
 					<ul>
@@ -212,12 +245,15 @@
 				</aside>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>quality engineering</h3>
-				<div style="margin-left: 1rem;">
-					<h5>influence quality throughout the development process</h5>
-					<h5>"Where can I help?" <-> "Where can you help?"</h5>
-					<h5>selling a problem so you can sell a solution</h5>
-					<h5>someone with authority needs to define expected impact</h5>
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">quality engineering</h2>
+				</div>
+				<div class="slide-body">
+					<h4>influence quality throughout the development process</h4>
+					<h4>"Where can I help?" --- "Where can you help?"</h4>
+					<h4>selling a problem so you can sell a solution</h4>
+					<h4>someone with authority needs to define expected impact</h4>
 				</div>
 				<aside class="notes">
 					<ul>
@@ -231,13 +267,15 @@
 				</aside>
 			</section>
 			<section data-state="h-left-v-left">
-				<h3>testing-related roles</h3>
-				<div style="margin-left: 1rem;">
-					<h5>unsolved problem in software development</h5>
-					<h5>dynamic along three axes:</h5>
-					<h5>doing testing yourself versus supporting testing by others</h5>
-					<h5>being in a separate team versus being embedded in a team</h5>
-					<h5>doing your job versus improving the system</h5>
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">testing-related roles</h2>
+				</div>
+				<div class="slide-body">
+					<h4>dynamic along three axes:</h4>
+					<h5>- doing testing yourself versus supporting testing by others</h5>
+					<h5>- being in a separate team versus being embedded in a team</h5>
+					<h5>- doing your job versus improving the system</h5>
 				</div>
 				<aside class="notes">
 					<ul>
@@ -250,8 +288,8 @@
 
 			<section data-state="h-cent-v-cent">
 				<h2>thank you!</h2>
-				<h6>slides at <a href="https://smallsheds.garden/my-talks/">smallsheds.garden/my-talks/</a></h6>
-				<h6>full experience report at the XP2023 site</h6>
+				<h5>slides at <a href="https://smallsheds.garden/my-talks/">smallsheds.garden/my-talks/</a></h5>
+				<h5>full experience report at the XP2023 site</h5>
 			</section>
 
 		<script src="reveal.js/dist/reveal.js"></script>
