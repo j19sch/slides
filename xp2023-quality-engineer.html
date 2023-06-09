@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>I'm a quality engineer and I'm not sure how I feel about that</title>
+
+	<meta name="description"
+		content="In August of '22 I took on a new role in a new company. I became a quality engineer, supporting two teams. No one in my department had prevous experiences working with a quality engineer. And I hadn't done it before either. Most of us were also quite new to the company, which itself was quite young as well. So one of my biggest tasks in this new job was figuring out what exactly my job was. This meant having conversations, trying things out, reflecting regularly on my position and about the role of quality engineer in general. One thing I was explicitly told to do, was to facilitate risk sessions and exploratory testing sessions.
+		After six months of being a quality engineer, I've done useful things for the two teams and have done useful things for the engineering department. Things such as reviewing pull requests, fixing some flaky tests, investigating support tickets, participating in refinement, finding bugs, building a proof-of-concept for a particular piece of test automation, and analyzing the length and character sets of people's names in our production data. While I know my colleagues appreciate these things, it's also true that I haven't done many of the risk sessions and exploratory testing sessions I was explicitly told to do. And that feels odd.
+		The core of my experience report will be the story of my first six months as a quality engineer, what I did during that time and how I felt about it. I will also use those experiences as a lens to reflect on other testing roles I had in the past. What I've discovered is that these roles are inherently unstable and require a constant balancing act.">
+	<meta name="author" content="Joep Schuurkes">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="reveal.js/dist/reset.css">
+	<link rel="stylesheet" href="reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="css/xp2023.css" id="theme">
+	<!-- <link rel="stylesheet" href="css/j19sch-base-v1.css" id="theme"> -->
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="css/j19sch-base-code-v1.css">
+	<!-- <link rel="stylesheet" href="css/arduino-light.css"> see https://github.com/highlightjs/highlight.js/tree/main/src/styles -->
+
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<div class="footer-left">
+				<p>@joeposaurus@chaos.social</p>
+			</div>
+			<div class="footer-right">
+				<p>#XP2023</p>
+			</div>
+
+			<section data-state="h-cent-v-cent">
+					<h1 style="margin-top:0.7em; margin-bottom:0em">I'm a quality engineer</h1>
+					<h2 style="font-size:1.4em;">and I'm not sure how I feel about that</h2>
+					<div style="margin-top:1.7em;display:flex;flex-wrap:nowrap;justify-content:space-around;align-items:center;">
+						<div style="width:45%">
+							<img class="plain" style="margin-bottom:0" src="./xp2023/xp2023-banner.jpg" width="100%" alt="XP2023 banner"/>
+							<h6 style="font-size:0.4em;">by Agile Alliance</h6>
+						</div>
+						<div style="width:40%">
+							<h5>Joep Schuurkes</h5>
+							<h6>
+								<a href="https://chaos.social/@joeposaurus">@joeposaurus@chaos.social</a><br/>
+								<a href="https://smallsheds.garden">https://smallsheds.garden</a>
+							</h6>
+							<h6><a href="https://frogsconf.nl">FroGS conf</a></h6>
+						</div>
+					</div>
+					<aside class="notes">
+					<ul>
+						<li>thank you</li>
+						<li>very condensed, 12 mins talk, 8 mins questions</li>
+					</ul>
+				</aside>
+				</section>
+
+			<section data-state="h-left-v-left">
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">outline</h2>
+				</div>
+				<div class="slide-body">
+					<div class="flex-start">
+						<div class="fragment" style="width:50%">
+							<h3 style="font-style: italic;">my story</h3>
+							<h4>background</h4>
+							<h4>the first four months</h4>
+							<h4>the next two months</h4>
+							<h4>layoffs and a reorg</h4>
+							<h4>epilogue</h4>
+						</div>
+						<div class="fragment" style="width:50%">
+							<h3 style="font-style: italic;">lessons learned</h3>
+							<h4>personal reflections</h4>
+							<h4>quality engineering</h4>
+							<h4>testing-related roles</h4>
+						<div>
+					</div>
+				</div>
+				<aside class="notes">
+					<ul>
+						<li>agenda</li>
+					</ul>
+				</aside>
+			</section>
+
+
+			<section data-state="h-cent-v-cent">
+				<h1 class="section-title">my story</h1>
+			</section>
+			<section data-state="h-left-v-left">
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">background</h2>
+				</div>
+				<div class="slide-body">
+					<div class="fragment">
+						<h4>scale-up, founded in 2019, fully remote</h4>
+						<h4>Employer of Record (EOR), web platform</h4>
+					</div>
+					<div class="fragment" style="margin-top:1.2em;">
+						<h4>I joined in Aug '22</h4>
+						<h4>support two teams as quality engineer</h4>
+					</div>
+					<div class="fragment" style="margin-top:1.2em;">
+						<h4>no one had previous experience with quality engineering</h4>
+						<h4>principal quality engineer and vision</h4>
+					</div>
+				</div>
+				<aside class="notes">
+					<ul>
+						<li>manager had joined two weeks before me</li>
+						<li>me: 16 years of experience in testing-related roles</li>
+						<li>princ QE: joined Apr 2021; other QEs joined in '22</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">the first four months</h2>
+				</div>
+				<div class="slide-body">
+					<h4>start with risk sessions and exploratory testing sessions</h4>
+					<div style="margin-top:1.2em;">
+						<h4 class="fragment">some of the things I did:</h4>
+						<h5 class="fragment">- process workshop with team A</h5>
+						<h5 class="fragment">- diagram about the Salesforce - platform integration</h5>
+						<h5 class="fragment">- quality engineering menu</h5>
+						<h5 class="fragment">- talking with colleagues</h5>
+					</div>
+				</div>
+				<aside class="notes">
+					<ul>
+						<li>princ QE: figure it out with the teams</li>
+						<li>manager: questions about QE alignment</li>
+						<li>manager's manager (mid-Nov): no clear expected impact, humble and doing well</li> 
+					</ul>
+				</aside>
+			</section>
+			<section data-state="h-left-v-left">
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">the first four months</h2>
+				</div>
+				<div class="slide-body">
+					<div>
+						<h4 class="fragment">tried different things, none of it really stuck</h4>
+						<h4 class="fragment" style="margin-top:1.2em;">positive or no feedback, but none negative</h4>
+						<h4 class="fragment" style="margin-top:1.2em;">frustrated and demotivated</h4>
+					</div>
+				</div>
+				<aside class="notes">
+					<ul>
+						<li>haven't found my in with the teams</li>
+						<li>blog post: visibility, connections, patience</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">the next two months</h2>
+				</div>
+				<div class="slide-body">
+					<h4>let go of expectations (to some degree)</h4>
+					<div style="margin-top:1.2em;">
+						<h4 class="fragment">some of the things I did:</h4>
+						<h5 class="fragment">- PoC for test automation for Salesforce integration</h5>
+						<h5 class="fragment">- pointing out the obvious in team B's retro</h5>
+						<h5 class="fragment">- helping team A with test scenarios</h5>
+					</div>
+				</div>
+				<aside class="notes">
+					<ul>
+						<li>after end-of-year holidays</li>
+					</ul>
+				</aside>
+			</section>
+			<section data-state="h-left-v-left">
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">the next two months</h2>
+				</div>
+				<div class="slide-body">
+					<h4 class="fragment">shift focus to making myself useful</h4>
+					<h4 class="fragment" style="margin-top:1.2em;">still something had to change</h4>
+					<h4 class="fragment" style="margin-top:1.2em;">that change ended up being layoffs and a reorg</h4>
+				</div>
+				<aside class="notes">
+					<ul>
+						<li>agenda</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">epilogue</h2>
+				</div>
+				<div class="slide-body">
+					<h4 class="fragment">my new role</h4>
+					<h4 class="fragment" style="margin-top:1.2em;">vision on quality engineering is good,<br/> but execution is lacking</h4>
+					<h4 class="fragment" style="margin-top:1.2em;">"It's a leadership problem, isn't it?"</h4>
+				</div>
+				<aside class="notes">
+					<ul>
+						<li>new role: engineering effectiveness team led by director instead of princ QE</li>
+						<li>manager: would like to continue working with you</li>
+						<li>new manager: vision on QE but execution lacking, 1-to-1s, breakthrough, presentation, more layoffs</li>
+					</ul>
+				</aside>
+			</section>
+
+
+			<section data-state="h-cent-v-cent">
+				<h1 class="section-title">lessons learned</h1>
+			</section>
+			<section data-state="h-left-v-left">
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">personal reflections</h2>
+				</div>
+				<div class="slide-body">
+					<h4 class="fragment">feeling of failure</h4>
+					<h4 class="fragment" style="margin-top:1.2em;">adapted to the environment</h4>
+					<h4 class="fragment" style="margin-top:1.2em;">so many conversations that never happened</h4>
+				</div>
+				<aside class="notes">
+					<ul>
+						<li>for better: be useful, not be a distraction</li>
+						<li>for worse: but quality engineering</li>
+					</ul>
+				</aside>
+			</section>
+			<section data-state="h-left-v-left">
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">quality engineering</h2>
+				</div>
+				<div class="slide-body">
+					<h4 class="fragment">influence quality throughout the development process</h4>
+					<h4 class="fragment" style="margin-top:1.2em;">"Where can I help?" versus "Where can you help?"</h4>
+					<h4 class="fragment" style="margin-top:1.2em;">selling a problem so you can sell a solution</h4>
+					<h4 class="fragment" style="margin-top:1.2em;">someone with the right authority<br/>needs to define the expected impact</h4>
+				</div>
+				<aside class="notes">
+					<ul>
+						<li>influence, not authority</li>
+						<li>whole sw dev process, not (a) clear step(s), sprinkled throughout</li>
+						<li>There are no specific process steps you can point to and say “This is where quality engineering happens.”</li>
+						<li>selling a problem: tricky proposition, need to be sure it's an actual problem; need to be sure the problem is important to solve now; need to be sure your solution will solve the problem</li>
+						<li>someone with authority -> management's job</li>
+						<li>why create a role when you can't communicate expected impact?</li>
+					</ul>
+				</aside>
+			</section>
+			<section data-state="h-left-v-left">
+				<div style="position:relative">
+					<img class="slide-title-image" src="./xp2023/xp2023-slides-header.png"  alt="XP2023 header"/>
+					<h2 class="slide-title">testing-related roles</h2>
+				</div>
+				<div class="slide-body">
+					<h4 class="fragment">unsolved problem in software engineering</h4>
+					<h4 class="fragment" style="margin-top:1.2em;">dynamic along three axes:</h4>
+					<h5 class="fragment">- doing testing yourself versus supporting testing by others</h5>
+					<h5 class="fragment">- being in a separate team versus being embedded in a team</h5>
+					<h5 class="fragment">- doing your job versus improving the system</h5>
+				</div>
+				<aside class="notes">
+					<ul>
+						<li>structure: pros and cons of each end of each axis</li>
+					</ul>
+				</aside>
+			</section>
+
+
+
+			<section data-state="h-cent-v-cent">
+				<h2>thank you!</h2>
+				<h5>slides at <a href="https://smallsheds.garden/my-talks/">smallsheds.garden/my-talks/</a></h5>
+				<h5>full experience report at the XP2023 site</h5>
+			</section>
+
+		<script src="reveal.js/dist/reveal.js"></script>
+		<script src="reveal.js/plugin/zoom/zoom.js"></script>
+		<script src="reveal.js/plugin/notes/notes.js"></script>
+		<script src="reveal.js/plugin/search/search.js"></script>
+		<script src="reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js/plugin/highlight/highlight.js"></script>
+
+		<script>
+			document.getElementsByClassName("footer-right")[0].hidden = true;
+		 	document.getElementsByClassName("footer-left")[0].hidden = true;
+
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				 if (Reveal.isFirstSlide() ||  Reveal.isLastSlide() ||
+				 	Reveal.getCurrentSlide().className.includes("no-footers")) {
+				 	document.getElementsByClassName("footer-left")[0].hidden = true;
+				 	document.getElementsByClassName("footer-right")[0].hidden = true;
+				 } else {
+				 	document.getElementsByClassName("footer-left")[0].hidden = false;
+				 	document.getElementsByClassName("footer-right")[0].hidden = false;
+				 }
+			} );
+
+			Reveal.addEventListener( 'h-left-v-left', function() {
+				console.log('h-left-v-left');
+    			Reveal.configure({center: false});
+    			document.getElementsByClassName('slides')[0].style.textAlign = 'left';
+			}, false );
+
+			Reveal.addEventListener( 'h-left-v-cent', function() {
+				console.log('h-left-v-cent');
+    			Reveal.configure({center: true});
+    			document.getElementsByClassName('slides')[0].style.textAlign = 'left';
+			}, false );
+
+			Reveal.addEventListener( 'h-cent-v-left', function() {
+				console.log('h-cent-v-left');
+    			Reveal.configure({center: false});
+    			document.getElementsByClassName('slides')[0].style.textAlign = 'center';
+			}, false );
+
+			Reveal.addEventListener( 'h-cent-v-cent', function() {
+				console.log('h-cent-v-cent');
+    			Reveal.configure({center: true});
+    			document.getElementsByClassName('slides')[0].style.textAlign = 'center';
+			}, false );
+
+		</script>
+
+		<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: true,
+			slideNumber: false,
+			history: true,
+			center: false,
+			pdfSeparateFragments: false,
+
+			// test aspect ratio 4:3
+			//width: 1024,
+			//height: 768,
+
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+			transitionspeed: 'fast',
+
+			plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+		});
+
+		</script>
+
+	</body>
+	</html>
