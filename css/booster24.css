@@ -91,7 +91,7 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2.2em; } /*3.77em*/
+  font-size: 2.0em; } /*3.77em*/
 
 .reveal h2 {
   font-size: 1.9em; } /*2.11em*/
@@ -108,7 +108,7 @@ body {
   font-size: 0.8em; }
 
 .reveal h6 {
-  font-size: 0.6em; }
+  font-size: 0.45em; }
 
 .reveal span.sub {
   font-size: 0.70em;
