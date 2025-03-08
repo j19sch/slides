@@ -6,8 +6,8 @@ see [https://smallsheds.garden/my-talks/](https://smallsheds.garden/my-talks/)
 ## How to set up
 - clone recursively because submodules
 - install `nvm`
-- `nvm install 18`
-- `nvm use 18`
+- `nvm install 22`
+- `nvm use 22`
 - `npm install`
 
 
