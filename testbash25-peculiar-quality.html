@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Ensuring quality for a peculiar piece of software</title>
+
+	<meta name="description"
+		content="
+		My team is building a peculiar piece of software. It will be used on average once a year, mostly by volunteers. We have to deliver the final version weeks before anyone uses it. There's no hot fixing or even monitoring, because it will run air gapped in 300+ locations. And if we don't do a good job, the results of the Dutch Municipal Elections of March 2026 will have to be determined manually with calculators, and pen and paper. Because the software is used to tally up the votes and determine who gets a seat in all the municipal councils across the Netherlands.
+
+		So how do we ensure quality for such a piece of software? One option would be to lock ourselves away for more than a year and then appear with the fruits of our labour. With the requirements mostly coming straight from Dutch law and the goal being to replace an existing piece of software, waterfall actually starts to look like a sensible approach.
+
+		We didn't think it was. We decided the principles from modern software engineering still applied. As to ensuring quality, most of what we do can be summarized as 'always be delivering' and 'always be collecting feedback'. These two go hand-in-hand. Delivering a fully done vertical slice is what allows you to collect proper feedback.
+
+		I'm looking forward to sharing how we do this exactly through practices like working in thin vertical slices, applying a zero bug policy, writing use cases with stakeholders, and working fully open source.
+
+		Continuously delivering and continuously collecting feedback are crucial, even when you don't have a production environment
+		Continuously delivering in vertical slices lets you get richer feedback
+		Constraints will prevent you from applying practices in the most ideal way. That's ok, they can still deliver value 
+	">
+	<meta name="author" content="Joep Schuurkes">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="reveal.js/dist/reset.css">
+	<link rel="stylesheet" href="reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="css/booster24.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="css/j19sch-base-code-v1.css">
+	<!-- <link rel="stylesheet" href="css/arduino-light.css"> see https://github.com/highlightjs/highlight.js/tree/main/src/styles -->
+
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<div class="footer-left">
+				<p>@joeposaurus@chaos.social</p>
+			</div>
+				<div class="footer-right">
+				<p>TestBash Brighton</p>
+			</div>
+			<section data-state="h-cent-v-cent">
+				<h1>Ensuring quality for a peculiar piece of software </h1>
+				<div style="margin-top:1.7em;display:flex;flex-wrap:nowrap;justify-content:space-around;align-items:center;">
+					<div style="width:45%">
+						<img class="plain" style="margin-bottom:0" src="./testbash25/TestBashBrighton-400.png" width="40%" alt="TestBash Brighton logo"/>
+						<h6 class="small">TestBash Brighton, 2 October 2025</h6>
+					</div>
+					<div style="width:40%">
+						<h5 style="margin-bottom: 0.25rem;">Joep Schuurkes</h5>
+						<h6 class="small">Staff Test Engineer<br/>Dutch Electoral Council</h6>
+						<h6 class="small">
+							<a href="https://chaos.social/@joeposaurus">@joeposaurus@chaos.social</a><br/>
+							<a href="https://smallsheds.garden">https://smallsheds.garden</a>
+						</h6>
+					</div>
+				</div>
+				<aside class="notes">speaker notes</aside>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>What makes it peculiar?</h3>
+				<div class="slide-body">
+						<h4>used on average one time a year for about 1.5 weeks</h4>
+						<h4>by about 350 organisations</h4>
+						<h4>mostly by volunteers</h4>
+						<h4>delivered weeks before usage</h4>
+						<h4>air-gapped server and clients</h4>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>Why is it peculiar?</h3>
+				<div class="slide-body">
+						<h4>used for Dutch elections</h4>
+						<h4>voting on paper ballots</h4>
+						<h4>data entry of results per polling station</h4>
+						<h4>adding up all the votes</h4>
+						<h4>apportionment (who got elected?)</h4>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>One way to build it</h3>
+				<div class="slide-body">
+						<h4>party like it's 1999</h4>
+						<h4>greenfield</h4>
+						<h4>clear requirements</h4>
+						<h4>clear deadline</h4>
+						<h4>lock ourselves away for 18 months</h4>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>but that's not an honest picture</h3>
+				<div class="slide-body">
+						<h4>significant changes in the law</h4>
+						<h4>there's more to great UX than just supporting the process </h4>
+						<h4>is locking yourself away ever a good idea?</h4>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>Another way to build it</h3>
+				<div class="slide-body">
+						<h4>modern software development practices still apply</h4>
+						<h4>always be delivering</h4>
+						<h4>always be collecting feedback</h4>
+						<h4>even if you need to tweak some things</h4>
+				</div>
+			</section>
+
+			<section data-state="h-cent-v-cent">
+				<h3>quality is many small things done right</h3>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>some of our other practices</h3>
+				<div class="slide-body">
+						<h4>contemporary exploratory testing</h4>
+						<h4>domain knowledge</h4>
+						<h4>humane place to work</h4>
+						<h4>purpose</h4>
+						<h4>pipeline with quality gates</h4>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>my role in all of this</h3>
+				<div class="slide-body">
+						<h4>test & quality engineer</h4>
+						<h4>not testing every change</h4>
+						<h4>attending to quality in general</h4>
+						<h4>which includes some testing</h4>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>the four practices I will cover</h3>
+				<div class="slide-body">
+						<h4>use cases</h4>
+						<h4>thin vertical slices</h4>
+						<h4>zero bug policy</h4>
+						<h4>working in public</h4>
+				</div>
+			</section>
+
+			<section data-state="h-cent-v-cent">
+				<h2>use cases</h2>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>use cases</h3>
+				<div class="slide-body">
+					<h4>more here</h4>
+				</div>
+			</section>
+
+			<section data-state="h-cent-v-cent">
+				<h2>thin vertical slices</h2>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>thin vertical slices</h3>
+				<div class="slide-body">
+					<h4>more here</h4>
+				</div>
+			</section>
+
+			<section data-state="h-cent-v-cent">
+				<h2>zero bug policy</h2>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>the process</h3>
+				<div class="slide-body">
+					<h4>find a bug</h4>
+					<h4>is it ok if stays like this forever</h4>
+					<h4>if no, fix it; if yes, forget about it</h4>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>the why</h3>
+				<div class="slide-body">
+					<h4>no backlog full of bugs</h4>
+					<h4>done is done is good enough</h4>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>the reality</h3>
+				<div class="slide-body">
+					<h4>discipline and vigilance</h4>
+					<h4>team culture</h4>
+					<h4>postponing a fix until after the two current epics</h4>
+				</div>
+			</section>
+
+			<section data-state="h-cent-v-cent">
+				<h2>working in public</h2>
+			</section>
+
+			<section data-state="h-left-v-left">
+				<h3>working in puclic</h3>
+				<div class="slide-body">
+					<h4>more here</h4>
+				</div>
+			</section>
+
+
+			<section data-state="h-cent-v-cent">
+				<h2>closing thoughts</h2>
+			</section>
+
+			<section data-state="h-cent-v-cent">
+				<h3>this basic Agile stuff(TM) works!</h3>
+			</section>
+
+			<section data-state="h-cent-v-cent">
+				<h3>there is no such thing</br>as a greenfield project</h3>
+			</section>
+
+			<section data-state="h-cent-v-cent">
+				<h3>adapt practices based on<br/>outcome and principles</h3>
+				<h4>we tried baseball and it didn't work</h4>
+			</section>
+
+			<section data-state="h-cent-v-cent">
+				<h3>quality is something emergent<br/>- Anne-Marie Charrett</h#>
+				<h3>quality is many small things done right</h3>
+			</section>
+			
+			<section data-state="h-cent-v-cent">
+				<h2>thank you!</h2>
+				<h5>slides at <a href="https://smallsheds.garden/my-talks/">smallsheds.garden/my-talks/</a></h5>
+			</section>
+
+
+		<script src="reveal.js/dist/reveal.js"></script>
+		<script src="reveal.js/plugin/zoom/zoom.js"></script>
+		<script src="reveal.js/plugin/notes/notes.js"></script>
+		<script src="reveal.js/plugin/search/search.js"></script>
+		<script src="reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js/plugin/highlight/highlight.js"></script>
+
+		<script>
+			document.getElementsByClassName("footer-right")[0].hidden = true;
+		 	document.getElementsByClassName("footer-left")[0].hidden = true;
+
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				 if (Reveal.isFirstSlide() ||  Reveal.isLastSlide() ||
+				 	Reveal.getCurrentSlide().className.includes("no-footers")) {
+				 	document.getElementsByClassName("footer-left")[0].hidden = true;
+				 	document.getElementsByClassName("footer-right")[0].hidden = true;
+				 } else {
+				 	document.getElementsByClassName("footer-left")[0].hidden = false;
+				 	document.getElementsByClassName("footer-right")[0].hidden = false;
+				 }
+			} );
+
+			Reveal.addEventListener( 'h-left-v-left', function() {
+				console.log('h-left-v-left');
+    			Reveal.configure({center: false});
+    			document.getElementsByClassName('slides')[0].style.textAlign = 'left';
+			}, false );
+
+			Reveal.addEventListener( 'h-left-v-cent', function() {
+				console.log('h-left-v-cent');
+    			Reveal.configure({center: true});
+    			document.getElementsByClassName('slides')[0].style.textAlign = 'left';
+			}, false );
+
+			Reveal.addEventListener( 'h-cent-v-left', function() {
+				console.log('h-cent-v-left');
+    			Reveal.configure({center: false});
+    			document.getElementsByClassName('slides')[0].style.textAlign = 'center';
+			}, false );
+
+			Reveal.addEventListener( 'h-cent-v-cent', function() {
+				console.log('h-cent-v-cent');
+    			Reveal.configure({center: true});
+    			document.getElementsByClassName('slides')[0].style.textAlign = 'center';
+			}, false );
+
+		</script>
+
+		<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: true,
+			slideNumber: false,
+			history: true,
+			center: false,
+			pdfSeparateFragments: false,
+
+			// test aspect ratio 4:3
+			//width: 1024,
+			//height: 768,
+
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+			transitionspeed: 'fast',
+
+			plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+		});
+
+		</script>
+
+	</body>
+	</html>
