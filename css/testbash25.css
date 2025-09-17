@@ -15,15 +15,15 @@ to do:
 
 
 @font-face {
-  font-family: 'urbanist';
-  src: url('fonts/urbanist/Urbanist-Regular.woff2') format('woff');
+  font-family: 'Space Grotesk';
+  src: url('fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf') format('truetype');
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'urbanist';
-  src: url('fonts/urbanist/Urbanist-MediumItalic.woff2') format('woff');
-  font-style: italic;
+  font-family: 'DM Sans';
+  src: url('fonts/DM_Sans/static/DMSans-Regular.ttf') format('truetype');
+  font-style: normal;
 }
 
 
@@ -49,7 +49,7 @@ body {
 }
 
 .reveal {
-  font-family: "urbanist", serif;
+  font-family: "DM Sans", serif;
 /*  font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;*/
   font-size: 40px;
   font-weight: normal;
@@ -83,7 +83,6 @@ body {
   margin: 0 0 20px 0;
   color: #383D3D;
 /*  font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;*/
-  font-family: "urbanist", serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
@@ -92,7 +91,9 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2.0em; } /*3.77em*/
+  font-size: 2.0em; /*3.77em*/
+  text-shadow: none;
+}
 
 .reveal h2 {
   font-size: 1.9em; } /*2.11em*/
@@ -118,8 +119,16 @@ body {
   font-size: 0.70em;
 }
 
-.reveal h1 {
-  text-shadow: none; }
+.reveal h2.title-slide-title {
+  font-family: "Space Grotesk", serif;
+  color: #FFFFFF;
+}
+
+.reveal h3.slide-title {
+  font-family: "Space Grotesk", serif;
+  color: #00305B;
+}
+
 
 /*********************************************
  * OTHER
