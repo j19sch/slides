@@ -21,7 +21,7 @@ to do:
 }
 
 @font-face {
-  font-family: 'DM Sans';
+  font-family: 'DM Sans';font-weight: bold
   src: url('fonts/DM_Sans/static/DMSans-Regular.ttf') format('truetype');
   font-style: normal;
 }liar piece of software 
@@ -128,6 +128,7 @@ body {
 .reveal h2.title-slide-title {
   font-family: "Space Grotesk", serif;
   font-size: 2.1em;
+  font-weight: bold;
   color: #FFFFFF;
   background:#4A75BA;
   padding-top:3rem;
@@ -137,13 +138,16 @@ body {
 
 .reveal h3.slide-title {
   font-family: "Space Grotesk", serif;
+  font-size: 1.5em;
   color: #00305B;
+  /*font-weight: bold;*/
 }
 
 .reveal h3.key-point {
   font-family: "Space Grotesk", serif;
-  font-size: 1.5em;
+  font-size: 1.55em;
   color: #00305B;
+  font-weight: bold;
 }
 
 
