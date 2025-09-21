@@ -150,6 +150,14 @@ body {
   font-weight: bold;
 }
 
+.reveal .slide-body h4 {
+  margin-bottom: 22px;
+}
+
+.reveal .slide-body h4.space-above {
+  margin-top: 1.3em;
+}
+
 
 /*********************************************
  * OTHER
@@ -307,6 +315,10 @@ body {
   text-shadow: none;
   border: none; }
 
+.reveal a.small {
+  font-size: 0.6em;
+}
+
 .reveal .roll span:after {
   color: #fff;
   background: #25211c; }
@@ -325,6 +337,12 @@ body {
   border: 0;
   background: none;
   box-shadow: none; }
+
+.reveal section img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .reveal a img {
   -webkit-transition: all .15s linear;
@@ -439,11 +457,11 @@ body {
   align-items: center;
 }
 
-/*.reveal .slides div.flex-between {
+.reveal .slides div.flex-between {
   display:flex;
   flex-wrap:nowrap;
   justify-content:space-between;
-}*/
+}
 
 
 /*********************************************

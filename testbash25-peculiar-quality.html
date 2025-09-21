@@ -50,7 +50,7 @@
 				<div style="margin-top:0.5em;display:flex;flex-wrap:nowrap;justify-content:space-around;align-items:center;">
 					<div style="width:45%">
 						<img class="plain" style="margin-bottom:0" src="./testbash25/TestBashBrighton-400.png" width="35%" alt="TestBash Brighton logo"/>
-						<h6 class="small">TestBash Brighton<br/>2 October 2025</h6>
+						<h6 class="small">2 October 2025</h6>
 					</div>
 					<div style="width:40%">
 						<h5 style="margin-bottom: 0.25rem;">Joep Schuurkes</h5>
@@ -67,44 +67,50 @@
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
 				<h3 class="slide-title">What's peculiar about it?</h3>
 				<div class="slide-body">
-						<h4>used on average once a year for about a week</h4>
-						<h4>350 organisations</h4>
+						<h4>used once a year (or not at all, or seven times)</h4>
+						<h4>350+ organisations</h4>
 						<h4>most users are volunteers</h4>
-						<h4>delivered weeks before usage</h4>
-						<h4>air-gapped server and clients</h4>
+						<h4>delivery weeks before usage</h4>
+						<h4>runs air-gapped</h4>
 				</div>
+				<aside class="notes">
+					used for about a week
+				</aside>
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
 				<h3 class="slide-title">Why is it peculiar?</h3>
 				<div class="slide-body">
-						<h4>used for Dutch elections</h4>
+						<h4>software for Dutch elections</h4>
 						<h4>voting on paper ballots</h4>
 						<h4>data entry per polling station</h4>
 						<h4>adding up all the votes</h4>
-						<h4>apportionment (who got elected?)</h4>
+						<h4>determine who gets a seat</h4>
 				</div>
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
 				<h3 class="slide-title">One way to build it</h3>
 				<div class="slide-body">
-						<h4>lock ourselves away for 18 months</h4>
-						<h4>greenfield</h4>
 						<h4>clear requirements</h4>
 						<h4>clear deadline</h4>
-						<h4>party like it's 1999</h4>
+						<h4>very few and very stable integrations</h4>
+						<!-- <h4>greenfield</h4> -->
+						<h4>lock ourselves away for 18 months</h4>
 				</div>
+				<aside class="notes">
+					party like it's 1999
+				</aside>
 			</section>
 
-			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
+<!-- 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
 				<h3 class="slide-title">But that's not the full story</h3>
 				<div class="slide-body">
 						<h4>significant changes in the law</h4>
 						<h4>great UX vs. just supporting the process</h4>
 						<h4>is locking yourself away ever a good idea?</h4>
 				</div>
-			</section>
+			</section> -->
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
 				<h3 class="slide-title">Another way to build it</h3>
@@ -112,7 +118,17 @@
 						<h4>modern software development practices still apply</h4>
 						<h4>always be delivering</h4>
 						<h4>always be collecting feedback</h4>
-						<h4>even if you need to adapt some practices</h4>
+						<!-- <h4>even if you need to adapt some practices</h4> -->
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
+				<h3 class="slide-title">The four practices I will cover</h3>
+				<div class="slide-body">
+						<h4>use cases</h4>
+						<h4 style="margin-top: 1.3em;">thin vertical slices</h4>
+						<h4 style="margin-top: 1.3em;">zero bug policy</h4>
+						<h4 style="margin-top: 1.3em;">working in public</h4>
 				</div>
 			</section>
 
@@ -121,34 +137,27 @@
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">Some of our other practices</h3>
+				<h3 class="slide-title">Not just those four, also</h3>
 				<div class="slide-body">
-						<h4>contemporary exploratory testing</h4>
+						<h4>just-in-time refinement</h4>
 						<h4>domain knowledge</h4>
 						<h4>humane place to work</h4>
-						<h4>purpose</h4>
+						<h4>clear purpose</h4>
 						<h4>pipeline with quality gates</h4>
-						<h4>...</h4>
+						<h4>... and many more</h4>
 				</div>
+				<aside class="notes">
+					contemporary eploratory testing
+				</aside>
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
 				<h3 class="slide-title">My role in all of this</h3>
 				<div class="slide-body">
 						<h4>test & quality engineer</h4>
-						<h4>not testing every change</h4>
+						<h4 class="space-above">not testing every change</h4>
 						<h4>attending to quality in general</h4>
 						<h4>which includes some testing</h4>
-				</div>
-			</section>
-
-			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">The four practices I will cover</h3>
-				<div class="slide-body">
-						<h4>use cases</h4>
-						<h4>thin vertical slices</h4>
-						<h4>zero bug policy</h4>
-						<h4>working in public</h4>
 				</div>
 			</section>
 
@@ -158,20 +167,25 @@
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
 				<h3 class="slide-title">My previous experiences</h3>
-				<div class="slide-body">
-					<h4>thick documents</h4>
-					<h4>confusing diagrams</h4>
-					<h4>too much detail</h4>
+				<div class="slide-body flex-between">
+					<div>
+						<h4>thick documents</h4>
+						<h4>confusing diagrams</h4>
+						<h4>too much detail</h4>
+						<h4>done before I start</h4>
+					</div>
+					<div style="width:45%">
+						<img class="plain" src="./testbash25/use_case_restaurant_model.png" alt="an UML digram of a use case"/>
+					</div>
 				</div>
 				<aside class="notes">
 					documents are where information goes to die
-					https://commons.wikimedia.org/w/index.php?curid=74819707
 					https://commons.wikimedia.org/wiki/File:Use_case_restaurant_model.svg
 				</aside>
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">a different way</h3>
+				<h3 class="slide-title">There's a book!</h3>
 				<div class="slide-body">
 					<div class="flex-start-c" style="margin-top: 4rem;">
 					<div style="width:45%">
@@ -185,25 +199,29 @@
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">why not user stories?</h3>
+				<h3 class="slide-title">Why not user stories?</h3>
 				<div class="slide-body">
-					<h4>work management versus documentation</h4>
-					<h4>an archeological puzzle is not documentation</h4>
+					<h4>user stories are for work management</h4>
+<!-- 				<h4>use cases are for documentation</h4>
+					<h4>an archeological puzzle is not documentation</h4> -->
+					<img class="plain center" style="margin-top:2em;" src="./testbash25/lego-indiana-jones.jpg" width=50% alt="a Lego Idiana Jones in the grass"/>
 				</div>
 				<aside class="notes">
-					https://openverse.org/image/893bc755-8170-44b1-a2b1-172f5969768d?q=indiana+jones&p=8
+					an archeological puzzle is not documentation
+					=> https://openverse.org/image/893bc755-8170-44b1-a2b1-172f5969768d?q=indiana+jones&p=8
 					https://en.m.wikipedia.org/wiki/File:Indianajones4.jpg
 					https://commons.wikimedia.org/wiki/File:Indianajones4_(cropped).jpg
 				</aside>
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">effective use cases</h3>
+				<h3 class="slide-title">Tree structure</h3>
 				<div class="slide-body">
-					<h4>tree structure</h4>
-					<h4>☁️ cloud<br/>🪁 kite<br/>🌊 sea<br/>🐟 fish<br/>🐚 shell</h4>
-					<h4>subject - object - verb</h4>
-					<h4>different levels of formality</h4>
+					<h4>☁️ cloud</h4>
+					<h4>🪁 kite</h4>
+					<h4>🌊 sea</h4>
+					<h4>🐟 fish</h4>
+					<h4>🐚 shell</h4>
 				</div>
 				<aside class="notes">
 					where process and software touch
@@ -211,21 +229,42 @@
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">how use cases have helped us</h3>
+				<h3 class="slide-title">Effective use cases</h3>
 				<div class="slide-body">
-					<h4>better understanding both by team and stakeholders</h4>
-					<h4>input for UX design</h4>
+					<h4>subject - object - verb</h4>
+					<h4>"The application determines the data is valid."</h4>
+					<h4 class="space-above">different levels of formality</h4>
+					<h4>iterative and incremental</h4>
+				</div>
+				<aside class="notes">
+					where process and software touch
+				</aside>
+			</section>
+
+			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
+				<h3 class="slide-title">Use case example</h3>
+				<div class="slide-body">
+					<img class="center" src="./testbash25/use-case-example.png" width=85% alt="scereeenshot of a use case with a main success scenario and a few extentions"/>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
+				<h3 class="slide-title">How use cases have helped us</h3>
+				<div class="slide-body">
+					<h4>better understanding by team</h4>
+					<h4>better understanding by stakeholders</h4>
+					<h4 class="space-above">input for UX design</h4>
 					<h4>input for epic kick-off</h4>
 					<h4>double check before closing epic</h4>
 				</div>
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">the reality</h3>
+				<h3 class="slide-title">The reality</h3>
 				<div class="slide-body">
-					<h4>keep investing energy</h4>
+					<h4>requires investing energy</h4>
 					<h4>some people engage more than others</h4>
-					<h4>expectation of long-term value</h4>
+					<h4>short-term and long-term value</h4>
 				</div>
 			</section>
 
@@ -234,31 +273,33 @@
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">thin vertical slices</h3>
+				<h3 class="slide-title">Slices, thin and vertical</h3>
 				<div class="slide-body">
 					<h4>how do you split up the work?</h4>
-					<h4>elephant carpaccio-workshop</h4>
-					<div style="width:30%;">
-						<img class="plain" src="./testbash25/elephant-carpaccio.png" width=80% alt="drawing of an elephant with red 	vertical lines drawn to indicate slices"/>
-					</div>
+					<h4 class="space-above">elephant carpaccio-workshop</h4>
+						<img style="width:40%;" class="plain center" src="./testbash25/elephant-carpaccio.jpg" alt="drawing of an elephant with yellow vertical lines drawn over it to indicate slices"/>
+
 				</div>
+				<aside class="notes">
+					https://medium.com/@olivercecilspann/elephant-carpaccio-exercise-an-experience-report-207f0cc79c34
+				</aside>
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">thin slices</h3>
+				<h3 class="slide-title">Thin slices</h3>
 				<div class="slide-body">
 					<h4>small steps of progress</h4>
 					<h4>instead of...</h4>
-					<h4>feedback on what you're working on now,<br/>instead of last week</h4>
+					<h4 class="space-above">feedback on what you're working on now,<br/>instead of last week</h4>
 				</div>
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">vertical slices</h3>
+				<h3 class="slide-title">Vertical slices</h3>
 				<div class="slide-body">
 					<h4>frontend - backend - database</h4>
 					<h4>instead of...</h4>
-					<h4>rich feedback<br/>instead of narrow feedback</h4>
+					<h4 class="space-above">rich feedback<br/>instead of narrow feedback</h4>
 				</div>
 			</section>
 
@@ -273,13 +314,16 @@
 			</section> -->
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">the reality</h3>
+				<h3 class="slide-title">The reality</h3>
 				<div class="slide-body">
-					<h4>thin-ish and vertical-ish slices -> small epics</h4>
-					<h4>slow(?) delivery schedule</h4>
-					<h4>incremental feedback is challenging</h4>
-					<h4>greenfield</h4>
+					<h4>thin-ish and vertical-ish slices</h4>
+					<h4>small epics</h4>
+					<h4 class="space-above">challenge of incremental feedback</h4>
+					<h4>challenge of greenfield project</h4>
 				</div>
+				<aside class="notes">
+					slow(?) delivery schedule
+				</aside>
 			</section>
 
 			<section data-state="h-cent-v-cent" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
@@ -287,7 +331,7 @@
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">zero bug policy</h3>
+				<h3 class="slide-title">Zero bug policy</h3>
 				<div class="slide-body">
 					<img class="plain" width="80%" src="./testbash25/zero-bug-policy-hor.png" alt="A flowchart showing that if you find a bug the question is: Can it stay like this forever? If not, fix it. If it can, forget about it."/>
 				</div>
@@ -301,19 +345,23 @@
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">the why</h3>
+				<h3 class="slide-title">The why</h3>
 				<div class="slide-body">
 					<h4>no backlog full of bugs</h4>
-					<h4>done is done is good enough</h4>
+					<h4>done is done,<br/>so done needs to be good enough</h4>
+					<img class="plain center" width="70%" src="./testbash25/first-bug.jpg" alt="The first recorded instance of an actual bug (a moth) disrupting the operation of the Harvard Mark II on September 9, 1947"/>
 				</div>
+				<aside class="notes">
+					https://en.wikipedia.org/wiki/Harvard_Mark_II
+				</aside>
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">the reality</h3>
+				<h3 class="slide-title">The reality</h3>
 				<div class="slide-body">
 					<h4>discipline and vigilance</h4>
 					<h4>team culture</h4>
-					<h4>postponing a fix until after the two current epics</h4>
+					<h4>recently postponed a fix</h4>
 				</div>
 			</section>
 
@@ -322,14 +370,14 @@
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">it's all public</h3>
+				<h3 class="slide-title">It's all public!</h3>
 				<div class="slide-body">
 					<h4>the code</h4>
-					<h4>the repository</h4>
+					<h4>the repository <a class="small" style="margin-left:1.2em" href="https://github.com/kiesraad/abacus">github.com/kiesraad/abacus</a></h4>
 					<h4>the pipelines and releases</h4>
-					<h4>the documentation: application and project</h4>
+					<h4>the documentation</h4>
 					<h4>the project board</h4>
-					<h4>the test environments: abacus-test.nl</h4>
+					<h4>the test environments <a class="small" style="margin-left:1.2em" href="https://abacus-test.nl">abacus-test.nl</a></h4>
 				</div>
 				<aside class="notes">
 					repository -> pull requests
@@ -337,20 +385,19 @@
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">but why?</h3>
+				<h3 class="slide-title">But why?</h3>
 				<div class="slide-body">
 					<h4>because we have to</h4>
-					<h4>because we can</h4>
 					<h4>because we think we should</h4>
 				</div>
 			</section>
 
+
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">what it has brought us so far</h3>
+				<h3 class="slide-title">What it has brought us so far</h3>
 				<div class="slide-body">
-					<h4>Putting seat calculations in Dutch election software to the (fuzz) test</h4>
-					<h4>six external pull requests (so far)</h4>
-					<h4>municipalities</h4>
+					<h4>free fuzz testing</h4>
+					<img class="center" width="100%" src="./testbash25/fuzz-testing.png" alt="Putting seat calculations in Dutch election software to the (fuzz) test"/>
 				</div>
 				<aside class="notes">
 					https://tweedegolf.nl/en/blog/156/putting-seat-calculations-in-dutch-election-software-to-the-test
@@ -358,22 +405,41 @@
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">the reality</h3>
+				<h3 class="slide-title">What it has brought us so far</h3>
 				<div class="slide-body">
-					<h4>it takes more than making the repository public</h4>
-					<h4>documentation</h4>
-					<h4>reaching out and inviting people</h4>
-					<h4>responding to their feedback</h4>
+					<h4>six external pull requests (so far)</h4>
+					<img class="center" width="100%" src="./testbash25/pr-1651.png" alt="A pull request making a minor fix to the comment of a unit test"/>
+				</div>
+				<aside class="notes">
+					https://github.com/kiesraad/abacus/pull/1651
+				</aside>
+			</section>
+
+			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
+				<h3 class="slide-title">What it has brought us so far</h3>
+				<div class="slide-body">
+					<h4>involvement of municipalities</h4>
+					<img class="center" width="100%" src="./testbash25/abacus-release.png" alt="A release of the application published on GitHub"/>
 				</div>
 			</section>
 
 			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="slide-title">the four practices I covered</h3>
+				<h3 class="slide-title">The reality</h3>
+				<div class="slide-body">
+					<h4>it takes more than making the repository public</h4>
+					<h4 class="space-above">including documentation</h4>
+					<h4>reaching out to people</h4>
+					<h4>responding to feedback</h4>
+				</div>
+			</section>
+
+			<section data-state="h-left-v-left" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
+				<h3 class="slide-title">The four practices I covered</h3>
 				<div class="slide-body">
 						<h4>use cases</h4>
-						<h4>thin vertical slices</h4>
-						<h4>zero bug policy</h4>
-						<h4>working in public</h4>
+						<h4 style="margin-top: 1.3em;">thin vertical slices</h4>
+						<h4 style="margin-top: 1.3em;">zero bug policy</h4>
+						<h4 style="margin-top: 1.3em;">working in public</h4>
 				</div>
 			</section>
 
@@ -383,23 +449,26 @@
 			</section>
 
 			<section data-state="h-cent-v-cent" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="key-point">this very basic Agile stuff(TM),<br/>it works!</h3>
+				<h3 class="key-point">this basic Agile stuff(TM),<br/>it works!</h3>
 				<aside class="notes">™</aside>
 			</section>
 
 			<section data-state="h-cent-v-cent" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="key-point">adapt practices based on<br/>outcome and principles</h3>
-				<h4>(drop?) what do you do while under pressure?</h4>
-				<h4>We Tried Baseball and It Didn't Work - Ron Jeffries</h4>
+				<h3 class="key-point">adapt practices based on<br/>outcome(s) and principles</h3>
+				<h6 style="margin-top: 2em;"><a href="https://ronjeffries.com/xprog/articles/jatbaseball/">We Tried Baseball and It Didn't Work</a> - Ron Jeffries</h6>
 				<aside class="notes">
+					what do you do while under pressure?
 					https://ronjeffries.com/xprog/articles/jatbaseball/
 				</aside>
 			</section>
-			<section data-state="h-cent-v-cent" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
+
+<!-- 			<section data-state="h-cent-v-cent" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
 				<h3 class="key-point">start from where you are</h3>
-				<h3 class="key-point">there is no such thing</br>as a greenfield project</h3>
-				<!-- <h3 class="key-point">wherever you went, there you are</h3> -->
-			</section>
+				<aside class="notes">
+					there is no such thing as a greenfield project
+					wherever you went, there you are
+				</aside>
+			</section> -->
 
 			<section data-state="h-cent-v-cent" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
 				<h3 class="key-point">quality is something emergent<br/><span style="font-size:0.6em;">- Anne-Marie Charrett</span></h3>
@@ -410,7 +479,7 @@
 			</section>
 
 			<section data-state="h-cent-v-cent" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3 class="key-point">you don't sprinkle on</br>some quality at every step</h3>
+				<h3 class="key-point">you don't sprinkle on</br>a little quality at every step</h3>
 				<aside class="notes">
 					you don't put in a little quality at every step
 				</aside>
@@ -421,7 +490,7 @@
 			</section>
 			
 			<section data-state="h-cent-v-cent" data-background-image="testbash25/bg_slide.png" data-background-size=contain>
-				<h3>thank you!</h3>
+				<h3 class="key-point" style="color:#383D3D">thank you!</h3>
 				<h6>slides at <a href="https://smallsheds.garden/my-talks/">smallsheds.garden/my-talks/</a></h6>
 			</section>
 
