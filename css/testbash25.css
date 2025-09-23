@@ -93,7 +93,7 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2.0em; /*3.77em*/
+  font-size: 1.85em; /*3.77em*/
   text-shadow: none;
 }
 
@@ -106,7 +106,7 @@ body {
 } /*1.55em*/
 
 .reveal h4 {
-  font-size: 0.95em; }
+  font-size: 0.90em; }
 
 .reveal h5 {
   font-size: 0.8em; }
@@ -138,7 +138,7 @@ body {
 
 .reveal h3.slide-title {
   font-family: "Space Grotesk", serif;
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: #00305B;
   /*font-weight: bold;*/
 }
@@ -155,7 +155,7 @@ body {
 }
 
 .reveal .slide-body h4.space-above {
-  margin-top: 1.3em;
+  margin-top: 1.7em;
 }
 
 
