@@ -12,7 +12,7 @@ to do:
 - quote box (blockquote?)
 */
 
-
+/* 49af53 */
 
 @font-face {
   font-family: 'urbanist';
@@ -26,6 +26,23 @@ to do:
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'iosevka-aile';
+  /*font-display: swap;*/
+  /*font-weight: 400;*/
+  /*font-stretch: normal;*/
+  /*font-style: normal;*/
+  src: url('fonts/Iosevka/IosevkaAile-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'iosevka-aile-light';
+/*  font-display: swap;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;*/
+  src: url('fonts/Iosevka/IosevkaAile-Light.woff2') format('woff2');
+}
 
 .reveal a {
   line-height: 1.3em; }
@@ -49,7 +66,7 @@ body {
 }
 
 .reveal {
-  font-family: "urbanist", serif;
+  font-family: "urbanist", sans-serif;
 /*  font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;*/
   font-size: 40px;
   font-weight: normal;
@@ -92,7 +109,7 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2.0em; } /*3.77em*/
+  font-size: 2.2em; } /*3.77em*/
 
 .reveal h2 {
   font-size: 1.9em; } /*2.11em*/
@@ -317,7 +334,7 @@ body {
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #51483D; } /*#595959;*/
+  color: #49af53; } /*#595959;*/
 
 .reveal .progress span {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -369,12 +386,12 @@ body {
 .reveal .slides section div.slide-body {
   margin-top: 0.3em;  /*0.8 */
   /*  margin-left: 0.6em;*/
-  margin-left: 25px; /* slide-title's left is 15px*/
+  /*margin-left: 25px; /* slide-title's left is 15px*/*/
 }
 
 .reveal .slides section div.slide-body-c {
   margin-top: 1.0em;  /*0.8 */
-  margin-left: 0.6em;
+  /*margin-left: 0.6em;*/
   text-align: center;
 }
 
@@ -420,7 +437,47 @@ body {
  * slide title
  *********************************************/
 
-.reveal .slides h2.slide-title {
+.reveal h3.key-point {
+  /*font-family: "iosevka-aile", sans-serif;*/
+  font-size: 1.25em;
+  /*color: #00305B;*/
+  /*font-weight: bold;*/
+}
+
+.reveal .slides h3.slide-title {
+  /*font-family: "iosevka-aile", sans-serif;*/
+  font-size: 1.4em;
+  margin-left:7rem;
+  margin-right:7rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 0.3rem solid #49af53;
+}
+
+.reveal .slides h2.sub-section-title {
+  /*font-family: "iosevka-aile", sans-serif;*/
+  font-size: 1.7em; /*2.11em*/
+  margin-left:7rem;
+  margin-right:7rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 0.6rem solid #49af53;
+}
+
+.reveal .slides h1.section-title {
+  /*font-family: "iosevka-aile", sans-serif;*/
+  font-size: 2.0em;
+  /*font-weight: bold;*/
+  color: #2f2f2f;
+  /*color: #000000;*/
+  background:#49af53;
+  padding-top:1.2rem;
+  padding-bottom:1.7rem;
+  border-radius: 10px;
+  margin-left:6rem;
+  margin-right:6rem;
+}
+
+
+/*.reveal .slides h2.slide-title {
   position: absolute;
   top: 15px;
   left: 15px;
@@ -439,4 +496,4 @@ body {
 .reveal .slides h1.section-title {
   margin-top:-1em;
   font-style: italic;
-}
+}*/
