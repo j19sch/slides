@@ -475,11 +475,12 @@ body {
   font-family: "iosevka-aile", sans-serif;
   font-size: 1.8em;
   font-weight: bold;
-  color: #2f2f2f;
-  /*color: #000000;*/
-  background:#49af53;
+  /*color: #2f2f2f;*/
+  color: #000000;
+  background: rgb(73, 175, 83, 0.8);  /* #49af53;*/
   padding-top:1.2rem;
   padding-bottom:1.7rem;
+  /*border: 0.6rem solid #49af53;*/
   border-radius: 10px;
   margin-left:6rem;
   margin-right:6rem;
