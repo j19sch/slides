@@ -439,7 +439,7 @@ body {
 
 .reveal h3.key-point {
   font-family: "iosevka-aile", sans-serif;
-  font-size: 1.30em;
+  font-size: 1.25em;
   /*color: #00305B;*/
   /*font-weight: bold;*/
 }
@@ -449,6 +449,15 @@ body {
   font-size: 1.30em;
   margin-left:7rem;
   margin-right:7rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 0.3rem solid #49af53;
+}
+
+.reveal .slides h3.story-title {
+  /*font-family: "iosevka-aile", sans-serif;*/
+  font-size: 1.30em;
+  margin-left:15rem;
+  margin-right:15rem;
   padding-bottom: 0.8rem;
   border-bottom: 0.3rem solid #49af53;
 }
