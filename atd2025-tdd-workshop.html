@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Experience test-driven development (TDD)</title>
+
+	<meta name="description"
+		content="
+		The red-green-refactor cycle of test-driven development (TDD) is a powerful way to write code.
+
+		Key-Learnings
+    	Red-green-refactor lets you take small steps with feedback at every step.
+    	Red-green-refactor lets you discover the right implementation as you go.
+    	The ideas of red-green-refactor still apply when you're writing test automation.
+
+		Discover the power of red-green-refactor with the counterstring code kata
+
+		People who practice test-driven development (TDD) often describe it as a powerful approach. And while they make a convincing case, nothing beats experiencing it for yourself. So that's exactly what we'll do in this workshop.
+
+		We'll start with a brief explanation of TDD's red-green-refactor cycle. Red: write a test for the next bit of functionality you want to add. Green: write the code needed to make the test pass. Refactor: improve the code and the tests. Next, it's time to put that cycle into practice implementing a fairly simple algorithm. There's very little setup needed, so you can do this in any programming language you like.
+
+		In the last part of the workshop you'll share you experiences and your code. We'll reflect on those as a group, drawing lessons from it. And we'll discuss how the red-green-refactor cycle applies, even when you're writing something that's not unit testable, like test automation.
+
+		Please complete the setup of this workshop beforehand, by following the instructions in the 'Setup for the kata-section of the workshop repo: https://codeberg.org/joeposaurus/counterstring-codekata#setup-for-the-kata
+	">
+	<meta name="author" content="Joep Schuurkes">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="reveal.js/dist/reset.css">
+	<link rel="stylesheet" href="reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="css/atd2025-tdd-workshop.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="css/j19sch-base-code-v1.css">
+	<!-- <link rel="stylesheet" href="css/arduino-light.css"> see https://github.com/highlightjs/highlight.js/tree/main/src/styles -->
+
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<div class="footer-left">
+				<p>@joeposaurus@chaos.social</p>
+			</div>
+				<div class="footer-right">
+				<p>#AgileTD</p>
+			</div>
+
+			<section data-state="h-cent-v-cent">
+				<h1>Experience test-driven development (TDD)</h1>
+				<div class="flex-c" style="margin-top:0.8em">
+					<div style="width:45%">
+						<img class="plain" style="margin-bottom:0" src="./atd2025-tdd-workshop/agiletd24-icon_color.svg" width="30%" alt="Booster conf logo"/>
+						<h6 class="small">Agile Testing Days<br/>27 November 2025</h6>
+					</div>
+					<div style="width:40%;">
+						<h5 style="margin-top: 1.3rem; margin-bottom: 0.25rem;">Joep Schuurkes</h5>
+						<h6 class="small">Staff Test Engineer<br/>Dutch Electoral Council</h6>
+						<h6 class="small">
+							<a href="https://chaos.social/@joeposaurus">@joeposaurus@chaos.social</a><br/>
+							<a href="https://smallsheds.garden">https://smallsheds.garden</a>
+						</h6>
+					</div>
+				</div>
+				<aside class="notes">speaker notes</aside>
+			</section>
+
+			<section>
+				<h3 class="slide-title">workshop prep</h3>
+				<div class="slide-body">
+					<h4>https://codeberg.org/joeposaurus/<br/>counterstring-codekata#setup-for-the-kata</h4>
+				</div>
+			</section>
+
+			<section>
+				<h3 class="slide-title">agenda</h3>
+				<div class="slide-body">
+					<h4>instructions (15 mins)</h4>
+					<h4>the kata (50 mins)</h4>
+					<h4 style="margin-top:2.3rem;margin-bottom:2.3rem;">break (10 mins) -> 3:55 p.m.</h4>
+					<h4>reflect & share (20 mins) -> 4:05 p.m.</h4>
+					<h4>how to apply (20 mins)</h4>
+					<!-- <h4>plus / delta</h4> -->
+				</div>
+			</section>
+
+			<section>
+				<h1 class="section-title">instructions</h1>
+			</section>
+
+			<section>
+				<h2 class="sub-section-title">goal of the workshop</h2>
+			</section>
+
+			<section>
+				<h3 class="slide-title">the goal</h3>
+				<div class="slide-body">
+					<h4>experience test-driven development</h4>
+					<h4>understand the principles behind TDD</h4>
+					<h4>explore how the principles apply to your work</h4>
+				</div>
+			</section>
+
+			<section>
+				<h3 class="slide-title"><strong>NOT</strong> the goal</h3>
+				<div class="slide-body">
+					<h4>become an expert in TDD</h4>
+					<h4>be able to teach devs TDD</h4>
+					<h4>apply TDD in your daily work</h4>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="sub-section-title">test-driven development</h2>
+			</section>
+
+			<section>
+				<h3 class="slide-title">red - green - refactor</h3>
+				<div class="slide-body">
+					<h4>think of the next step</h4>
+					<h4>write a failing test</h4>
+					<h4>run the test(s)</h4>
+					<h4>write just enough code to get the test to pass</h4>
+					<h4>run the test(s)</h4>
+					<h4>refactor</h4>
+					<h4>run the test(s)</h4>
+				</div>
+			</section>
+
+			<section>
+				<h3 class="slide-title">red - green - refactor</h3>
+				<div class="slide-body">
+					<h4>think of the next step</h4>
+					<h4>write a failing test</h4>
+					<h4>run the test(s) => red</h4>
+					<h4>write just enough code to get the test to pass</h4>
+					<h4>run the test(s) => green</h4>
+					<h4>refactor => refactor</h4>
+					<h4>run the test(s)</h4>
+				</div>
+			</section>
+
+			<section>
+				<h3 class="slide-title">red - green - refactor</h3>
+				<div class="slide-body">
+					<h4>think</h4>
+					<h4>red bar</h4>
+					<h4>green bar</h4>
+					<h4>refactor</h4>
+					<h4>refactor</h4>
+					<h6>The Art of Agile Development (2nd ed.) - James Shore</h6>
+				</div>
+			</section>
+
+			<section>
+				<h3 class="slide-title">fake it till you make it</h3>
+				<div class="slide-body">
+					<pre><code class="language-python">
+def test_add_two_numbers():
+	assert sum(4,5) == 9
+
+def add_two_numbers(a,b):
+	return 9
+					</code></pre>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="sub-section-title">counterstrings</h2>
+			</section>
+
+			<section>
+				<h3 class="slide-title">a counterstring</h3>
+				<div class="slide-body">
+					<h3>*3*5*7*9*</h3>
+				</div>
+			</section>
+
+			<section>
+				<h1 class="section-title">the kata</h1>
+			</section>
+
+			<section>
+				<h3 class="slide-title">kata?</h3>
+				<div class="slide-body">
+					<h4>coding kata</h4>
+				</div>
+			</section>
+
+			<section>
+				<h3 class="slide-title">the setup</h3>
+				<div class="slide-body">
+					<h4>work in pairs or on your own</h4>
+					<h4 style="margin-top: 2rem;">https://codeberg.org/joeposaurus/<br/>counterstring-codekata</h4>
+					<h4>https://smallsheds.garden/counterstring/</h4>
+					<h4 style="margin-top: 2rem;">a function/method that returns an empty string<br/>
+    				a (failing) test for a counterstring of length 1</h4>
+				</div>
+			</section>
+
+			<section>
+				<h3 class="slide-title">the steps</h3>
+				<div class="slide-body">
+					<h4>decide on the next small step</h4>
+					<h4>write a failing test</h4>
+					<h4>change the code to make the test pass</h4>
+					<h4>refactor if it makes sense</h4>
+				</div>
+			</section>
+
+			<section>
+				<h1 class="section-title">break</h1>
+			</section>
+
+			<section>
+				<h1 class="section-title">reflect & share</h1>
+			</section>
+
+			<section>
+				<h3 class="slide-title">share experiencies & code</h3>
+				<div class="slide-body">
+					<h4>share with another person/group</h4>
+					<h4>and another person/group</h4>
+					<h4 style="margin-top:3rem;">What was different?<br/>
+						What was the same?</h4>
+				</div>
+			</section>
+
+			<section>
+				<h1 class="section-title">how to apply</h1>
+			</section>
+
+			<section>
+				<h3 class="slide-title">a question</h3>
+				<div class="slide-body">
+					<h4>What kinds of code do you write?</h4>
+				</div>
+				<aside class="notes">
+					test automation or pipeline
+					data generator
+					bug fix
+				</aside>
+			</section>
+
+			<section>
+				<h3 class="slide-title">reflect & discuss</h3>
+				<div class="slide-body">
+					<h4>three groups</h4>
+					<h4>rotate after 5 minutes</h4>
+					<h4>one person stays for a next round</h4>
+					<h4>summary at the end</h4>
+				</div>
+			</section>
+
+			<section>
+				<h3 class="slide-title">my two cents</h3>
+				<div class="slide-body">
+					<h4>size of steps depends on length feedback loop</h4>
+					<h4>size of steps depends on level of confidence</h4>
+					<h4>how you test depends on technology</h4>
+					<h4>amount of refactoring depends on level of experience</h4>
+				</div>
+			</section>
+
+			<section>
+				<h2>thank you!</h2>
+				<h4>agiletestingdays.com/session-ratings</h4>
+				<h5>slides at <a href="https://smallsheds.garden/my-talks/" target="_blank">smallsheds.garden/my-talks/</a></h5>
+			</section>
+
+
+		<script src="reveal.js/dist/reveal.js"></script>
+		<script src="reveal.js/plugin/zoom/zoom.js"></script>
+		<script src="reveal.js/plugin/notes/notes.js"></script>
+		<script src="reveal.js/plugin/search/search.js"></script>
+		<script src="reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js/plugin/highlight/highlight.js"></script>
+
+		<script>
+			document.getElementsByClassName("footer-right")[0].hidden = true;
+		 	document.getElementsByClassName("footer-left")[0].hidden = true;
+
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				 if (Reveal.isFirstSlide() ||  Reveal.isLastSlide() ||
+				 	Reveal.getCurrentSlide().className.includes("no-footers")) {
+				 	document.getElementsByClassName("footer-left")[0].hidden = true;
+				 	document.getElementsByClassName("footer-right")[0].hidden = true;
+				 } else {
+				 	document.getElementsByClassName("footer-left")[0].hidden = false;
+				 	document.getElementsByClassName("footer-right")[0].hidden = false;
+				 }
+			} );
+
+			// Reveal.addEventListener( 'h-left-v-left', function() {
+			// 	console.log('h-left-v-left');
+    		// 	Reveal.configure({center: false});
+    		// 	document.getElementsByClassName('slides')[0].style.textAlign = 'left';
+			// }, false );
+
+			// Reveal.addEventListener( 'h-left-v-cent', function() {
+			// 	console.log('h-left-v-cent');
+    		// 	Reveal.configure({center: true});
+    		// 	document.getElementsByClassName('slides')[0].style.textAlign = 'left';
+			// }, false );
+
+			// Reveal.addEventListener( 'h-cent-v-left', function() {
+			// 	console.log('h-cent-v-left');
+    		// 	Reveal.configure({center: false});
+    		// 	document.getElementsByClassName('slides')[0].style.textAlign = 'center';
+			// }, false );
+
+			// Reveal.addEventListener( 'h-cent-v-cent', function() {
+			// 	console.log('h-cent-v-cent');
+    		// 	Reveal.configure({center: true});
+    		// 	document.getElementsByClassName('slides')[0].style.textAlign = 'center';
+			// }, false );
+
+		</script>
+
+		<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: true,
+			slideNumber: false,
+			history: true,
+			center: true,
+			pdfSeparateFragments: false,
+
+			// test aspect ratio 4:3
+			//width: 1024,
+			//height: 768,
+
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+			transitionspeed: 'fast',
+
+			plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+		});
+
+		</script>
+
+	</body>
+	</html>
