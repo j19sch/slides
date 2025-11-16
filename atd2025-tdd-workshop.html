@@ -123,13 +123,13 @@
 			<section>
 				<h3 class="slide-title">red - green - refactor</h3>
 				<div class="slide-body">
-					<h4 class="fragment" data-fragment-index="4">think of the next step</h4>
-					<h4 class="fragment" data-fragment-index="5">write a failing test</h4>
+					<h4 class="fragment" data-fragment-index="7">think of the next step</h4>
+					<h4 class="fragment" data-fragment-index="4">write a failing test</h4>
 					<h4 class="fragment" data-fragment-index="1">run the test(s) => red</h4>
-					<h4 class="fragment" data-fragment-index="6">write just enough code to get the test to pass</h4>
+					<h4 class="fragment" data-fragment-index="5">write just enough code to get the test to pass</h4>
 					<h4 class="fragment" data-fragment-index="2">run the test(s) => green</h4>
 					<h4 class="fragment" data-fragment-index="3">refactor => refactor</h4>
-					<h4 class="fragment" data-fragment-index="7">run the test(s)</h4>
+					<h4 class="fragment" data-fragment-index="6">run the test(s)</h4>
 				</div>
 			</section>
 
@@ -162,12 +162,15 @@
 				<h3 class="slide-title">fake it till you make it</h3>
 				<div class="slide-body">
 					<pre><code class="language-python">
-def test_add_two_numbers():
-	assert sum(4,5) == 9
+def test_fizzbuzz_15():
+	assert fizzbuzz(15) == "1,2,Fizz,4,Buzz,Fizz,7,8,
+		Fizz,Buzz,11,Fizz,13,14,FizzBuzz"
 
-def add_two_numbers(a,b):
-	return 9
+def fizzbuzz(length):
+	return "1,2,Fizz,4,Buzz,Fizz,7,8,
+		Fizz,Buzz,11,Fizz,13,14,FizzBuzz"
 					</code></pre>
+				<h6><a href="https://www.youtube.com/watch?v=O1h9ho2G85Q&t=155s">Fake it till you make it - Llewellyn Falco</a></h6>
 				</div>
 			</section>
 
