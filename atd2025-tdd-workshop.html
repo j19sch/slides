@@ -151,6 +151,19 @@
 			</section>
 
 			<section>
+				<h3 class="slide-title">The Three Modes of TDD</h3>
+				<div class="slide-body">
+					<h5>1. Obvious Implementation</h5>
+					<h5>2. Fake It 'Til You Make It</h5>
+					<h4>3. Triangulation</h4>
+					<div style="margin-top: 3rem;">
+						<h6><a href="https://dzone.com/articles/three-modes-of-tdd" target="_blank">The Three Modes of TDD - Grzegorz Ziemoński</a></h6>
+						<h6>via <a href="https://agiletestingdays.com/2025/session/the-many-schools-of-tdd-a-quick-overview/" target="_blank">The Many Schools of TDD: A Quick Overview - Andreas Jürgensen (ATD 2025)</a></h6>
+					</div>
+				</div>
+			</section>
+
+<!-- 			<section>
 				<h3 class="slide-title">fake it till you make it</h3>
 				<div class="slide-body">
 					<pre><code class="language-python">
@@ -163,6 +176,37 @@ def fizzbuzz(length):
 		Fizz,Buzz,11,Fizz,13,14,FizzBuzz"
 					</code></pre>
 				<h6><a href="https://www.youtube.com/watch?v=O1h9ho2G85Q&t=155s">Fake it till you make it - Llewellyn Falco</a></h6>
+				</div>
+			</section> -->
+
+			<section>
+				<h3 class="slide-title">Triangulation</h3>
+				<div class="slide-body">
+					<h4><em>1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, ...</em></h4>
+					<pre><code class="language-python">
+def test_fizzbuzz_1():
+	assert fizzbuzz(1) == 1
+
+def fizzbuzz(length):
+	return 1
+					</code></pre>
+				</div>
+			</section>
+
+			<section>
+				<h3 class="slide-title">Triangulation</h3>
+				<div class="slide-body">
+					<h4><em>1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, ...</em></h4>
+					<pre><code class="language-python">
+def test_fizzbuzz_1():
+	assert fizzbuzz(1) == 1
+
+def test_fizzbuzz_2():
+	assert fizzbuzz(2) == 2
+
+def fizzbuzz(length):
+	return length
+					</code></pre>
 				</div>
 			</section>
 
@@ -206,7 +250,7 @@ def fizzbuzz(length):
 						a function/method that returns an empty string<br/>
     					a (failing) test for a counterstring of length 1</h4>
 					<h4 style="margin-top: 3rem;">reference implementation:<br/>
-						<a href="https://smallsheds.garden/counterstring" target="_blank_">https://smallsheds.garden/counterstring</a></h4>
+						<a href="https://smallsheds.garden/counterstring" target="_blank">https://smallsheds.garden/counterstring</a></h4>
 				</div>
 			</section>
 
