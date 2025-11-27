@@ -198,14 +198,17 @@ def fizzbuzz(length):
 				<div class="slide-body">
 					<h4><em>1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, ...</em></h4>
 					<pre><code class="language-python">
+def fizzbuzz(length):
+	if length == 1:
+		return "1"
+	else:
+		return "1,2"
+
 def test_fizzbuzz_1():
-	assert fizzbuzz(1) == 1
+	assert fizzbuzz(1) == "1"
 
 def test_fizzbuzz_2():
-	assert fizzbuzz(2) == 2
-
-def fizzbuzz(length):
-	return length
+	assert fizzbuzz(2) == "1,2"
 					</code></pre>
 				</div>
 			</section>
